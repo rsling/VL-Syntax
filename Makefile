@@ -5,7 +5,7 @@ PREFLAGS = -no-pdf
 TEXFLAGS = -output-directory=output
 HANDIFLAGS = \def\HANDOUT{}
 FINALFLAGS = \input{main}
-FILEPRE = SchaeferMorpholexikologie
+FILEPRE = SchaeferSyntax
 HOSUFF = Handout
 PRESUFF = Presentation
 
