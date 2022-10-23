@@ -11,11 +11,11 @@ PRESUFF = Presentation
 
 H01JOB = $(FILEPRE)01$(HOSUFF)
 P01JOB = $(FILEPRE)01$(PRESUFF)
-L01FLAGS = \def\TITLE{1. Sprache und Grammatik}\def\LECTURE{01}
+L01FLAGS = \def\TITLE{1. Sprache, Grammatik, Grammatikalität}\def\LECTURE{01}
 
 H02JOB = $(FILEPRE)02$(HOSUFF)
 P02JOB = $(FILEPRE)02$(PRESUFF)
-L02FLAGS = \def\TITLE{2. Sprache und Lehramt}\def\LECTURE{02}
+L02FLAGS = \def\TITLE{2. Kern und Peripherie, Regel und Regularität}\def\LECTURE{02}
 
 FULLJOB = $(FILEPRE)Handout
 
