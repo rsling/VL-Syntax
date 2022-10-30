@@ -2,13 +2,350 @@
 
 \begin{frame}
   {Überblick}
+  \onslide<+->
+  \onslide<+->
+  \begin{itemize}[<+->]
+    \item \alert{Strukturbildung} | große Einheiten aus kleinen Einheiten
+    \Zeile
+    \item \alert{Relationen} | Kongruenz und Valenz
+    \Zeile
+    \item \alert{Valenz} | Verbklassen und Ereignisbeschreibung
+  \end{itemize}
 \end{frame}
-
-\section{Kategorien}
 
 \section{Struktur}
 
+\begin{frame}
+  {Auf allen Ebenen | Struktur}
+  \onslide<+->
+  \onslide<+->
+  \alert{Struktur} | Einheiten sind aus Einheiten zusammengesetzt.
+  \begin{exe}
+    \ex\label{ex:strukturbildung021}
+    \begin{xlist}
+      \ex \textbf{Sätze} \\
+      {\alert{[}Alexandra schießt den Ball ins gegnerische Tor.\alert{]}\ }
+      \onslide<+->
+      \ex \textbf{Satzteile} \\
+      {\alert{[}Alexandra\alert{]}\  \alert{[}schießt\alert{]}\  \alert{[}den Ball\alert{]}\  \alert{[}ins gegnerische Tor\alert{]}\ }
+      \onslide<+->
+      \ex \textbf{Wörter} \\
+      {\alert{[}Alexandra\alert{]}\  \alert{[}schießt\alert{]}\  \alert{[}den\alert{]}\  \alert{[}Ball\alert{]}\  \alert{[}ins\alert{]}\  \alert{[}gegnerische\alert{]}\  \alert{[}Tor\alert{]}\ }
+      \onslide<+->
+      \ex \textbf{Wortteile} \\
+      {\alert{[}Alexandra\alert{]}\  \alert{[}schieß\alert{]}\ \alert{[}t\alert{]}\  \alert{[}den\alert{]}\  \alert{[}Ball\alert{]}\  \alert{[}ins\alert{]}\  \alert{[}gegner\alert{]}\ \alert{[}isch\alert{]}\ \alert{[}e\alert{]}\  \alert{[}Tor\alert{]}\ }
+      \onslide<+-> 
+      \ex \textbf{Laute} \\
+      {\alert{[}A\alert{]}\ \alert{[}l\alert{]}\ \alert{[}e\alert{]}\ \alert{[}k\alert{]}\ \alert{[}s\alert{]}\ \alert{[}a\alert{]}\ \alert{[}n\alert{]}\ \alert{[}d\alert{]}\ \alert{[}r\alert{]}\ \alert{[}a\alert{]}\  \ldots \\}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Struktur in der Syntax}
+  \onslide<+->
+  \onslide<+->
+  Durch mehrfache \alert{Aneinanderfügung} ergeben sich \alert{hirarchische Strukturen}.\\
+  \Zeile
+  \onslide<+->
+  \centering 
+    \begin{forest}
+    [Alexandra schießt den Ball ins gegnerische Tor
+      [Alexandra [Alexandra]]
+      [schießt [schießt]]
+      [den Ball
+        [den]
+        [Ball]
+      ]
+      [ins gegenerische Tor
+        [ins]
+        [gegnerische]
+        [Tor]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Struktur in der Morphologie}
+  \onslide<+->
+  \onslide<+->
+  Auch innerhalb von Wörtern gibt es solche Strukturen.\\
+  \Zeile
+  \onslide<+->
+  \centering 
+    \begin{forest}
+    [gegnerische
+      [generisch
+        [gegner]
+        [isch, tier=terminal]
+      ]
+      [e, tier=terminal]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Konstituenten}
+  \onslide<+->
+  \onslide<+->
+  \centering 
+  \begin{block}
+    {Konstituenten einer Struktur}
+    \textit{Konstituenten} einer Einheit sind die (meistens kleineren und höchstens genauso großen) Einheiten, aus denen eine Struktur besteht.    
+  \end{block}
+\end{frame}
+
 \section{Rektion und Kongruenz}
+
+\begin{frame}
+  {Was sind Relationen?}
+  \onslide<+->
+  \onslide<+->
+  \begin{exe}
+    \ex\label{ex:rektionundkongruenz024}
+    \begin{xlist}
+      \ex{\label{ex:rektionundkongruenz025}[Dzsenifer] \alert{[schießt] } \orongsch{[ein Tor]}.}
+      \ex{\label{ex:rektionundkongruenz026}[Kim] \alert{[läuft]} \gruen{[schnell]}.}
+    \end{xlist}
+  \end{exe}
+  \onslide<+->
+  \Zeile
+  \begin{itemize}[<+->]
+    \item \orongsch{\textit{ein Tor}} ist ein \orongsch{Objekt} zu \textit{schießt}.
+    \item \gruen{\textit{schnell}} ist eine \gruen{adverbiale Bestimmung} zu \textit{läuft}.
+      \Zeile
+    \item Es gibt kein Objekt und keine adverbiale Bestimmung\\
+      ohne ein Verb im Satzkontext \ldots
+    \item die Begriffe \orongsch{Objekt} und \gruen{adverbiale Bestimmung} sind also \alert{relational}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \onslide<+->
+  \onslide<+->
+  {Rektion}
+  Wörter (oder andere Einheiten) \alert{bestimmen}\\
+  Eigenschaften anderer Wörter.\\
+  \onslide<+->
+  \Zeile
+  \begin{exe}
+    \ex[ ]{\gruen{Der Torwart} \alert{gedenkt} \orongsch{der Niederlage.}}
+    \ex[ ]{\gruen{Der FCR Duisburg} \alert{besiegt} \orongsch{den FFC Frankfurt}.}
+  \end{exe}
+  \onslide<+->
+  \Halbzeile
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex[*]{\rot{Den Torwart} \alert{gedenkt} \rot{die Niederlage}.}
+    \ex{\rot{Des FCR Duisburgs} \alert{besiegt} \rot{dem FFC Frankfurt}.}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Kongruenz}
+  \onslide<+->
+  \onslide<+->
+  Zwei oder mehr Wörter (bzw.\ Einheiten)\\
+  \alert{stimmen in bestimmten Eigenschaften überein}\\
+  \onslide<+->
+  \Zeile
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex{Der FCR besiegt \gruen{den} \alert{gegnerischen Verein}.}
+      \ex{Der FCR besiegt \alert{alle} \gruen{gegnerischen} \alert{Vereine}.}
+    \end{xlist}
+  \end{exe}
+  \onslide<+->
+  \Halbzeile
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex[*]{Der FCR besiegt \rot{die} \alert{gegnerischen Verein}.}
+      \ex[*]{Der FCR besiegt \alert{alle} \rot{gegnerischer} \alert{Verein}.}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Wichtige Kongruenzrelationen im Deutschen}
+  \onslide<+->
+  \onslide<+->
+  \alert{Subjekt-Verb-Kongruenz}\\
+  \Viertelzeile
+  Das Subjekt und das finite Verb eines Satzes stimmen in \alert{Person} und \alert{Numerus} überein.\\
+  \Zeile
+  \onslide<+->
+  \Zeile
+  \alert{Kongruenz in der Nominalgruppe}\\
+  \Viertelzeile
+  Zusammenstehende und zusammengehörige Artikelwörter, Adjektive und Substantive (in dieser Reihenfolge) stimmen in \alert{Numerus}, \alert{Genus} und \alert{Kasus} überein.
+\end{frame}
 
 \section{Valenz}
 
+\begin{frame}
+  {Traditionelle Verbtypen}
+  \pause
+  \begin{itemize}[<+->]
+    \item traditionelle Termini für Verbtypen (s.\ Kapitel 14 für Neuordnung)
+      \Halbzeile
+      \begin{itemize}[<+->]
+        \item \alert{intransitiv}: regiert nur einen Nominativ (\textit{leben}, \textit{schlafen})
+          \Viertelzeile
+        \item \alert{transitiv}: regiert einen Nominativ und einen Akkusativ (\textit{sehen}, \textit{lesen})
+          \Viertelzeile
+        \item \alert{ditransitiv}: regiert zusätzlich einen Dativ (\textit{geben}, \textit{schicken})
+          \Viertelzeile
+        \item \alert{präpositional transitiv}: regiert Nom und PP (\textit{leiden +unter})
+          \Viertelzeile
+        \item \alert{präpositional ditransitiv}: regiert Nom, Akk, PP (\textit{schreiben +an})
+          \Viertelzeile
+        \item \ldots
+          \Zeile
+      \end{itemize}
+    \item nur Abkürzungen für einige (von sehr viel mehr) \alert{Valenztypen}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Ergänzungen und Angaben}
+  \pause
+  Siehe auch: Kapitel~2, Abschnitt~2.4 (S.~40--48)!\\
+  \pause\Halbzeile
+  \begin{exe}
+    \ex\label{ex:valenz034}
+    \begin{xlist}
+      \ex{Gabriele malt \alert{[ein Bild]}.}
+      \pause
+      \ex{Gabriele malt \gruen{[gerne]}.}
+      \pause
+      \ex{Gabriele malt \gruen{[den ganzen Tag]}.}
+      \pause
+      \ex{Gabriele malt \gruen{[ihrem Mann]} \rot{[zu figürlich]}.}
+    \end{xlist}
+  \end{exe}
+  \pause\Halbzeile
+  \begin{itemize}[<+->]
+    \item \alert{[ein Bild]} mit besonderer Relation zum Verb
+    \item "`Weglassbarkeit"' (Optionalität) nicht entscheidend
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Lizenzierung}
+  \pause
+  \begin{exe}
+    \ex 
+    \begin{xlist}
+      \ex[ ]{Gabriele isst \gruen{[den ganzen Tag]} Walnüsse.}
+    \pause
+      \ex[ ]{Gabriele läuft \gruen{[den ganzen Tag]}.}
+      \pause
+      \ex[ ]{Gabriele backt ihrer Schwester \gruen{[den ganzen Tag]} Stollen.}
+      \pause
+      \ex[ ]{Gabriele litt \gruen{[den ganzen Tag]} unter Sonnenbrand.}
+    \end{xlist}
+    \pause\Halbzeile
+    \ex 
+    \begin{xlist}
+      \ex[*]{Gabriele isst \alert{[ein Bild]} Walnüsse.}
+      \pause
+      \ex[*]{Gabriele läuft \alert{[ein Bild]}.}
+      \pause
+      \ex[*]{Gabriele backt ihrer Schwester \alert{[ein Bild]} Stollen.}
+      \pause
+      \ex[*]{Gabriele litt \alert{[ein Bild]} unter Sonnenbrand. }
+      \pause
+    \end{xlist}
+  \end{exe}
+  \pause\Halbzeile
+  \begin{itemize}[<+->]
+    \item \gruen{Angaben} sind verb-unspezifisch lizenziert
+    \item \alert{Ergänzungen} sind verb(klassen)spezifisch \alert{genau einmal} lizenziert
+    \item \rot{Valenz = Liste der Ergänzungen eines lexikalischen Worts}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Iterierbarkeit | Angaben sind beliebig stapelbar}
+  \onslide<+->
+  \onslide<+->
+  \begin{exe}
+    \ex[ ]{Wir müssen den Wagen\\
+      \gruen{[jetzt]}\\
+      \gruen{[mit aller Kraft]}\\
+      \gruen{[vorsichtig]} anschieben.}
+    \onslide<+->
+    \ex[ ]{Wir essen \gruen{[schnell]}\\
+    \gruen{[mit Appetit]}\\
+    \gruen{[an einem Tisch]}\\
+    \gruen{[mit der Gabel]}\\
+    \alert{[einen Salat]}.}
+    \onslide<+->
+    \ex[*]{Wir essen \gruen{[schnell]}\\
+    \rot{[ein Tofugericht]}\\
+    \gruen{[mit Appetit]}\\
+    \gruen{[an einem Tisch]}\\
+    \gruen{[mit der Gabel]}\\
+    \alert{[einen Salat]}.}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Ergänzungen | Schnittstelle von Syntax und Semantik}
+  \onslide<+->
+  \onslide<+->
+  Verbsemantik | Welche \alert{Rolle} spielen die von den Satzgliedern bezeichneten Dinge in der vom Verb beschriebenen Situation?\\
+  \Zeile
+  \onslide<+->
+  Semantik von \alert{Ergänzungen} | \alert{abhängig} vom Verb\\
+  \onslide<+->
+  \Viertelzeile
+  Semantik von \gruen{Angaben} | \gruen{unabhängig} vom Verb\\
+  \Halbzeile
+  \pause
+  \begin{exe}
+    \ex\label{ex:valenz071}
+    \begin{xlist}
+      \ex{\label{ex:valenz072}Ich lösche \alert{[den Ordner]} \gruen{[während der Hausdurchsuchung]}.}
+      \pause
+      \ex{\label{ex:valenz073}Ich mähe \alert{[den Rasen]} \gruen{[während der Ferien]}.}
+      \pause
+      \ex{\label{ex:valenz074}Ich fürchte \alert{[den Sturm]} \gruen{[während des Sommers]}.}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Valenz | Zusammenfassung}
+  \onslide<+->
+  \onslide<+->
+  \alert{Angaben} sind grammatisch immer lizenziert\\
+  und bringen ihre eigene semantische Rolle mit.\\
+  \grau{Sie können aber semantisch\slash pragmatisch inkompatibel sein.}\\
+  \Zeile
+  \onslide<+->
+  \Zeile
+  \onslide<+->
+  \gruen{Ergänzungen} werden spezifisch vom Verb lizenziert\\
+  und in ihrer semantischen Rolle vom Verb festgelegt.\\
+  Jede dieser Rollen kann nur einmal vergeben werden.
+\end{frame}
+
+\section{Ausblick}
+
+\begin{frame}
+  {Nächste Woche | Wortklassen}
+  \begin{itemize}[<+->]
+    \item Möglichkeiten, Wortklassen zu definieren
+      \Halbzeile
+    \item syntaktisch definierte Wortklassen
+      \Halbzeile
+    \item \citet[Kapitel~6]{Schaefer2018b}
+  \end{itemize}
+\end{frame}
