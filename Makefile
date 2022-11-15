@@ -9,17 +9,21 @@ FILEPRE = SchaeferSyntax
 HOSUFF = Handout
 PRESUFF = Presentation
 
-H01JOB = $(FILEPRE)01$(HOSUFF)
-P01JOB = $(FILEPRE)01$(PRESUFF)
+H01JOB = 01$(FILEPRE)$(HOSUFF)
+P01JOB = 01$(FILEPRE)$(PRESUFF)
 L01FLAGS = \def\TITLE{1. Sprache, Grammatik, Grammatikalität}\def\LECTURE{01}
 
-H02JOB = $(FILEPRE)02$(HOSUFF)
-P02JOB = $(FILEPRE)02$(PRESUFF)
+H02JOB = 02$(FILEPRE)$(HOSUFF)
+P02JOB = 02$(FILEPRE)$(PRESUFF)
 L02FLAGS = \def\TITLE{2. Kern und Peripherie, Regel und Regularität}\def\LECTURE{02}
 
-H03JOB = $(FILEPRE)03$(HOSUFF)
-P03JOB = $(FILEPRE)03$(PRESUFF)
+H03JOB = 03$(FILEPRE)$(HOSUFF)
+P03JOB = 03$(FILEPRE)$(PRESUFF)
 L03FLAGS = \def\TITLE{3. Strukturen und Relationen}\def\LECTURE{03}
+
+H04JOB = 04$(FILEPRE)$(HOSUFF)
+P04JOB = 04$(FILEPRE)$(PRESUFF)
+L04FLAGS = \def\TITLE{4. Wortklassen und Syntax}\def\LECTURE{04}
 
 FULLJOB = $(FILEPRE)Handout
 
@@ -28,12 +32,12 @@ create:
 	mkdir -p ./output/includes
 
 all: handouts presentations
-handouts: h01 h02 h03
-presentations: p01 p02 p03
+handouts: h01 h02 h03 h04
+presentations: p01 p02 p03 p04
 
 allq: handoutsq presentationsq
-handoutsq: h01q h02q h03q
-presentationsq: p01q p02q p03q
+handoutsq: h01q h02q h03q h04q
+presentationsq: p01q p02q p03q p04q
 
 h01: create
 	$(LX) $(TEXFLAGS) -jobname=$(H01JOB) $(PREFLAGS) "$(L01FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
@@ -83,6 +87,23 @@ p03: create
 
 p03q: create
 	$(LX) $(TEXFLAGS) -jobname=$(P03JOB) "$(L03FLAGS)$(FINALFLAGS)"
+
+
+h04: create
+	$(LX) $(TEXFLAGS) -jobname=$(H04JOB) $(PREFLAGS) "$(L04FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(H04JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(H04JOB) "$(L04FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+h04q: create
+	$(LX) $(TEXFLAGS) -jobname=$(H04JOB) "$(L04FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+p04: create
+	$(LX) $(TEXFLAGS) -jobname=$(P04JOB) $(PREFLAGS) "$(L04FLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(P04JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(P04JOB) "$(L04FLAGS)$(FINALFLAGS)"
+
+p04q: create
+	$(LX) $(TEXFLAGS) -jobname=$(P04JOB) "$(L04FLAGS)$(FINALFLAGS)"
 
 
 full: create
