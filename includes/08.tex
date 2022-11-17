@@ -1,0 +1,230 @@
+\section{Überblick}
+
+\begin{frame}
+  {Verbphrasen und Verbkomplexe}
+  \onslide<+->
+  \begin{itemize}[<+->]
+    \item \citet[12.8]{Schaefer2018b}
+  \end{itemize}
+\end{frame}
+
+
+\section{Verbphrasen}
+
+\begin{frame}
+  {Beispiele für Verbphrasen}
+  \pause
+  \begin{exe}
+  \ex
+    \begin{xlist}
+      \ex{dass [Ischariot \alert{malt}]}
+      \pause
+      \ex{dass [Ischariot [das Bild] \alert{malt}]}
+      \pause
+      \ex{dass [Ischariot [dem Arzt] [das Bild] \alert{verkauft}]}
+      \pause
+      \ex{dass [Ischariot [wahrscheinlich] [dem Arzt] [heimlich] [das Bild] \\schnell \alert{verkauft}]}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \Halbzeile
+  \centering
+  \scalebox{0.8}{
+    \begin{forest}
+      l sep+=3em
+      [VP, calign=last
+        [NP, tier=preterminal
+          [\it Ischariot, narroof]
+        ]
+        [AdvP, tier=preterminal
+          [\it wahrscheinlich, narroof]
+        ]
+        [NP, tier=preterminal
+          [\it dem Arzt, narroof]
+        ]
+        [AdvP, tier=preterminal
+          [\it heimlich, narroof]
+        ]
+        [NP, tier=preterminal
+          [\it das Bild, narroof]
+        ]
+        [AdvP, tier=preterminal
+          [\it schnell, narroof]
+        ]
+        [\bf V, tier=preterminal, bluetree
+          [\it verkauft]
+        ]
+      ]
+    \end{forest}
+  }
+\end{frame}
+
+\section{Verbkomplexe}
+
+\begin{frame}
+  {Warum Verbkomplexe?}
+  \pause
+  \begin{exe}
+    \ex{\label{ex:verbkomplex121} dass der Junge ein Eis \alert{[isst]}}
+    \pause
+    \ex\label{ex:verbkomplex122}
+    \begin{xlist}
+      \ex{\label{ex:verbkomplex123} dass der Junge ein Eis \alert{[essen wird]}}
+      \pause
+      \ex{\label{ex:verbkomplex124} dass das Eis \alert{[gegessen wird]}}
+      \pause
+      \ex{\label{ex:verbkomplex125} dass die Freundin das Eis \alert{[kaufen wollen wird]}}
+    \end{xlist}
+  \end{exe}
+  \Zeile
+  \pause
+  Deutsch: \alert{Verben werden miteinander kombiniert, um Tempora,\\
+  Modalität, Diathese usw.\ zu kodieren.}\\
+\end{frame}
+
+
+\begin{frame}
+  {Verbkomplexe und Statusrektion}
+  \pause
+  \Halbzeile
+  \centering
+  \scalebox{0.7}{
+    \begin{forest}
+      [\bf V, tier=preterminal
+        [\it isst, baseline]
+      ]
+    \end{forest}
+  }
+  \hspace{1em}\scalebox{0.7}{
+    \begin{forest}
+      [\bf V\Sub{B+A}, calign=last, bluetree
+        [\bf V\Sub{B}, tier=preterminal, gruentree
+          [\it essen\\(1.~Status)]
+        ]
+        [\bf V\Sub{A}, tier=preterminal
+          [\it wird, baseline]
+          {\draw [->, trueblue, bend left=30] (.south) to (!uu11.south);}
+        ]
+      ]
+    \end{forest}
+  }
+  \hspace{1em}\scalebox{0.7}{
+    \begin{forest}
+      [\bf V\Sub{B+A}, calign=last, bluetree
+        [\bf V\Sub{B}, tier=preterminal, gruentree
+          [\it gegessen\\(3.~Status)]
+        ]
+        [\bf V\Sub{A}, tier=preterminal
+          [\it wird, baseline]
+          {\draw [->, trueblue, bend left=30] (.south) to (!uu11.south);}
+        ]
+      ]
+    \end{forest}
+  }
+  \hspace{1em}\scalebox{0.7}{
+    \begin{forest}
+      [\bf V\Sub{C+B+A}, calign=last, bluetree
+        [\bf V\Sub{C+B}, calign=last, gruentree
+          [\bf V\Sub{C}, tier=preterminal, orongschtree
+            [\it kaufen\\(1.~Status)]
+          ]
+          [\bf V\Sub{B}, tier=preterminal
+            [\it wollen\\(1.~Status)]
+            {\draw [->, gruen, bend left=30] (.south) to (!uu11.south);}
+          ]
+        ]
+        [\bf V\Sub{A}, tier=preterminal
+          [\it wird, baseline]
+          {\draw [->, trueblue, bend left=30] (.south) to (!uu121.south);}
+        ]
+      ]
+    \end{forest}
+  }
+  \pause
+  \Halbzeile
+  \begin{itemize}[<+->]
+    \item Buchstaben (im Buch Zahlen): \alert{Verb A} regiert \gruen{Verb B} regiert \orongsch{Verb C}
+    \item Numerierung: Status
+      \begin{itemize}[<+->]
+        \item 1.~Status: Infinitiv ohne \textit{zu}
+        \item 2.~Status: Infinitiv mit \textit{zu}
+        \item 3.~Status: Partizip
+      \end{itemize}
+    \item infinite Verbformen: solche, die von anderen Verben regiert werden
+%    \item "`Partizip 1"' keine infinite Verbform (Derivation zum Adjektiv)
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Verbkomplex und Rektion in der VP}
+  \pause
+  Die Hilfsverben \textit{heben} die \alert{Valenz-Anforderungen}\\
+  lexikalischer Verben zu sich \textit{an}.\\
+  \pause
+  \centering
+  \adjustbox{max width=0.5\textwidth}{%
+    \begin{forest}
+      l sep+=2em
+      [VP, calign=last
+        [NP, tier=preterminal, name=subj
+          [\it die Freundin, narroof]
+        ]
+        [NP, tier=preterminal, name=obj
+          [\it das Eis, narroof]
+        ]
+        [\bf V\Sub{\orongsch{C}\gruen{+B}\alert{+A}}, calign=last, bluetree, name=CBAnode
+          [\bf V\Sub{\orongsch{C}\gruen{+B}}, calign=last, gruentree, name=CBnode
+            [\bf V\Sub{C}, tier=preterminal, orongschtree
+              [\it kaufen]
+            ]
+            {\draw [->, orongsch, bend left=15] (.north) to node [above, near start] {\tiny{(Nom, Akk)}} (CBnode.west);}
+            [\bf V\Sub{B}, tier=preterminal
+              [\it wollen]
+              {\draw [->, gruen, bend left=30] (.south) to node [below] {\footnotesize{1.~Status}} (!uu11.south);}
+            ]
+          ]
+          {\draw [->, orongsch, bend left=15] (.north) to node [above, near start] {\tiny{(Nom, Akk)}} (CBAnode.west);}
+          [\bf V\Sub{A}, tier=preterminal
+            [\it wird]
+            {\draw [->, trueblue, bend left=30] (.south) to node [below, near start] {\footnotesize{1.~Status}} (!uu121.south);}
+          ]
+        ]
+        {\draw [->, orongsch, bend right=80] (.north) to node [above] {\footnotesize{Nom}} (subj.north);}
+        {\draw [->, orongsch, bend right=60] (.north) to node [above] {\footnotesize{Akk}} (obj.north);}
+      ]
+    \end{forest}
+  }
+\end{frame}
+
+
+\begin{frame}
+  {Verbphrase und Verbkomplex | Schemata}
+  \centering
+  \begin{forest}
+    phrasenschema
+    [VP, Ephr, calign=last
+      [Angaben, Emult, Eopt, Erec [Ergänzungen, Eopt, Emult, Erec, name=Vpergaenzi]]
+      [V, Ehd]
+      {\draw [->, bend left=90] (.south) to (Vpergaenzi.south);}
+    ]
+  \end{forest}
+  \pause\hspace{2em}
+  \begin{forest}
+    phrasenschema
+    [V\Sub{j+i}, Ephr, , calign=last
+      [V\Sub{j}, Eopt, name=Vkkopf]
+      [V\Sub{i}, Ehd]
+      {\draw [->, bend left=30] (.south) to (Vkkopf.south);}
+    ]
+  \end{forest}
+\end{frame}
+
+
+
+
+\section{Vorschau}
+
+\begin{frame}
+  {Form und Funktion von Sätzen}
+\end{frame}

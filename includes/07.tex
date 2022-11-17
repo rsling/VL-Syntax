@@ -1,0 +1,69 @@
+
+\section{Überblick}
+
+\begin{frame}
+  {Andere Phrasentypen}
+  \onslide<+->
+  \begin{itemize}[<+->]
+    \item Koordination
+    \item Adjektivphrasen
+    \item Präpositionalphrasen
+    \item Adverbphrasen
+    \item Komplementiererphrase
+    \item nicht-phrasenfähige Elemente
+      \Zeile
+    \item \citet[12.2,12.4--12.7]{Schaefer2018b}
+  \end{itemize}
+\end{frame}
+
+\section{Phrasentypen, Fortsetzung}
+
+\begin{frame}
+  {Komplementiererphrasen = eingeleitete Nebensätze}
+  \pause
+  \begin{exe}
+    \ex\label{ex:komplementiererphrase111}
+    \begin{xlist}
+      \ex[]{\label{ex:komplementiererphrase112} Der Arzt möchte, [dass [der Privatpatient die Rechnung \alert{bezahlt}]].}
+      \pause
+      \ex[*]{\label{ex:komplementiererphrase113} Der Arzt möchte, [dass [der Privatpatient \rot{bezahlt} die Rechnung]].}
+      \pause
+      \ex[*]{\label{ex:komplementiererphrase114} Der Arzt möchte, [dass [\rot{bezahlt} der Privatpatient die Rechnung]].}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \Halbzeile
+  \centering
+  \begin{forest}
+    [KP, calign=first
+      [\bf K, tier=preterminal
+        [\it dass, name=Kpkopf]
+      ]
+      [\alert{VP}, tier=preterminal
+        [\it der Kassenpatient \alert{geht}, narroof]
+      ]
+    ]
+  \end{forest}\\
+  \pause
+  \Zeile
+  \alert{Verb-Letzt-Stellung!}\\
+\end{frame}
+
+
+
+\begin{frame}
+  {Komplementiererphrase | Schema}
+  \centering
+  \begin{forest}
+    phrasenschema
+    [KP, Ephr, calign=first
+      [K, Ehd, name=Kpkopf]
+      [VP, Eobl]
+      {\draw [bend left=45, <-] (.south) to (Kpkopf.south);}
+    ]
+  \end{forest}
+\end{frame}
+
+
+\section{Vorschau}
+
