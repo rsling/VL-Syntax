@@ -29,6 +29,10 @@ H05JOB = 05$(FILEPRE)$(HOSUFF)
 P05JOB = 05$(FILEPRE)$(PRESUFF)
 L05FLAGS = \def\TITLE{5. Phrasen und Konstituententests}\def\LECTURE{05}
 
+H06JOB = 06$(FILEPRE)$(HOSUFF)
+P06JOB = 06$(FILEPRE)$(PRESUFF)
+L06FLAGS = \def\TITLE{6. Nominalphrasen}\def\LECTURE{06}
+
 FULLJOB = $(FILEPRE)Handout
 
 
