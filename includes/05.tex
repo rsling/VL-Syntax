@@ -1,0 +1,493 @@
+
+
+\section{Überblick}
+
+\begin{frame}
+  {Überblick: Konstituenten und Phrasen}
+  \pause
+  \begin{itemize}[<+->]
+    \item Warum und wie syntaktische Analyse?
+    \item syntaktische Generalisierungen formulieren
+    \item größere und kleinere Teilstrukturen (Konstituenten) identifizieren
+      \Zeile
+    \item Strukur der deutschen \alert{Nominalphrase}
+    \item Struktur der deutschen \alert{Präpositionalphrase}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Syntax und (bildungssprachliche) Funktion}
+  \pause
+  \begin{itemize}[<+->]
+    \item \alert{hohe Komplexität} des syntaktischen Systems
+    \item \rot{Regularitätensystem kaum vollständig explizit lernbar}
+    \item überall \alert{starke Interaktion mit Semantik, Pragmatik usw.}
+    \item \alert{Kompositionalität}
+      \Zeile
+    \item Der Versuch, Funktionen zu beschreiben, ohne Formsystem zu kennen,\\
+      wäre in der Syntax völlig absurd.
+      \Zeile
+    \item reduzierte Syntax = erhebliche Einschränkung des Ausdrucks
+    \item komplexe schriftsprachliche Syntax, ggf.\ \rot{Rezeptionsprobleme}
+  \end{itemize}
+\end{frame}
+
+
+\section{Konstituenten}
+
+
+\begin{frame}
+  {Generalisierungen anhand von Wortklassen in der Syntax}
+  \pause
+  Denkbare Abstraktion für einen Satzbauplan anhand von Wortklassen:\\
+  \Zeile
+  \pause
+  \begin{center}
+    \begin{forest}
+      [Satz
+        [\it Ein]
+        [\it Snookerball]
+        [\it ist]
+        [\it eine]
+        [\it Kugel]
+        [\it aus]
+        [\it Kunststoff]
+      ]
+    \end{forest}\\
+    \pause
+    \Halbzeile
+    \begin{center}
+      →
+    \end{center}
+    \Halbzeile
+    \begin{forest}
+      [Satz
+        [Art]
+        [Subst]
+        [Kopula-Verb]
+        [Art]
+        [Subst]
+        [Prp]
+        [Subst]
+      ]
+    \end{forest}        
+  \end{center}
+\end{frame}
+
+
+\begin{frame}
+  {"`Flache Beschreibungen"'}
+  \pause
+  \rot{Solche flachen Strukturbeschreibungen sind extrem ineffizient!}\\
+  \Zeile
+  \pause
+  Aus Korpus mit \alert{über 1 Mrd.\ Wörtern} (DeReKo) \alert{alle Sätze} mit der Struktur\\
+  von der vorherigen Folie (Art Subst Kopula Art Subst Prp Subst):\\
+  \pause
+  \Zeile
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex{Die Verlierer sind die Schulkinder in Weyerbusch.}
+      \pause
+      \ex{Die Vienne ist ein Fluss in Frankreich.}
+      \pause
+      \ex{Ein Baustein ist die Begegnung beim Spiel.}
+      \pause
+      \ex{Das Problem ist die Ortsdurchfahrt in Großsachsen.}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Viele ähnliche Strukturen auf einmal beschreiben}
+  \pause
+  Strukturen, die ähnlich, aber \alert{nicht genau} \\
+  \alert{[Art Subst Kopula Art Subst Prp Subst]} sind:\\
+  \pause
+  \Zeile
+  \begin{exe}
+    \ex\label{ex:syntaktischestruktur013}
+    \begin{xlist}
+      \ex{\label{ex:syntaktischestruktur014} [Dieses Endspiel] ist [eine spannende Partie].}
+      \pause
+      \ex{\label{ex:syntaktischestruktur015} [Eine Hose] war [eine Hose].}
+      \pause
+      \ex{\label{ex:syntaktischestruktur016} [Sieger] wurde [ein Teilnehmer aus dem Vereinigten Königreich].}
+      \pause
+      \ex{\label{ex:syntaktischestruktur017} [Lemmy] ist [Ian Kilmister].}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \Halbzeile
+  \begin{itemize}[<+->]
+    \item Diese Sätze sie sind \alert{gleich aufgebaut}.
+    \item Sie haben jeweils \alert{drei Konstituenten} (= Bestandteile).
+    \item Die Konstituenten haben intern teilweise abweichende Strukturen.
+    \item Aber ihre unterschiedlich aufgebauten Konstituenten (Nominalphrasen)\\
+      verhalten sich in diesen Sätzen jeweils gleich. 
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Bauplan und Analyse}
+  \pause
+  Bauplan "`Kopula-Satz"' (vorläufig):\\
+  \pause
+  \Halbzeile
+  \begin{center}
+    \begin{forest}
+      [Satz
+        [NP]
+        [Kopula-Verb]
+        [NP]
+      ]
+    \end{forest}\\
+    \pause
+    \Zeile
+    \raggedright
+    Analyse auf Basis dieses Plans (vorläufig):\\
+    \pause
+    \Halbzeile
+    \centering
+    \begin{forest}
+      [Satz
+        [NP
+          [\it Dieses Endspiel, narroof]
+        ]
+        [Kopula-Verb
+          [\it ist]
+        ]
+        [NP
+          [\it eine spannende Partie, narroof]
+        ]
+      ]
+    \end{forest}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}
+  {Konstituenten und Konstituententests}
+  \pause
+  {\Large \alert{Konstituententests sollen uns helfen, herauszufinden,\\
+  wie wir Sätze in Konstituenten unterteilen wollen.}}\\
+  \Zeile
+  \pause
+  \rot{Achtung!}
+  \pause
+  \Halbzeile
+  \begin{itemize}[<+->]
+    \item \rot{Konstituententests sind heuristisch!}
+    \item unerwünschte Ergebnisse in beide Richtungen
+    \item keine "`wahre Konstituentenstruktur"'
+    \item theorieabhängig bzw.\ abhängig von gewählten Tests
+    \Zeile
+    \item Ziel: kompakte Beschreibung aller möglichen Strukturen
+    \item gewiss: möglichst "`natürliche"' Analyse erwünscht
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Pronominalisierungstest}
+  \pause
+  \begin{exe}
+    \ex Mausi isst \alert<3->{den leckeren Marmorkuchen}.\\
+    \pause
+      \KTArr{PronTest} Mausi isst \alert{ihn}.
+    \pause
+    \ex{\label{ex:konstituententests025} \rot<5->{Mausi isst} den Marmorkuchen.\\
+    \pause
+      \KTArr{PronTest} \Ast \rot{Sie} den Marmorkuchen.}
+    \pause
+    \ex{\label{ex:konstituententests026} Mausi isst \alert<7->{den Marmorkuchen und das Eis mit Multebeeren}.\\
+    \pause
+    \KTArr{PronTest} Mausi isst \alert{sie}.}
+  \end{exe}
+  \pause
+  \Halbzeile
+  Pronominalausdrücke i.\,w.\,S.:
+  \begin{exe}
+    \ex{\label{ex:konstituententests027} Ich treffe euch \alert<9->{am Montag} \gruen<10->{in der Mensa}.\\
+    \pause
+    \KTArr{PronTest} Ich treffe euch \alert{dann} \gruen<10->{dort}.}
+      \pause
+      \pause
+      \ex{\label{ex:konstituententests028} Er liest den Text \alert<12->{auf eine Art, die ich nicht ausstehen kann}.\\
+      \pause
+      \KTArr{PronTest} Er liest den Text \alert{so}.}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Vorfeldtest\slash Bewegungstest}
+  \pause
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex{Sarah sieht den Kuchen \alert<3->{durch das Fenster}.\\
+        \pause
+        \KTArr{VfTest} \alert{Durch das Fenster} sieht Sarah den Kuchen.}
+      \pause
+      \ex{Er versucht \alert{zu essen}.\\
+        \pause
+        \KTArr{VfTest} \alert<5->{Zu essen} versucht er.}
+      \pause
+      \ex{Sarah möchte gerne \alert{einen Kuchen backen}.\\
+        \pause
+        \KTArr{VfTest} \alert<7->{Einen Kuchen backen} möchte Sarah gerne.}
+      \pause
+      \ex{Sarah möchte \rot<9->{gerne einen} Kuchen backen.\\
+        \pause
+        \KTArr{VfTest} \Ast \rot{Gerne einen} möchte Sarah Kuchen backen.}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \Halbzeile
+  verallgemeinerter "`Bewegungstest"':\\
+  \begin{exe}
+    \ex\label{ex:konstituententests037}
+    \begin{xlist}
+      \ex{\label{ex:konstituententests038} Gestern hat \alert<11->{Elena} \gruen<11->{im Turmspringen} \orongsch<11->{eine Medaille} gewonnen.}
+      \pause
+      \ex{\label{ex:konstituententests039} Gestern hat \gruen{im Turmspringen} \alert{Elena} \orongsch{eine Medaille} gewonnen.}
+      \pause
+      \ex{\label{ex:konstituententests040} Gestern hat \gruen{im Turmspringen} \orongsch{eine Medaille} \alert{Elena} gewonnen.}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Koordinationstest}
+  \pause
+  \begin{exe}
+    \ex\label{ex:konstituententests041}
+    \begin{xlist}
+      \ex Wir essen \alert<3->{einen Kuchen}.\\
+      \pause
+        \KTArr{KoorTest} Wir essen \alert{einen Kuchen} \gruen{und} \alert{ein Eis}.
+      \pause
+      \ex Wir \alert<5->{essen einen Kuchen}.\\
+      \pause
+        \KTArr{KoorTest} Wir \alert{essen einen Kuchen} \gruen{und} \alert{lesen ein Buch}.
+      \pause
+      \ex Sarah hat versucht, \alert<7->{einen Kuchen zu backen}.\\
+      \pause
+        \KTArr{KoorTest} Sarah hat versucht, \alert{einen Kuchen zu backen} \gruen{und} \\{}\alert{heimlich das Eis aufzuessen}.
+      \pause
+      \ex Wir sehen, dass \alert<9->{die Sonne scheint}.\\
+      \pause
+        \KTArr{KoorTest} Wir sehen, dass \alert{die Sonne scheint} \gruen{und} \\{}\alert{Mausi den Rasen mäht}.
+    \end{xlist}
+  \end{exe}
+  \pause
+  \begin{exe}
+    \ex{\label{ex:konstituententests047} Der Kellner notiert, dass \rot<11->{meine Kollegin einen Salat} möchte.\\
+    \pause
+    \KTArr{KoorTest} Der Kellner notiert, dass \rot{meine Kollegin einen Salat}\\
+    \gruen{und} \rot{mein Kollege einen Sojaburger} möchte.}
+    \end{exe}
+\end{frame}
+
+
+
+\section{Satzglieder}
+
+\begin{frame}
+  {Satzglieder?}
+  \pause
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex Sarah riecht den Kuchen \alert<3->{mit ihrer Nase}.\\
+      \pause
+        \KTArr{VfTest} \alert{Mit ihrer Nase} riecht Sarah den Kuchen.
+        \pause
+      \ex \KTArr{KoorTest} Sarah riecht den Kuchen\\
+      {}\alert{mit ihrer Nase} und \alert{trotz des Durchzugs}.
+    \end{xlist}
+    \pause
+    \ex
+    \begin{xlist}
+      \ex Sarah riecht den Kuchen \gruen<6->{mit der Sahne}.\\
+      \pause
+        \KTArr{VfTest} \Ast \rot{Mit der Sahne} riecht Sarah den Kuchen.
+        \pause
+      \ex \KTArr{KoorTest} Sarah riecht den Kuchen\\
+      {}\alert{mit der Sahne} und \alert{mit den leckeren Rosinen}.
+    \end{xlist}
+  \end{exe}
+  \pause
+  \resizebox{0.9\textwidth}{!}{
+    \begin{forest}
+      [Satz
+        [\it Sarah]
+        [\it riecht]
+        [\it den Kuchen]
+        [\it mit ihrer Nase]
+      ]
+    \end{forest}\pause\begin{forest}
+      [Satz
+        [\it Sarah, tier=term]
+        [\it riecht, tier=term]
+        [Konstituente X
+          [\it den Kuchen, tier=term]
+          [\it mit der Sahne, tier=term]
+        ]
+      ]
+    \end{forest}
+  }
+\end{frame}
+
+\begin{frame}
+  {Satzglieder als "`vorfeldfähige Konstituenten"'}
+  \pause
+  Ganz so einfach ist das nicht\ldots\\
+  \Zeile
+  \pause
+  \begin{exe}
+    \ex \rot{[Kaufen können]} möchte Alma die Wolldecke.
+    \pause
+    \ex \rot{[Über Syntax]} hat Sarah sich \alert{ein Buch} ausgeliehen.
+  \end{exe}
+  \Zeile
+  \pause
+  \alert{Wozu überhaupt den begriff des Satzglieds?}
+  \begin{itemize}[<+->]
+    \item in der Linguistik kaum von Interesse
+    \item Sammelbegriff für "`Objekte und Adverbiale"'? -- \rot{Wozu?}
+    \item Vorfeldfähigkeit? -- Wohl kaum, denn das wäre \rot{zirkulär} (und s.\,o.).
+    \item Desambiguierung von Sätzen (s.\ Kuchen-Nase)? --\\
+      \rot{Dabei hilft aber der Begriff "`Satzglied"' nicht.}
+    \item Außerdem: \alert{Fördert das die Sprachkompetenz, oder kann das weg?}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Strukturelle Ambiguitäten und Kompositionalität}
+  \pause
+  \begin{exe}
+    \ex{\label{ex:strukturelleambiguitaet060} Scully sieht den Außerirdischen mit dem Teleskop.}
+  \end{exe}
+  \pause
+  \Halbzeile
+  \begin{block}{Erinnerung: Kompositionalität}
+    Die syntaktische Struktur ist die Basis für die Interpretation des Satzes (bzw.\ jedes syntaktisch komplexen Ausdrucks).
+  \end{block}
+  \pause
+  \Halbzeile
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex Scully sieht \gruen<5->{[den Außerirdischen]} \orongsch<6->{[mit dem Teleskop]}.
+      \pause
+      \pause
+      \pause
+      \ex Scully sieht \alert<8->{[den Außerirdischen [mit dem Teleskop]]}.
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+
+
+\begin{frame}
+  {Repräsentationsformat: Phrasenschemata}
+  \pause
+  \begin{itemize}[<+->]
+    \item \alert{Grammatikalität = Konformität zu einer spezifischen Grammatik}
+    \item Strukturen ohne spezifizierte Struktur: \rot{ungrammatisch}
+      \Halbzeile
+    \item Phrasenschemata = \alert{Baupläne} für zulässige Strukturen
+    \item Strukturen = \alert{Bäume}
+    \item Bei einer konkreten Analyse muss für jede Verzweigung im Baum\\
+      ein Phrasenschema vorliegen, \rot{sonst ist die Analyse nicht zulässig}.
+  \end{itemize}
+  \pause
+  \Halbzeile
+  \centering
+  \begin{multicols}{2}
+    \footnotesize Das Schema:~\scalebox{0.6}{%
+      \begin{forest}
+      phrasenschema, baseline
+      [NP, Ephr, calign=last
+        [Artikel, Eopt, Emult
+          [Pronomen, Eopt]
+        ]
+        [A, Eoptrec]
+        [N, Ehd]
+      ]
+    \end{forest}
+    \hspace{4em}
+    }
+    \onslide<8->{\footnotesize erlaubt~die~Analyse:~\scalebox{0.6}{%
+      \begin{forest}
+        [NP, calign=last, baseline
+          [Artikel
+            [\it ein]
+          ]
+          [A
+            [\it leckerer]
+          ]
+          [A
+            [\it geräucherter]
+          ]
+          [\textbf{N}
+            [\it Tofu]
+          ]
+        ]
+      \end{forest}
+    }
+  }
+  \end{multicols}
+\end{frame}
+
+\begin{frame}
+  {Jede Phrase hat genau einen Kopf}
+  \pause
+  \resizebox{\textwidth}{!}{
+    \begin{tabular}{lll}
+      \toprule
+      \textbf{Kopf} & \textbf{Phrase} & \textbf{Beispiel} \\
+      \midrule
+      Nomen (Substantiv, Pronomen) & Nominalphrase (NP) & \textit{die tolle \alert{Auf"|führung}} \\
+      Adjektiv & Adjektivphrase (AP) & \textit{sehr \alert{schön}} \\
+      Präposition & Präpositionalphrase (PP) & \textit{\alert{in} der Uni} \\
+      Adverb & Adverbphrase (AdvP) & \textit{total \alert{offensichtlich}} \\
+      Verb & Verbphrase (VP) & \textit{Sarah den Kuchen gebacken \alert{hat}} \\
+      Komplementierer & Komplementiererphrase (KP) & \textit{\alert{dass} es läuft} \\
+      \bottomrule
+    \end{tabular}
+  } 
+  \pause
+  \Halbzeile
+  \begin{itemize}[<+->]
+    \item Der Kopf bestimmt den \alert{internen Aufbau} der Phrase.
+    \item Der Kopf bestimmt die \alert{externen kategorialen Merkmale} der Phrase\\
+      und so das syntaktische Verhalten der Phrase (Parallele: \alert{Kompositum}).
+  \end{itemize}
+\end{frame}
+
+
+\section{Phrasentypen}
+
+\begin{frame}
+  {Wieviele Wortklassen? Wieviele Phrasentypen?}
+  \pause
+  \begin{itemize}[<+->]
+    \item \alert{Phrasentyp: passend zur Wortklasse des Kopfes}
+    \item maximal so viele Phrasentypen wie Wortklassen
+    \item aber: nicht alle Wortklassen kopffähig (\alert{Funktionswörter})
+      \Zeile
+    \item heute nur zwei Phrasentypen als Beispiele:
+      \begin{itemize}[<+->]
+        \item Nominalphrase
+        \item Präpositionalphrase
+      \end{itemize}
+    \item \rot{in der Klausur: alle Phrasentypen}\\
+      (ab nächster Woche vorausgesetzt)
+  \end{itemize}
+\end{frame}
+
+
+

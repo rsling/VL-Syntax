@@ -25,6 +25,10 @@ H04JOB = 04$(FILEPRE)$(HOSUFF)
 P04JOB = 04$(FILEPRE)$(PRESUFF)
 L04FLAGS = \def\TITLE{4. Wortklassen und Syntax}\def\LECTURE{04}
 
+H05JOB = 05$(FILEPRE)$(HOSUFF)
+P05JOB = 05$(FILEPRE)$(PRESUFF)
+L05FLAGS = \def\TITLE{5. Phrasen und Konstituententests}\def\LECTURE{05}
+
 FULLJOB = $(FILEPRE)Handout
 
 
@@ -32,12 +36,12 @@ create:
 	mkdir -p ./output/includes
 
 all: handouts presentations
-handouts: h01 h02 h03 h04
-presentations: p01 p02 p03 p04
+handouts: h01 h02 h03 h04 h05 h06
+presentations: p01 p02 p03 p04 p05 p06
 
 allq: handoutsq presentationsq
-handoutsq: h01q h02q h03q h04q
-presentationsq: p01q p02q p03q p04q
+handoutsq: h01q h02q h03q h04q h05q h06q
+presentationsq: p01q p02q p03q p04q p05q p06q
 
 h01: create
 	$(LX) $(TEXFLAGS) -jobname=$(H01JOB) $(PREFLAGS) "$(L01FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
@@ -104,6 +108,40 @@ p04: create
 
 p04q: create
 	$(LX) $(TEXFLAGS) -jobname=$(P04JOB) "$(L04FLAGS)$(FINALFLAGS)"
+
+h05: create
+	$(LX) $(TEXFLAGS) -jobname=$(H05JOB) $(PREFLAGS) "$(L05FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(H05JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(H05JOB) "$(L05FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+h05q: create
+	$(LX) $(TEXFLAGS) -jobname=$(H05JOB) "$(L05FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+p05: create
+	$(LX) $(TEXFLAGS) -jobname=$(P05JOB) $(PREFLAGS) "$(L05FLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(P05JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(P05JOB) "$(L05FLAGS)$(FINALFLAGS)"
+
+p05q: create
+	$(LX) $(TEXFLAGS) -jobname=$(P05JOB) "$(L05FLAGS)$(FINALFLAGS)"
+
+
+h06: create
+	$(LX) $(TEXFLAGS) -jobname=$(H06JOB) $(PREFLAGS) "$(L06FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(H06JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(H06JOB) "$(L06FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+h06q: create
+	$(LX) $(TEXFLAGS) -jobname=$(H06JOB) "$(L06FLAGS)$(HANDIFLAGS)$(FINALFLAGS)"
+
+p06: create
+	$(LX) $(TEXFLAGS) -jobname=$(P06JOB) $(PREFLAGS) "$(L06FLAGS)$(FINALFLAGS)"
+	cd ./output; $(BX) $(P06JOB)
+	$(LX) $(TEXFLAGS) -jobname=$(P06JOB) "$(L06FLAGS)$(FINALFLAGS)"
+
+p06q: create
+	$(LX) $(TEXFLAGS) -jobname=$(P06JOB) "$(L06FLAGS)$(FINALFLAGS)"
+
 
 
 full: create
