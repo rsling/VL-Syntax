@@ -1,0 +1,236 @@
+\section{Überblick}
+
+\begin{frame}
+  {Nebensätze und unabhängige Sätze}
+  \begin{itemize}[<+->]
+    \item \citet{Schaefer2018b}
+  \end{itemize}
+\end{frame}
+
+
+\section{Relativsätze}
+
+\begin{frame}
+  {Relativsätze als etwas andere VL-Sätze}
+  \pause
+  Das \tuerkis{Relativelement} wird nach links gestellt. Das \alert{Verb} bleibt rechts.\\
+  \pause
+  \begin{center}
+    \adjustbox{max width=0.4\textwidth}{%
+      \begin{minipage}{0.7\textwidth}
+      \begin{forest}
+        [NP, calign=child, calign child=2
+          [Art, tier=preterminal
+            [\it einen]
+          ]
+          [\bf N, tier=preterminal
+            [\it Tofu]
+          ]
+          [RS, calign=first
+            [NP\Sub{1}, tier=preterminal, tuerkistree
+              [\it der, narroof, name=BeweDer]
+            ]
+            [VP, calign=last
+              [NP, tier=preterminal, baseline
+                [\it mir, narroof]
+              ]
+              [\Ti, tier=preterminal, tuerkistree]
+              {\draw[dotted, tuerkis, thick, ->] (.south) |- ++(0,-4.5em) -| (BeweDer.south);}
+              [Ptkl, tier=preterminal
+                [nicht]
+              ]
+              [\bf V, calign=last
+                [\bf V, tier=preterminal
+                  [\it geschmeckt]
+                ]
+                [\bf V, tier=preterminal, bluetree
+                  [\it hat]
+                ]
+              ]
+            ]
+          ]
+        ]
+      \end{forest}
+    \end{minipage}
+    }
+    \pause
+    \hspace{0.1\textwidth}\adjustbox{max width=0.35\textwidth}{%
+      \begin{minipage}{0.35\textwidth}
+      \begin{forest}
+        [RS, Ephr
+          [XP\UpSub{relativ}{1}, Eobl, baseline, tuerkis]
+          [VP\\{[\ldots\tuerkis{\Ti}\ldots]}, Eobl]
+        ]
+      \end{forest}
+      \end{minipage}
+    }
+  \end{center}
+  \pause
+  \Halbzeile
+  \begin{itemize}[<+->]
+    \item Relativelement
+      \begin{itemize}[<+->]
+        \item \alert{Bedeutung}: Bezugs-Substantiv
+        \item \alert{Genus, Numerus}: Kongruenz mit Bezugs-Substantiv
+        \item \alert{Kasus\slash PP-Form}: gemäß Status als Ergänzung\slash Angabe im RS
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Komplexe Einbettung des Relativelements}
+  \pause
+  Das \tuerkis{Relativelement} als pränominaler Genitiv nimmt die Matrix-NP mit.\\
+  \pause
+  \Halbzeile
+  \centering
+  \begin{forest}
+    [NP, calign=child, calign child=2
+      [Art, tier=preterminal
+        [\it der]
+      ]
+      [\bf N, tier=preterminal
+        [\it Tofu]
+        {\draw [->, bend right=30] (.south) to node [below, near start] {\footnotesize\textsc{Genus,Numerus}} (RekDessen.south);}
+      ]
+      [RS, calign=first
+        [NP\Sub{1}, calign=first, tuerkistree
+          [NP, tier=preterminal
+            [\it dessen, narroof, name=RekDessen]
+          ]
+          [\bf N, tier=preterminal
+            [\it Geschmack, name=RekGeschmack]
+            {\draw [->, bend left=25] (.south) to node [below, near start] {\footnotesize\textsc{Kasus}} (RekDessen.south);}
+          ]
+        ]
+        [VP, calign=last
+          [NP, tier=preterminal
+            [\it ich, narroof]
+          ]
+          [\Ti, tuerkistree]
+          [\bf V, tier=preterminal
+            [\it mag]
+            {\draw [->, bend left=15] (.south) to node [below, near start] {\footnotesize\textsc{Kasus}} (RekGeschmack.south);}
+          ]
+        ]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+
+
+\subsection{Objektsätze}
+
+\begin{frame}
+  {Objektsätze}
+  \pause
+  \begin{exe}
+    \ex{\label{ex:komplementsaetze127} Michelle weiß, [\rot{dass} die Corvette nicht anspringen wird].}
+    \pause
+    \ex\label{ex:komplementsaetze128}
+    \begin{xlist}
+      \ex{\label{ex:komplementsaetze129} Michelle will wissen, [\rot{wer} die Corvette gewartet hat].}
+      \pause
+      \ex{\label{ex:komplementsaetze130} Michelle will wissen, [\rot{ob} die Corvette gewartet wurde].}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \Halbzeile
+  \alert{Achtung: \textit{ob} ist eigentlich nur ein w-Wort ohne w (vgl.\ engl.\ \textit{whether}).}\\
+  \pause
+  \Halbzeile
+\end{frame}
+
+\begin{frame}
+  {Regierende Verben und Alternationen}
+  \pause
+  \alert{Drei primäre Muster}, welche Satz-Objekte Verben regieren.\\
+  \pause\Halbzeile
+  \begin{exe}
+    \ex\label{ex:komplementsaetze131}
+    \begin{xlist}
+      \ex[]{\label{ex:komplementsaetze132} Michelle behauptet, \alert{dass} die Corvette nicht anspringt.}
+      \pause
+      \ex[*]{\label{ex:komplementsaetze133} Michelle behauptet, \rot{wie\slash ob} die Corvette nicht anspringt.}
+    \end{xlist}
+    \pause
+    \ex\label{ex:komplementsaetze134}
+    \begin{xlist}
+      \ex[*]{\label{ex:komplementsaetze135} Michelle untersucht, \rot{dass} der Vergaser funktioniert.}
+      \pause
+      \ex[]{\label{ex:komplementsaetze136} Michelle untersucht, \alert{wie\slash ob} der Vergaser funktioniert.}
+    \end{xlist}
+    \pause
+    \ex\label{ex:komplementsaetze137}
+    \begin{xlist}
+      \ex[]{\label{ex:komplementsaetze138} Michelle hört, \alert{dass} die Nockenwelle läuft.}
+      \pause
+      \ex[]{\label{ex:komplementsaetze139} Michelle hört, \alert{wie\slash ob} die Nockenwelle läuft.}
+    \end{xlist}
+  \end{exe}
+  \pause\Halbzeile
+  Außerdem: \textit{dass} alterniert oft mit \textit{zu}-Infinitiv.\\
+  \pause
+  \Halbzeile
+  \begin{exe}
+  \ex\label{ex:komplementsaetze140}
+  \begin{xlist}
+    \ex{\label{ex:komplementsaetze141} Michelle glaubt, [\alert{dass} sie das Geräusch erkennt].}
+    \pause
+    \ex{\label{ex:komplementsaetze142} Michelle glaubt, [das Geräusch \alert{zu} erkennen].}
+  \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Stellung von Adverbial- und Komplementsätzen}
+  \pause
+  \Halbzeile
+  \begin{exe}
+  \ex\label{ex:komplementsaetze146}
+  \begin{xlist}
+    \ex[]{\label{ex:komplementsaetze147} \alert{[Dass sie unseren Kuchen mag]}, hat Sarah uns eröffnet.}
+    \pause
+    \ex[]{\label{ex:komplementsaetze148} Sarah hat uns eröffnet, \alert{[dass sie unseren Kuchen mag]}.}
+    \pause
+    \ex[?]{\label{ex:komplementsaetze149} Sarah hat uns, \rot{[dass sie unseren Kuchen mag]}, eröffnet.}
+  \end{xlist}
+    \pause
+
+  \ex\label{ex:komplementsaetze150}
+  \begin{xlist}
+    \ex[]{\label{ex:komplementsaetze151} \alert{[Ob Pavel unseren Kuchen mag]}, haben wir uns oft gefragt.}
+    \pause
+    \ex[]{\label{ex:komplementsaetze152} Wir haben uns oft gefragt, \alert{[ob Pavel unseren Kuchen mag]}.}
+    \pause
+    \ex[?]{\label{ex:komplementsaetze153} Wir haben uns, \rot{[ob Pavel unseren Kuchen mag]}, oft gefragt.}
+  \end{xlist}
+    \pause
+  \ex\label{ex:komplementsaetze154}
+  \begin{xlist}
+    \ex[]{\label{ex:komplementsaetze155} \alert{[Wer die Rosinen geklaut hat]}, wollen wir endlich wissen.}
+    \pause
+    \ex[]{\label{ex:komplementsaetze156} Wir wollen endlich wissen, \alert{[wer die Rosinen geklaut hat]}.}
+    \pause
+    \ex[?]{\label{ex:komplementsaetze157} Wir wollen, \rot{[wer die Rosinen geklaut hat]}, endlich wissen.}
+  \end{xlist}
+  \end{exe}
+  \pause
+  \begin{itemize}[<+->]
+    \item Fast immer Bewegung nach links oder Rechtsversetzung \alert{hinter VK}!\\
+    \item \grau{Fehlendes Schema für Rechtsversetzung: Transferaufgabe im Buch.}
+  \end{itemize}
+  \pause
+\end{frame}
+
+
+\begin{frame}
+  {Korrelate}
+\end{frame}
+
+\section{Das Feldermodell}
+
+\section{Vorschau}
+
