@@ -4,6 +4,13 @@
   {Verbphrasen und Verbkomplexe}
   \onslide<+->
   \begin{itemize}[<+->]
+    \item Verbphrasen mit Verb-Letzt-Stellung
+    \item Scrambling | Stellungsfreiheit in der VP
+      \Halbzeile
+    \item Verbkomplexe | Verbketten am Ende der VP
+      \Halbzeile
+    \item systematische syntaktische Analysen
+      \Zeile
     \item \citet[12.8]{Schaefer2018b}
   \end{itemize}
 \end{frame}
@@ -19,44 +26,135 @@
     \begin{xlist}
       \ex{dass [Ischariot \alert{malt}]}
       \pause
+      \Halbzeile
       \ex{dass [Ischariot [das Bild] \alert{malt}]}
       \pause
+      \Halbzeile
       \ex{dass [Ischariot [dem Arzt] [das Bild] \alert{verkauft}]}
       \pause
-      \ex{dass [Ischariot [wahrscheinlich] [dem Arzt] [heimlich] [das Bild] \\schnell \alert{verkauft}]}
+      \Halbzeile
+      \ex{dass [Ischariot [wahrscheinlich] [dem Arzt]\\
+        { }[heimlich] [das Bild] schnell \alert{verkauft}]}
     \end{xlist}
   \end{exe}
-  \pause
-  \Halbzeile
-  \centering
-  \scalebox{0.8}{
-    \begin{forest}
-      l sep+=3em
-      [VP, calign=last
-        [NP, tier=preterminal
-          [\it Ischariot, narroof]
-        ]
-        [AdvP, tier=preterminal
-          [\it wahrscheinlich, narroof]
-        ]
-        [NP, tier=preterminal
-          [\it dem Arzt, narroof]
-        ]
-        [AdvP, tier=preterminal
-          [\it heimlich, narroof]
-        ]
-        [NP, tier=preterminal
-          [\it das Bild, narroof]
-        ]
-        [AdvP, tier=preterminal
-          [\it schnell, narroof]
-        ]
-        [\bf V, tier=preterminal, bluetree
-          [\it verkauft]
-        ]
+\end{frame}
+
+\begin{frame}
+  {VP mit einstelliger Valenz}
+  \centering 
+  \scalebox{1}{
+  \begin{forest}
+    [VP, calign=last
+      [NP, tier=preterminal
+        [\it Ischariot, narroof]
       ]
-    \end{forest}
+      [\bf V, tier=preterminal
+        [\it malt]
+      ]
+    ]
+  \end{forest}
   }
+\end{frame}
+
+\begin{frame}
+  {VP mit zweistelliger Valenz}
+  \centering 
+  \scalebox{1}{
+  \begin{forest}
+    l sep+=1em
+    [VP, calign=last
+      [NP, tier=preterminal
+        [\it Ischariot, narroof]
+      ]
+      [NP, tier=preterminal
+        [\it das Bild, narroof]
+      ]
+      [\bf V, tier=preterminal
+        [\it malt]
+      ]
+    ]
+  \end{forest}
+  }
+\end{frame}
+
+\begin{frame}
+  {VP mit dreistelliger Valenz}
+  \centering 
+  \scalebox{1}{
+  \begin{forest}
+    l sep+=2em
+    [VP, calign=last
+      [NP, tier=preterminal
+        [\it Ischariot, narroof]
+      ]
+      [NP, tier=preterminal
+        [\it dem Arzt, narroof]
+      ]
+      [NP, tier=preterminal
+        [\it das Bild, narroof]
+      ]
+      [\bf V, tier=preterminal
+        [\it verkauft]
+      ]
+    ]
+  \end{forest}
+  }
+\end{frame}
+
+\begin{frame}
+  {VP mit einstelliger Valenz und Adverbialen}
+  \centering 
+  \scalebox{1}{
+  \begin{forest}
+    l sep+=3em
+    [VP, calign=last
+      [NP, tier=preterminal
+        [\it Ischariot, narroof]
+      ]
+      [AdvP, tier=preterminal
+        [\it wahrscheinlich, narroof]
+      ]
+      [NP, tier=preterminal
+        [\it dem Arzt, narroof]
+      ]
+      [AdvP, tier=preterminal
+        [\it heimlich, narroof]
+      ]
+      [NP, tier=preterminal
+        [\it das Bild, narroof]
+      ]
+      [AdvP, tier=preterminal
+        [\it schnell, narroof]
+      ]
+      [\bf V, tier=preterminal
+        [\it verkauft]
+      ]
+    ]
+  \end{forest}
+  }
+\end{frame}
+
+\begin{frame}
+  {Achtung! Scrambling!}
+  \onslide<+->
+  \onslide<+->
+  \alert{Scrambling} | Die Phrasen innerhalb der VP können\\
+  nahezu beliebig umsortiert werden.\\
+  \Zeile
+  \onslide<+->
+  \begin{exe}
+    \ex dass dem Arzt Ischariot wahrscheinlich\\
+    schnell das Bild verkauft
+    \ex dass Ischariot wahrscheinlich schnell\\
+    dem Arzt das Bild verkauft
+    \ex dass Ischariot wahrscheinlich\\
+    das Bild schnell dem Arzt verkauft
+    \ex \ldots
+  \end{exe}
+  \onslide<+->
+  \Zeile
+  Die Umstellungen haben \alert{semantische und pragmatische Effekte},\\
+  aber syntaktisch sind sie alle möglich.
 \end{frame}
 
 \section{Verbkomplexe}
@@ -220,11 +318,174 @@
   \end{forest}
 \end{frame}
 
+\section{Analyse}
 
+\begin{frame}
+  {Systematische syntaktische Analyse | Schritt 1}
+  \centering
+  \begin{forest}
+    [, phantom, s sep=1em
+      [\bf K, tier=preterminal [\it dass]]
+      [\bf N, tier=preterminal [\it Frida]]
+      [Art, tier=preterminal [\it den]]
+      [\bf A, tier=preterminal [\it heißen]]
+      [\bf N, tier=preterminal [\it Kaffee]]
+      [\bf Adv, tier=preterminal [\it gerne]]
+      [\bf V, tier=preterminal [\it trinken]]
+      [\bf V, tier=preterminal [\it möchte]]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Systematische syntaktische Analyse | Schritt 2}
+  \centering
+  \begin{forest}
+    [, phantom, s sep=1em
+      [\bf K, tier=preterminal [\it dass]]
+      [NP
+        [\bf N, tier=preterminal [\it Frida]]
+      ]
+      [Art, tier=preterminal [\it den]]
+      [AP
+        [\bf A, tier=preterminal [\it heißen]]
+      ]
+      [\bf N, tier=preterminal [\it Kaffee]]
+      [AdvP
+        [\bf Adv, tier=preterminal [\it gerne]]
+      ]
+      [\bf V, tier=preterminal [\it trinken]]
+      [\bf V, tier=preterminal [\it möchte]]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Systematische syntaktische Analyse | Schritt 3}
+  \centering
+  \begin{forest}
+    [, phantom, s sep=0.5em
+      [\bf K, tier=preterminal [\it dass]]
+      [NP
+        [\bf N, tier=preterminal [\it Frida]]
+      ]
+      [NP, calign=last
+        [Art [\it den, tier=terminal]]
+        [AP
+          [\bf A, tier=preterminal [\it heißen]]
+        ]
+        [\bf N, tier=preterminal [\it Kaffee]]
+      ]
+      [AdvP
+        [\bf Adv, tier=preterminal [\it gerne]]
+      ]
+      [\bf V, tier=preterminal [\it trinken]]
+      [\bf V, tier=preterminal [\it möchte, tier=terminal]]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Systematische syntaktische Analyse | Schritt 4}
+  \centering
+  \begin{forest}
+    [, phantom, s sep=0.5em
+      [\bf K, tier=preterminal [\it dass]]
+      [NP
+        [\bf N, tier=preterminal [\it Frida]]
+      ]
+      [NP, calign=last
+        [Art [\it den, tier=terminal]]
+        [AP
+          [\bf A, tier=preterminal [\it heißen]]
+        ]
+        [\bf N, tier=preterminal [\it Kaffee]]
+      ]
+      [AdvP
+        [\bf Adv, tier=preterminal [\it gerne]]
+      ]
+      [\bf V, calign=last
+        [\bf V, tier=preterminal [\it trinken]]
+        [\bf V, tier=preterminal [\it möchte, tier=terminal]]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Systematische syntaktische Analyse | Schritt 5}
+  \centering
+  \begin{forest}
+    [, phantom, s sep=0.5em
+      [\bf K, tier=preterminal [\it dass]]
+      [VP, calign=last, l sep=4em
+        [NP
+          [\bf N, tier=preterminal [\it Frida]]
+        ]
+        [NP, calign=last
+          [Art [\it den, tier=terminal]]
+          [AP
+            [\bf A, tier=preterminal [\it heißen]]
+          ]
+          [\bf N, tier=preterminal [\it Kaffee]]
+        ]
+        [AdvP
+          [\bf Adv, tier=preterminal [\it gerne]]
+        ]
+        [\bf V, calign=last
+          [\bf V, tier=preterminal [\it trinken]]
+          [\bf V, tier=preterminal [\it möchte, tier=terminal]]
+        ]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Systematische syntaktische Analyse | Schritt 6}
+  \centering
+  \begin{forest}
+    [KP, calign=first
+      [\bf K, tier=preterminal [\it dass]]
+      [VP, calign=last, l sep=4em
+        [NP
+          [\bf N, tier=preterminal [\it Frida]]
+        ]
+        [NP, calign=last
+          [Art [\it den, tier=terminal]]
+          [AP
+            [\bf A, tier=preterminal [\it heißen]]
+          ]
+          [\bf N, tier=preterminal [\it Kaffee]]
+        ]
+        [AdvP
+          [\bf Adv, tier=preterminal [\it gerne]]
+        ]
+        [\bf V, calign=last
+          [\bf V, tier=preterminal [\it trinken]]
+          [\bf V, tier=preterminal [\it möchte, tier=terminal]]
+        ]
+      ]
+    ]
+  \end{forest}
+\end{frame}
 
 
 \section{Vorschau}
 
 \begin{frame}
   {Form und Funktion von Sätzen}
+  \onslide<+->
+  \begin{itemize}[<+->]
+    \item Was ist ein "`unabhängiger Satz"'?\\
+      \grau{Funktion unabhängiger Sätze}
+    \item Hypotaxe und komplexe Sachverhalte
+    \item Komplementatz, Adverbialsatz, Relativsatz\\
+      in Relation zum Matrixsatz (Semantik)
+      \Zeile
+    \item Überblick über die Syntax des unabhängigen Satzes\\
+      \grau{Feldermodell}
+      \Zeile
+    \item \citet[13.1, 13.2]{Schaefer2018b}
+  \end{itemize}
 \end{frame}
