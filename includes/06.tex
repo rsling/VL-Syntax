@@ -76,6 +76,8 @@
   \end{itemize}
 \end{frame}
 
+\section{Nominalphrasen}
+
 \begin{frame}
   {Ziemlich volle NP-Struktur mit Substantiv-Kopf}
   \pause
@@ -251,9 +253,52 @@
   \onslide<+->
   \Zeile
   \begin{exe}
-    \ex Martinas Freundin ist wieder zuhause. Martina teilt ihrmit, dass die Pferde bereits gefüttert wurden.
-    \ex Martinas Mitteilung an ihre Freundin, die wieder zuhause ist, dass die Pferde bereits gefüttert wurden, habe ich nicht mitbekommen.
+    \ex{ } \grau{Martinas Freundin ist wieder zuhause.}\\
+      \rot{Martina} \alert{teilt} \gruen{ihr} \alert{mit}, \orongsch{dass die Pferde bereits gefüttert wurden}.
+    \onslide<+->
+    \Zeile
+    \ex{ } [\rot{[Martinas]} \alert{Mitteilung} [\gruen{an ihre Freundin}, \grau{[die wieder zuhause ist]}],\\
+      { }\orongsch{[dass die Pferde bereits gefüttert wurden]}],\\
+      (kam gerade noch rechtzeitig.)
   \end{exe}
+\end{frame}
+
+
+\begin{frame}
+  {Baum für die NP}
+  \onslide<+->
+  \onslide<+->
+  \centering
+  \begin{forest}
+    [NP, calign=child, calign child=2, tier=root
+      [NP, tier=subroot, rottree
+        [\it Martinas, narroof, tier=terminal]
+      ]
+      [\textbf{N}, tier=subroot, bluetree
+        [\it Mitteilung, tier=terminal]
+      ]
+      [PP, tier=subroot, gruen
+        [P, calign=child, calign child=1, gruennode
+          [\it an, tier=terminal, gruennode]
+          [NP, calign=child, calign child=2, gruennode
+            [Art, tier=preterminal, gruennode
+              [\it ihre, tier=terminal, gruennode]
+            ]
+            [N, tier=preterminal, gruennode
+              [\it Freundin, gruennode]
+            ]
+            [RS, tier=preterminal, grautree
+              [\it die \ldots\ ist, narroof]
+            ]
+          ]
+        ]
+      ]
+      [KP, tier=subroot, orongschtree
+        [\it dass \ldots\ wurden, narroof, tier=terminal]
+      ]
+    ]
+  \end{forest}
+
 \end{frame}
 
 \section{Vorschau}
@@ -262,12 +307,11 @@
   {Andere Phrasentypen}
   \onslide<+->
   \begin{itemize}[<+->]
-    \item Koordination
     \item Adjektivphrasen
     \item Präpositionalphrasen
     \item Adverbphrasen
+    \item Koordination
     \item Komplementiererphrase
-    \item nicht-phrasenfähige Elemente
       \Zeile
     \item \citet[12.2,12.4--12.7]{Schaefer2018b}
   \end{itemize}
