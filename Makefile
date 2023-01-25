@@ -59,7 +59,7 @@ L12FLAGS = \def\TITLE{12. Objekte und Valenz}\def\LECTURE{12}
 
 H13JOB = 13$(FILEPRE)$(HOSUFF)
 P13JOB = 13$(FILEPRE)$(PRESUFF)
-L13FLAGS = \def\TITLE{13. Syntax infiniter Verben}\def\LECTURE{13}
+L13FLAGS = \def\TITLE{13. Infinitivsyntax}\def\LECTURE{13}
 
 
 FULLJOB = $(FILEPRE)Handout
