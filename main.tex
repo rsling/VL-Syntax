@@ -124,7 +124,14 @@
 
 % Beamer ==============================================================
 
-\usetheme[hideothersubsections]{PaloAlto}
+\usetheme[hideothersubsections]{Boadilla}
+
+\ifdefined\HANDOUT
+  \usecolortheme{whale}
+\else
+  \usecolortheme{magpie}
+\fi
+
 
 \renewcommand<>{\rot}[1]{%
   \alt#2{\beameroriginal{\rot}{#1}}{#1}%
@@ -323,8 +330,8 @@
 
 \title[Deutsche Syntax]{Deutsche Syntax\\\TITLE}
 \author{Roland Schäfer}
-\institute{Institut für Germanistische Sprachwissenschaft\\Friedrich-Schiller-Universität Jena}
-\date{Diese Version ist vom \today.\\\Zeile%
+\institute[Germanistische Sprachwissenschaft]{Institut für Germanistische Sprachwissenschaft\\Friedrich-Schiller-Universität Jena}
+\date[\today]{Diese Version ist vom \today.\\\Zeile%
   \scriptsize \grau{stets aktuelle Fassungen: \url{https://github.com/rsling/VL-Deutsche-Syntax}}}
 
 \begin{document}
