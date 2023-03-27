@@ -221,13 +221,100 @@
   \end{xlist}
   \end{exe}
   \pause
+  \Halbzeile
   \begin{itemize}[<+->]
     \item Fast immer Bewegung nach links oder Rechtsversetzung \alert{hinter VK}!\\
-    \item \grau{Fehlendes Schema für Rechtsversetzung: Transferaufgabe im Buch.}
   \end{itemize}
   \pause
 \end{frame}
 
+
+\begin{frame}
+  {Was heißt \orongsch{Rechtsversetzung}?}
+  \onslide<+->
+  \onslide<+->
+  Ähnliche bisher wenig beachtete Strukturen | Rechtsversetzung von \rot{PPs}\\
+  \onslide<+->
+  \Halbzeile
+  \begin{exe}
+    \ex{Ich habe den Schrank \alert{zurückgebracht} \rot{ins Wohnzimmer}.\label{ex:schrank}}
+    \ex{Wir würden viel \alert{geben} \rot{für den Frieden}.\label{ex:frieden}}
+  \end{exe}
+  \onslide<+->
+  \Halbzeile
+  Einfachste Modellierung | \alert{Adjunktionsbewegung} rechts an die Phrase (hier VP)\\
+  \onslide<+->
+  \Halbzeile
+  \centering
+  \centering
+  \scalebox{0.7}{\begin{forest}
+    [S, calign=child, calign child=2
+      [NP\Sub{2}, tier=preterminal
+        [\it Wir, narroof]
+      ]
+      [V\Sub{1}, tier=preterminal
+        [\it würden, narroof]
+      ]
+      [VP, calign=first
+        [VP, calign=last
+          [\Tii, tier=terminal, forky]
+          [NP, tier=preterminal, forky
+            [\it viel, narroof, tier=terminal]
+          ]
+          [\alert{\Tiii}, tier=terminal, forky]
+          [V, calign=last
+            [V, tier=preterminal
+              [\it geben, tier=terminal]
+            ]
+            [\Ti, tier=terminal]
+          ]
+        ]
+        [PP\Sub{3}, tier=preterminal, bluetree
+          [\it für den Frieden, narroof, tier=terminal]
+        ]
+      ]
+    ]
+  \end{forest}}
+\end{frame}
+
+\begin{frame}
+  {Rechtsadjunktion eines Nebensatzes}
+  \onslide<+->
+  \onslide<+->
+  \centering 
+  \scalebox{1}{\begin{forest}
+    [S, calign=child, calign child=2
+      [NP\Sub{2}, tier=preterminal
+        [\it Wir, narroof]
+      ]
+      [V\Sub{1}, tier=preterminal
+        [\it haben, narroof]
+      ]
+      [VP, calign=first
+        [VP, calign=last
+          [\Tii, tier=terminal, forky]
+          [NP, tier=preterminal, forky
+            [\it uns, narroof]
+          ]
+          [AdvP, tier=preterminal, forky
+            [\it oft, narroof, tier=terminal]
+          ]
+          [\alert{\Tiii}, tier=terminal, forky]
+          [V, calign=last
+            [V, tier=preterminal
+              [\it gefragt, tier=terminal]
+            ]
+            [\Ti, tier=terminal]
+          ]
+        ]
+        [KP\Sub{3}, tier=preterminal, bluetree
+          [\it ob Pavel unseren Kuchen mag, narroof, tier=terminal]
+        ]
+      ]
+    ]
+  \end{forest}}
+  
+\end{frame}
 
 \begin{frame}
   {Korrelate bei Komplementsätzen}
