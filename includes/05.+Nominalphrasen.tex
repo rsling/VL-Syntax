@@ -1,0 +1,318 @@
+
+
+\section{Überblick}
+
+\begin{frame}
+  {Überblick: Konstituenten und Phrasen}
+  \pause
+  \begin{itemize}[<+->]
+    \item Phrasen und Köpfe
+    \item Strukur der deutschen \alert{Nominalphrase}
+    \item (regierte) Attribute
+      \Zeile
+    \item \citet[Abschnitt~12.3]{Schaefer2018b}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Syntax und (bildungssprachliche) Funktion}
+  \pause
+  \begin{itemize}[<+->]
+    \item \alert{hohe Komplexität} des syntaktischen Systems
+    \item \rot{Regularitätensystem kaum vollständig explizit lernbar}
+    \item überall \alert{starke Interaktion mit Semantik, Pragmatik usw.}
+    \item \alert{Kompositionalität}
+      \Zeile
+    \item Der Versuch, Funktionen zu beschreiben, ohne Formsystem zu kennen,\\
+      wäre in der Syntax völlig absurd.
+      \Zeile
+    \item reduzierte Syntax = erhebliche Einschränkung des Ausdrucks
+    \item komplexe schriftsprachliche Syntax, ggf.\ \rot{Rezeptionsprobleme}
+  \end{itemize}
+\end{frame}
+
+
+\section{Phrasentypen}
+
+\begin{frame}
+  {Jede Phrase hat genau einen Kopf}
+  \pause
+  \resizebox{\textwidth}{!}{
+    \begin{tabular}{lll}
+      \toprule
+      \textbf{Kopf} & \textbf{Phrase} & \textbf{Beispiel} \\
+      \midrule
+      Nomen (Substantiv, Pronomen) & Nominalphrase (NP) & \textit{die tolle \alert{Auf"|führung}} \\
+      Adjektiv & Adjektivphrase (AP) & \textit{sehr \alert{schön}} \\
+      Präposition & Präpositionalphrase (PP) & \textit{\alert{in} der Uni} \\
+      Adverb & Adverbphrase (AdvP) & \textit{total \alert{offensichtlich}} \\
+      Verb & Verbphrase (VP) & \textit{Sarah den Kuchen gebacken \alert{hat}} \\
+      Komplementierer & Komplementiererphrase (KP) & \textit{\alert{dass} es läuft} \\
+      \bottomrule
+    \end{tabular}
+  } 
+  \pause
+  \Halbzeile
+  \begin{itemize}[<+->]
+    \item Der Kopf bestimmt den \alert{internen Aufbau} der Phrase.
+    \item Der Kopf bestimmt die \alert{externen kategorialen Merkmale} der Phrase\\
+      und so das syntaktische Verhalten der Phrase (Parallele: \alert{Kompositum}).
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Wieviele Wortklassen? Wieviele Phrasentypen?}
+  \pause
+  \begin{itemize}[<+->]
+    \item \alert{Phrasentyp: passend zur Wortklasse des Kopfes}
+    \item maximal so viele Phrasentypen wie Wortklassen
+    \item aber: nicht alle Wortklassen kopffähig (\alert{Funktionswörter})
+      \Zeile
+    \item heute nur der wahrscheinlich komplexeste nicht-satzförmige Phrasentyp:
+      \begin{itemize}[<+->]
+        \item Nominalphrase
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Nominalphrasen}
+
+\begin{frame}
+  {Ziemlich volle NP-Struktur mit Substantiv-Kopf}
+  \pause
+  \centering
+  \begin{forest}
+    [NP, calign=child, calign child=3
+      [Art
+        [\it die]
+      ]
+      [AP
+        [\it antiken, narroof]
+      ]
+      [\textbf{N}, tier=preterminal
+        [\it Zahnbürsten]
+      ]
+      [NP, tier=preterminal
+        [\it des Königs, narroof
+        ]
+      ]
+      [RS
+        [\it die nicht benutzt wurden, narroof]
+      ]
+    ]
+  \end{forest}
+  \pause
+  \Zeile
+  \begin{itemize}[<+->]
+    \item \textit{die antiken Zahnbürsten}: \alert{Kongruenz}
+    \item Baum über dem \alert{genusfesten} Kopf aufgebaut
+    \item \alert{inneres Rechtsattribut} \textit{des Königs}
+    \item \alert{Relativsatz} \textit{die nicht benutzt wurden}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Struktur mit pronominalem Kopf}
+  \pause
+  \centering
+  \begin{forest}
+    [NP, calign=child, calign child=1
+      [\textbf{N}, tier=preterminal
+        [\it einige]
+      ]
+      [NP, tier=preterminal
+        [\it des Königs, narroof
+        ]
+      ]
+      [RS
+        [\it die geklaut wurden, narroof]
+      ]
+    ]
+  \end{forest}
+  \pause
+  \Zeile
+  \begin{itemize}[<+->]
+    \item links vom Kopf: \rot{nichts}
+    \item Determinierung erfolgt beim Pronomen \alert{im Kopf}.
+    \item Determinierung schließt NP nach links ab.
+    \item → \alert{Also kann links vom Pron-Kopf nichts stehen!}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Nominalphrase allgemein (Schema)}
+  \pause
+  \centering
+  \begin{forest}
+    phrasenschema
+    [NP, Ephr
+      [Art, Eopt, Emult, [NP\Sub{Genitiv}, Eopt]]
+      [AP, Eopt, Erec]
+      [N, Ehd, name=Nkopf]
+      [innere Rechtsattribute, Eopt, Erec]
+      {\draw [bend left=45, dashed,<-] (.south) to (Nkopf.south);}
+      [RS, Eopt, Erec]
+    ]
+  \end{forest}
+\end{frame}
+
+
+\begin{frame}
+  {Regierte Rechtsattribute}
+  \pause
+  \begin{exe}
+    \ex die \gruen{Beachtung} \alert{[ihrer Lyrik]}
+    \pause
+    \ex mein \gruen{Wissen} \alert{[um die Bedeutung der komplexen Zahlen]}
+    \pause
+    \ex die \gruen{Überzeugung}, \alert{[dass die Quantenfeldtheorie \\
+    die Welt korrekt beschreibt]}
+    \pause
+    \ex die \gruen{Frage}, \alert{[ob sich die Luftdruckanomalie von 2018 wiederholen wird]}
+    \pause
+    \ex die \gruen{Frage} \alert{[nach der möglichen Wiederholung der Luftdruckanomalie]}
+  \end{exe}
+  \pause
+  \Halbzeile
+  \begin{itemize}[<+->]
+    \item typisch: postnominale Genitive, PPs, satzförmige Recta
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Korrespondenzen zwischen Verben und Nomina(lisierungen)}
+  \pause
+  Viele Substantive entsprechen einem Verb mit bestimmten Rektionsanforderungen.\\
+  \pause
+  \Zeile
+  \begin{exe}
+    \ex\label{ex:rektionundvalenzindernp031}
+    \begin{xlist}
+      \ex{\label{ex:rektionundvalenzindernp032} \orongsch{Sarah} \alert{verziert} \gruen{[den Kuchen]}.}
+      \pause
+      \ex{\label{ex:rektionundvalenzindernp033} [Die \alert{Verzierung} \gruen{[des Kuchens]} \orongsch{[durch Sarah]}]}
+      \pause
+      \ex{\label{ex:rektionundvalenzindernp034} [Die \alert{Verzierung} \gruen{[von dem Kuchen]} \orongsch{[durch Sarah]}]}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \Zeile
+  \begin{itemize}[<+->]
+    \item \gruen{Akkusativ} beim transitiven Verb $\Leftrightarrow$ \gruen{Genitiv}\slash\gruen{von-PP} beim Substantiv
+    \item \orongsch{Nominativ} beim transitiven Verb $\Leftrightarrow$ \orongsch{durch-PP} beim Substantiv
+    \item Beim nominalen Kopf: alle Ergänzungen optional
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Alternative Korrespondenzen für Nominative}
+  \pause
+  \begin{exe}
+    \ex\label{ex:rektionundvalenzindernp035}
+    \begin{xlist}
+      \ex{\label{ex:rektionundvalenzindernp036} \orongsch{[Sarah]} rettet [den Kuchen] [vor dem Anbrennen].}
+      \pause
+      \ex{\label{ex:rektionundvalenzindernp037} [\orongsch{[Sarahs]} Rettung [des Kuchens] [vor dem Anbrennen]]}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \begin{itemize}[<+->]
+    \item \orongsch{Nominativ} beim transitiven Verb $\Leftrightarrow$\\
+      \orongsch{pränominaler Genitiv} beim Substantiv
+  \end{itemize}
+  \pause
+  \Halbzeile
+  \begin{exe}
+    \ex[ ]{\gruen{[Die Schokolade]} wirkt gemütsaufhellend.}
+    \pause
+    \ex[ ]{[Die Wirkung \gruen{[der Schokolade]}] ist gemütsaufhellend.}
+    \pause
+    \ex[?]{[Die Wirkung \gruen{[von der Schokolade]}] ist gemütsaufhellend.}
+    \pause
+    \ex[*]{[\gruen{[Der Schokolade]} Wirkung] ist gemütsaufhellend.}
+  \end{exe}
+  \pause
+  \begin{itemize}[<+->]
+    \item \gruen{Nominativ} beim intransitiven Verb $\Leftrightarrow$\\
+      \gruen{prä-\slash postnominaler Genitiv}\slash\gruen{von-PP} beim Substantiv
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  {Komplexität der NP | Sätze und NPs}
+  \onslide<+->
+  \onslide<+->
+  Die NP erreicht eine außergewöhnliche Komplexität,\\
+  weil sich ganze Sätze als NP verpacken lassen.\\
+  \onslide<+->
+  \Zeile
+  \begin{exe}
+    \ex{ } \grau{Martinas Freundin ist wieder zuhause.}\\
+      \rot{Martina} \alert{teilt} \gruen{ihr} \alert{mit}, \orongsch{dass die Pferde bereits gefüttert wurden}.
+    \onslide<+->
+    \Zeile
+    \ex{ } [\rot{[Martinas]} \alert{Mitteilung} [\gruen{an ihre Freundin}, \grau{[die wieder zuhause ist]}],\\
+      { }\orongsch{[dass die Pferde bereits gefüttert wurden]}],\\
+      (kam gerade noch rechtzeitig.)
+  \end{exe}
+\end{frame}
+
+
+\begin{frame}
+  {Baum für die NP}
+  \onslide<+->
+  \onslide<+->
+  \centering
+  \begin{forest}
+    [NP, calign=child, calign child=2, tier=root
+      [NP, tier=subroot, rottree
+        [\it Martinas, narroof, tier=terminal]
+      ]
+      [\textbf{N}, tier=subroot, bluetree
+        [\it Mitteilung, tier=terminal]
+      ]
+      [PP, tier=subroot, gruen
+        [P, calign=child, calign child=1, gruennode
+          [\it an, tier=terminal, gruennode]
+          [NP, calign=child, calign child=2, gruennode
+            [Art, tier=preterminal, gruennode
+              [\it ihre, tier=terminal, gruennode]
+            ]
+            [N, tier=preterminal, gruennode
+              [\it Freundin, gruennode]
+            ]
+            [RS, tier=preterminal, grautree
+              [\it die \ldots\ ist, narroof]
+            ]
+          ]
+        ]
+      ]
+      [KP, tier=subroot, orongschtree
+        [\it dass \ldots\ wurden, narroof, tier=terminal]
+      ]
+    ]
+  \end{forest}
+
+\end{frame}
+
+\section{Vorschau}
+
+\begin{frame}
+  {Andere Phrasentypen}
+  \onslide<+->
+  \begin{itemize}[<+->]
+    \item Adjektivphrasen
+    \item Präpositionalphrasen
+    \item Adverbphrasen
+    \item Koordination
+    \item Komplementiererphrase
+      \Zeile
+    \item \citet[12.2,12.4--12.7]{Schaefer2018b}
+  \end{itemize}
+\end{frame}

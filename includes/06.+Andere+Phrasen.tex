@@ -1,0 +1,398 @@
+
+\section{Überblick}
+
+\begin{frame}
+  {Andere Phrasentypen}
+  \onslide<+->
+  \begin{itemize}[<+->]
+    \item Adjektivphrasen
+    \item Präpositionalphrasen
+    \item Adverbphrasen
+    \item Koordination
+    \item Komplementiererphrase
+      \Zeile
+    \item \citet[12.2,12.4--12.7]{Schaefer2018b}
+  \end{itemize}
+\end{frame}
+
+\section[AP]{Adjektivphrasen}
+
+\begin{frame}
+  {Gradierungselemente vor dem Adjektiv}
+  \onslide<+->
+  \onslide<+->
+  \begin{exe}
+    \ex[]{\label{ex:adjektivphrase081} die [\gruen{sehr} \alert{angenehme}] Stimmung}
+    \ex[]{\label{ex:adjektivphrase082} die [\gruen{ziemlich} \alert{angenehme}] Stimmung}
+    \ex[]{\label{ex:adjektivphrase083} die [\gruen{wenig} \alert{angenehme}] Stimmung}
+      \onslide<+->
+      \Zeile
+      \ex[]{\label{ex:adjektivphrase085} die [\gruen{[über alle Maßen]} \alert{angenehme}] Stimmung}
+      \ex[]{\label{ex:adjektivphrase086} die [\gruen{[ja mal wieder so rein gar nicht]} \alert{angenehme}] Stimmung}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Modifizierer | noch vor Gradierungselementen}
+  \onslide<+->
+  \onslide<+->
+  \begin{exe}
+    \ex\label{ex:adjektivphrase087}
+    \begin{xlist}
+      \ex{\label{ex:adjektivphrase088} die [\braun{[seit gestern]} \gruen{sehr} \alert{angenehme}] Stimmung}
+      \ex{\label{ex:adjektivphrase089} das [\braun{[in Hessen]} \gruen{überaus} \alert{beliebte}] Getränk}
+    \end{xlist}
+    \onslide<+->
+    \Zeile
+    \ex[*]{\label{ex:adjektivphrase090}die [\gruen{sehr} \braun{[seit gestern]} \alert{angenehme}] Stimmung}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Adjektivphrase | Baumbeispiel}
+  \onslide<+->
+  \onslide<+->
+  \centering
+  \begin{forest}
+    [AP, calign=last
+      [PP, tier=preterminal
+        [\it seit gestern, narroof]
+      ]
+      [Ptkl, tier=preterminal
+        [\it sehr]
+      ]
+      [\bf A, tier=preterminal
+        [\it angenehme]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Ergänzungen in der AP}
+  \onslide<+->
+  \onslide<+->\begin{exe}
+  \ex\label{ex:adjektivphrase092}
+  \begin{xlist}
+    \ex[]{\label{ex:adjektivphrase093} die [\tuerkis{[auf ihre Tochter]} \alert{stolze}] Frau}
+    \ex[*]{die [\alert{stolze} \tuerkis{[auf ihre Tochter]}] Frau}
+    \Zeile
+    \onslide<+->
+    \ex[]{die [\tuerkis{[über ihre Tochter]} \alert{verwunderte}] Frau}
+    \ex[*]{die [\alert{verwunderte} \tuerkis{[über ihre Tochter]}] Frau}
+    \onslide<+->
+    \Zeile
+    \ex[]{die [\tuerkis{[ihres Lieblingseises]} \alert{überdrüssige}] Frau}
+    \ex[*]{die [\alert{überdrüssige} \tuerkis{[ihres Lieblingseises]}] Frau}
+  \end{xlist}
+\end{exe}
+\end{frame}
+
+\begin{frame}
+  {Ziemlich volle AP}
+  \onslide<+->
+  \onslide<+->
+  \centering
+  \begin{forest}
+    [AP, calign=last
+      [PP, tier=preterminal
+        [\it seit gestern, narroof]
+      ]
+      [PP, tier=preterminal
+        [\it auf ihre Tochter, narroof, name=AufIhreTochter]
+      ]
+      [Ptkl, tier=preterminal
+        [\it sehr]
+      ]
+      [\bf A, tier=preterminal
+        [\it stolze]
+        {\draw [->, bend left=30] (.south) to (AufIhreTochter);}
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Adjektivphrase | Schema}
+  \onslide<+->
+  \onslide<+->
+  \centering 
+  \begin{forest}
+    phrasenschema
+    [AP, Ephr, calign=child, calign child=2
+      [Modifizierer, Eopt, Erec, Emult [Ergänzungen, Eopt, Erec, name=Apergaenzi]]
+      [Gradierungselement, Eopt]
+      [A, Ehd]
+      {\draw [->, bend left=45] (.south) to (Apergaenzi.south);}
+    ]
+  \end{forest}
+\end{frame}
+
+\section[PP]{Präpositionalphrasen}
+
+\begin{frame}
+  {Präpositionalphrasen | Beispiele}
+  \onslide<+->
+  \onslide<+->
+  Erinnerung | \alert{Präpositionen haben eine einstellige Valenz.}\\
+  \onslide<+->
+  \Zeile
+  \begin{exe}
+    \ex\label{ex:normalepp096}
+    \begin{xlist}
+      \ex{[\alert{Auf} \orongsch{[dem Tisch]}] steht Ischariots Skulptur.}
+      \ex{[\gruen{[Einen Meter]} \alert{unter} \orongsch{[der Erde]}] ist die Skulptur versteckt.}
+    \end{xlist}
+    \onslide<+->
+    \Zeile
+    \ex{\label{ex:normalepp097} Seit der EM springt Christina [\gruen{weit} \alert{über} \orongsch{[ihrem früheren Niveau]}].}
+  \end{exe}{}
+\end{frame}
+
+\begin{frame}
+  {Baumbeispiel | PP mit Maßangabe}
+  \onslide<+->
+  \onslide<+->
+  \centering
+  \begin{forest}
+    [PP, calign=child, calign child=2
+      [NP, tier=preterminal
+        [\it einen Meter, narroof]
+      ]
+      [\bf P, tier=preterminal
+        [\it unter]
+      ]
+      [NP, tier=preterminal
+        [\it der Erde, narroof]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+
+\begin{frame}
+  {Präpositionalphrase | Schema}
+  \onslide<+->
+  \onslide<+->
+  \centering
+  \begin{forest}
+    phrasenschema
+    [PP, Ephr, calign=child, calign child=2
+      [Modifizierer, Eopt]
+      [P, Ehd, name=Ppkopf]
+      [NP, Eobl]
+      {\draw [<-, bend left=45] (.south) to (Ppkopf.south);}
+    ]
+  \end{forest}
+\end{frame}
+
+
+\section[AdvP]{Adverbphrasen}
+
+\begin{frame}
+  {Adverbphrasen}
+  \onslide<+->
+  \onslide<+->
+  \alert{Adverben} | Präpositionen mit \alert{nullstelliger Valenz}.\\
+  \Zeile
+  \onslide<+->
+  \begin{exe}
+    \ex{\label{ex:adverbphrase106} Ischariot malt [\orongsch{sehr} \alert{oft}].}
+      \Halbzeile
+      \ex{\label{ex:adverbphrase107} Ischariot schwimmt [\orongsch{weit} \alert{draußen}].}
+      \Halbzeile
+      \ex{\label{ex:adverbphrase108} Ischariot verreist [\orongsch{sehr} \alert{wahrscheinlich}].}
+  \end{exe}
+\end{frame}
+
+
+\begin{frame}
+  {Baumbeispiel | AdvP mit Modifizierer}
+  \onslide<+->
+  \onslide<+->
+  \centering
+  \begin{forest}
+    [AdvP, calign=last
+      [Ptkl, tier=preterminal
+        [\it sehr]
+      ]
+      [\bf Adv, tier=preterminal
+        [\it oft]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+
+\begin{frame}
+  {Adverbphrase | Schema}
+  \onslide<+->
+  \onslide<+->
+  \centering
+  \begin{forest}
+    phrasenschema
+    [AdvP, Ephr, calign=last
+      [Modifizierer, Eopt]
+      [Adv, Ehd]
+    ]
+  \end{forest}
+\end{frame}
+
+
+
+\section{Koordination}
+
+\begin{frame}
+  {Koordination | Beispiele}
+  \onslide<+->
+  \onslide<+->
+  \alert{Koordination} | Gleiches mit Gleichem zu Gleichem verbinden.\\
+  \onslide<+->
+  \Zeile
+  \begin{exe}
+    \ex\label{ex:koordination006}
+    \begin{xlist}
+      \ex{Ihre Freundin möchte [\orongsch{Kuchen} \alert{und} \orongsch{Sahne}].}
+      \Halbzeile
+      \onslide<+->
+      \ex{[\orongsch{[Es ist Sonntag]} \alert{und} \orongsch{[die Zeit wird knapp]}].}
+      \Halbzeile
+      \onslide<+->
+      \ex{Hast du das Teepulver [\orongsch{auf} \alert{oder} \orongsch{neben}]\\
+    den Tatami-Matten verstreut?}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+
+\begin{frame}
+  {Koordination von Substantiven (oder NPs?)}
+  \centering
+  \begin{forest}
+    [\textbf{N}, calign=child, calign child=2
+      [\textbf{N}, tier=preterminal
+        [\it Kuchen]
+      ]
+      [Konj, tier=preterminal
+        [\it und]
+      ]
+      [\textbf{N}, tier=preterminal
+        [\it Sahne]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Koordination von Sätzen}
+  \centering
+  \begin{forest}
+    [S, calign=child, calign child=2
+      [S, tier=preterminal
+        [\it Es ist Sonntag, narroof]
+      ]
+      [Konj, tier=preterminal
+        [\it und]
+      ]
+      [S, tier=preterminal
+        [\it die Zeit wird knapp, narroof]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Koordination von Präpositionen}
+  \centering
+  \begin{forest}
+    [\textbf{P}, calign=child, calign child=2
+      [\textbf{P}, tier=preterminal
+        [\it auf]
+      ]
+      [Konj, tier=preterminal
+        [\it oder]
+      ]
+      [\textbf{P}, tier=preterminal
+        [\it neben]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+\begin{frame}
+  {Koordination | Schema}
+  \onslide<+->
+  \onslide<+->
+  Die Koordination selber ist kein Kopf!\\
+  \onslide<+->
+  \Zeile
+  \centering
+  \begin{forest}
+    phrasenschema
+    [$\kappa$, Ephr
+      [$\kappa$, Eobl]
+      [Konj, Eopt]
+      [$\kappa$, Eobl]
+    ]
+  \end{forest}
+\end{frame}
+
+
+\section[KP]{Komplementiererphrase}
+
+\begin{frame}
+  {Komplementiererphrasen = eingeleitete Nebensätze}
+  \pause
+  \begin{exe}
+    \ex\label{ex:komplementiererphrase111}
+    \begin{xlist}
+      \ex[]{\label{ex:komplementiererphrase112} Der Arzt möchte, [dass [der Privatpatient die Rechnung \alert{bezahlt}]].}
+      \pause
+      \ex[*]{\label{ex:komplementiererphrase113} Der Arzt möchte, [dass [der Privatpatient \rot{bezahlt} die Rechnung]].}
+      \pause
+      \ex[*]{\label{ex:komplementiererphrase114} Der Arzt möchte, [dass [\rot{bezahlt} der Privatpatient die Rechnung]].}
+    \end{xlist}
+  \end{exe}
+  \pause
+  \Halbzeile
+  \centering
+  \begin{forest}
+    [KP, calign=first
+      [\bf K, tier=preterminal
+        [\it dass, name=Kpkopf]
+      ]
+      [\alert{VP}, tier=preterminal
+        [\it der Kassenpatient \alert{geht}, narroof]
+      ]
+    ]
+  \end{forest}\\
+  \pause
+  \Zeile
+  \alert{Verb-Letzt-Stellung!}\\
+\end{frame}
+
+
+
+\begin{frame}
+  {Komplementiererphrase | Schema}
+  \begin{center}
+    \begin{forest}
+      phrasenschema
+      [KP, Ephr, calign=first
+        [K, Ehd, name=Kpkopf]
+        [VP, Eobl]
+        {\draw [bend left=45, <-] (.south) to (Kpkopf.south);}
+      ]
+    \end{forest}
+  \end{center}
+  \onslide<+->
+  \Zeile
+  \alert{Aber wie sieht die VP aus?}\\
+  \Viertelzeile
+  \onslide<+->
+  \orongsch{Und was ist mit unabhängigen Sätzen?}
+\end{frame}
+
+
+\section{Vorschau}
+

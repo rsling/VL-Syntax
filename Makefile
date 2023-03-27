@@ -48,39 +48,37 @@ $(OUTDIR)/%$(SLIDESUFF)$(PROJECT)$(SUFFSUFF): main.tex $(SOURCEDIR)%.tex $(OUTDI
 
 # Phony shit.
 
-.PHONY: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12 handout13 slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12 slides13 allhandouts allslides all clean realclean edit
+.PHONY: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12 slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12 allhandouts allslides all clean realclean edit
 
 handout01: $(OUTDIR)/01.+Grammatik$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout02: $(OUTDIR)/02.+Kern+,+Peripherie+und+Regeln$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout03: $(OUTDIR)/03.+Grundbegriffe$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout04: $(OUTDIR)/04.+Wortklassen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout05: $(OUTDIR)/05.+Konstituenten+und+Satzglieder$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout06: $(OUTDIR)/06.+Nominalphrasen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout07: $(OUTDIR)/07.+Andere+Phrasen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout08: $(OUTDIR)/08.+Verbphrasen+und+Verbkomplexe$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout09: $(OUTDIR)/09.+Sätze$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout10: $(OUTDIR)/10.+Nebensätze$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout11: $(OUTDIR)/11.+Subjekte+und+Prädikate$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout12: $(OUTDIR)/12.+Passive+und+Objekte$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
-handout13: $(OUTDIR)/13.+Syntax+infiniter+Verbformen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout02: $(OUTDIR)/02.+Grundbegriffe$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout03: $(OUTDIR)/03.+Wortklassen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout04: $(OUTDIR)/04.+Konstituenten+und+Satzglieder$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout05: $(OUTDIR)/05.+Nominalphrasen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout06: $(OUTDIR)/06.+Andere+Phrasen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout07: $(OUTDIR)/07.+Verbphrasen+und+Verbkomplexe$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout08: $(OUTDIR)/08.+Sätze$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout09: $(OUTDIR)/09	+Nebensätze$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout10: $(OUTDIR)/10.+Subjekte+und+Prädikate$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout11: $(OUTDIR)/11.+Passive+und+Objekte$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
+handout12: $(OUTDIR)/12.+Syntax+infiniter+Verbformen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 
-allhandouts: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12 handout13
+allhandouts: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12
 
 slides01: $(OUTDIR)/01.+Grammatik$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides02: $(OUTDIR)/02.+Kern+,+Peripherie+und+Regeln$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides03: $(OUTDIR)/03.+Grundbegriffe$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides04: $(OUTDIR)/04.+Wortklassen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides05: $(OUTDIR)/05.+Konstituenten+und+Satzglieder$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides06: $(OUTDIR)/06.+Nominalphrasen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides07: $(OUTDIR)/07.+Andere+Phrasen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides08: $(OUTDIR)/08.+Verbphrasen+und+Verbkomplexe$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides09: $(OUTDIR)/09.+Sätze$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides10: $(OUTDIR)/10.+Nebensätze$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides11: $(OUTDIR)/11.+Subjekte+und+Prädikate$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides12: $(OUTDIR)/12.+Passive+und+Objekte$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
-slides13: $(OUTDIR)/13.+Syntax+infiniter+Verbformen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides02: $(OUTDIR)/02.+Grundbegriffe$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides03: $(OUTDIR)/03.+Wortklassen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides04: $(OUTDIR)/04.+Konstituenten+und+Satzglieder$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides05: $(OUTDIR)/05.+Nominalphrasen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides06: $(OUTDIR)/06.+Andere+Phrasen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides07: $(OUTDIR)/07.+Verbphrasen+und+Verbkomplexe$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides08: $(OUTDIR)/08.+Sätze$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides09: $(OUTDIR)/09.+Nebensätze$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides10: $(OUTDIR)/10.+Subjekte+und+Prädikate$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides11: $(OUTDIR)/11.+Passive+und+Objekte$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides12: $(OUTDIR)/12.+Syntax+infiniter+Verbformen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 
-allslides: slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12 slides13
+allslides: slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12
 
 all: allhandouts allslides
 

@@ -1,3 +1,4 @@
-# VL Deutsche Syntax
+# VL Syntax
 
-First iteration Winter 2022–2023
+Roland Schäfer, Germanistische Linguistik, FSU Jena
+Professur für Grammatik und Lexikon

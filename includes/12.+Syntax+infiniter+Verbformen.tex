@@ -1,0 +1,457 @@
+
+\section{Überblick}
+
+
+\begin{frame}
+  {Infinitivsyntax}
+  \begin{itemize}[<+->]
+    \item morphologische vs.\ analytische Tempora
+    \item Ersatzinfinitiv und Oberfeldumstellung
+      \Halbzeile
+    \item köhärente und inkohärente Infinitive
+    \item Modalverben und Halbmodale
+    \item Kontrollverben
+    \Zeile
+    \item \citet{Schaefer2018b}
+  \end{itemize}
+\end{frame}
+
+\section{Analytische Tempora}
+
+\begin{frame}
+  {Beispiele für analytische Tempora}
+  \begin{exe}
+  \ex\label{ex:analytischetempora216}
+  \begin{xlist}
+    \ex{\label{ex:analytischetempora217} dass der Hufschmied das Pferd [behuft hat]}
+    \ex{\label{ex:analytischetempora218} dass der Hufschmied das Pferd [behufen wird]}
+  \end{xlist}
+  \ex\label{ex:analytischetempora219}
+  \begin{xlist}
+    \ex{\label{ex:analytischetempora220} dass der Hufschmied das Pferd [behuft hatte]}
+    \ex{\label{ex:analytischetempora221} dass der Hufschmied das Pferd [[behuft haben] wird]}
+  \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Die analytischen Tempora des Deutschen}
+    \centering
+  \begin{tabular}{lll}
+    \lsptoprule
+    & \textbf{Hilfsverb} & \textbf{regierter Status} \\
+    \midrule
+    \textbf{Futur} & \textit{werden} & 1 (Infinitiv) \\
+    \textbf{Perfekt} & \textit{haben}\slash\textit{sein} & 3 (Partizip) \\
+    \lspbottomrule
+  \end{tabular}\\
+  \raggedright
+  \Zeile
+  Finit sind nur Präsens, Präteritum und Futur!
+  \Halbzeile
+  \begin{itemize}[<+->]
+    \item Perfekt = Präsensperfekt
+    \item Plusquamperfekt = Präteritumsperfekt
+    \item Futur II = Futurperfekt
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {Der Infinitiv des Perfekts}
+  \begin{exe}
+    \ex \alert{behuft haben}
+    \ex \alert{geplatzt sein}
+  \Zeile
+  \ex\label{ex:analytischetempora222}
+  \begin{xlist}
+    \ex{\label{ex:analytischetempora223} dass der Hufschmied das Pferd [[behuft haben] will]}
+    \ex{\label{ex:analytischetempora224} dass der Hufschmied das Pferd [[[behuft gehabt] haben] will]}
+  \end{xlist}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {Analyse als Verbkomplex}
+  \centering
+  \begin{forest}
+    [\textbf{V}, calign=last
+      [\textbf{V}, calign=last
+        [\textbf{V}, calign=last
+          [\textbf{V}, tier=preterminal
+            [\textit{behuft}]
+          ]
+          [\textbf{V}, tier=preterminal
+            [\textit{gehabt}]
+            {\draw [->, bend left=45] (.south) to node [below, midway] {\footnotesize\textsc{Status} (3)} (!uu11.south);}
+          ]
+        ]
+        [\textbf{V}, tier=preterminal
+          [\textit{haben}]
+          {\draw [->, bend left=45] (.south) to node [below, midway] {\footnotesize\textsc{Status} (3)} (!uu121.south);}
+        ]
+      ]
+      [\textbf{V}, tier=preterminal
+        [\textit{will}]
+        {\draw [->, bend left=45] (.south) to node [below, midway] {\footnotesize\textsc{Status} (1)} (!uu121.south);}
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+
+\begin{frame}
+  {Unterschiede zwischen Präteritum und Präsensperfekt}
+  Stilistische Unterschiede\\
+  \Halbzeile
+  \begin{exe}
+  \ex\label{ex:analytischetempora226}
+  \begin{xlist}
+    \ex{\label{ex:analytischetempora227} Das Pferd lief im Kreis.}
+    \ex{\label{ex:analytischetempora228} Das Pferd ist im Kreis gelaufen.}
+  \end{xlist}
+  \end{exe}
+  \Zeile
+  Semantische Unterschiede\\
+  \Halbzeile
+  \begin{exe}
+  \ex\label{ex:analytischetempora229}
+  \begin{xlist}
+    \ex{\label{ex:analytischetempora230} Im Jahr 1993 hat der Kommerz den Techno erobert.}
+    \ex{\label{ex:analytischetempora231} Im Jahr 1993 eroberte der Kommerz den Techno.}
+  \end{xlist}
+  \end{exe}
+\end{frame}
+
+
+\begin{frame}
+  {Nichtkanonische Infinitivrektion}
+  Die sogenannte Oberfeldumstellung mit Ersatzinfinitiv\\
+  \Zeile
+  \begin{exe}
+    \ex{\label{ex:ersatzinfinitivundoberfeldumstellung238} dass der Junge [hat [[schwimmen] wollen]]}
+  \end{exe}
+  \Zeile
+    \centering
+  \begin{forest}
+    [\textbf{V}, calign=first
+      [\textbf{V}, tier=preterminal
+        [\textit{hat}\\1]
+      ]
+      [\textbf{V}, calign=last
+        [\textbf{V}, tier=preterminal
+          [\textit{schwimmen}\\3]
+        ]
+        [\textbf{V}, tier=preterminal
+          [\textit{wollen}\\2]
+          {\draw [->, bend left=20] (.south) to node [below, near end] {\footnotesize\textsc{Status} (1)} (!uu11.south);}
+          {\draw [<-, bend left=60] (.south) to node [below, midway] {\footnotesize\textsc{Status} (1)} (!uuu11.south);}
+        ]
+      ]
+    ]
+  \end{forest}
+\end{frame}
+
+
+\section{Infinitivsyntax}
+
+\begin{frame}
+  {Kommas bei \textit{Infinitvkonstruktionen}}
+  \begin{exe}
+    \ex[*]{Nadezhda \rot{scheint}, die Kontrolle über die Hantel zu verlieren.}
+    \ex[*]{Nadezhda \rot{will}, die Weltmeisterschaft gewinnen.}
+    \ex[ ]{Nadezhda \alert{beschließt}, keine Steroide mehr einzunehmen.}
+    \ex[?]{Nadezhda \alert{beschließt}\orongsch{,} zu trainieren.}
+  \end{exe}
+  \onslide<+->
+  \Zeile
+  \begin{itemize}[<+->]
+    \item \alert{Infinitivsyntax} ist der Schlüssel
+    \item Komma nur bei \alert{inkohärenten Infinitiven}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {(In)kohärente Infinitive}
+  Kohärente und inkohärente Infinitivkonstruktionen\\
+  \onslide<+->
+  \Zeile
+  \centering
+  \scalebox{0.7}{%
+  \begin{forest}
+    [VP\Sub{1+2}, calign=last
+      [NP, tier=preterminal
+        [\textit{Vanessa}, narroof]
+      ]
+      [NP, tier=preterminal
+        [\textit{die Pferde}, narroof]
+      ]
+      [\textbf{V\Sub{2+1}}, calign=last
+        [\textbf{V\Sub{2}}, tier=preterminal
+          [\textit{behufen}]
+        ]
+        [\textbf{V\Sub{1}}, tier=preterminal
+          [\textit{will}]
+        ]
+      ]
+    ]
+  \end{forest}}~\hspace{2em}~%
+  \scalebox{0.7}{%
+  \begin{forest}
+    l sep+=3em, s sep+=2em
+    [VP\Sub{1}, calign=last
+      [NP, tier=preterminal
+        [\textit{Vanessa}, narroof]
+      ]
+      [VP\Sub{2}, calign=last
+        [NP, tier=preterminal
+          [\textit{die Pferde}, narroof]
+        ]
+        [\textbf{V\Sub{2}}, tier=preterminal
+          [\textit{zu behufen}]
+        ]
+      ]
+      [\textbf{V\Sub{1}}, tier=preterminal
+        [\textit{wünscht}]
+      ]
+    ]
+  \end{forest}}
+\end{frame}
+
+
+\begin{frame}
+  {Test | Herausstellbarkeit}
+  \begin{exe}
+  \ex\label{ex:kohaerenz243}
+  \begin{xlist}
+    \ex[ ]{\label{ex:kohaerenz244} Oma glaubt, dass Vanessa \Ti\ wünscht, [die Pferde zu behufen]\ORi.}
+    \ex[*]{\label{ex:kohaerenz245} Oma glaubt, dass Vanessa \Ti\ will, [die Pferde behufen]\ORi.}
+  \end{xlist}
+\end{exe}
+\end{frame}
+
+
+\begin{frame}
+  {Halbmnodale}
+  Scheinbar gleich strukturiert\\
+  \Halbzeile
+  \begin{exe}
+  \ex\label{ex:modalverbenundhalbmodalverben247}
+  \begin{xlist}
+    \ex{\label{ex:modalverbenundhalbmodalverben248} dass der Hufschmied das Pferd behufen will.}
+    \ex{\label{ex:modalverbenundhalbmodalverben249} dass der Hufschmied das Pferd zu behufen scheint.}
+    \ex{\label{ex:modalverbenundhalbmodalverben250} dass der Hufschmied das Pferd zu behufen beschließt.}
+  \end{xlist}
+\end{exe}
+\Zeile
+  Aber Abweichung bei der Extrahierbarkeit\\
+  \Halbzeile
+  \begin{exe}
+  \ex\label{ex:modalverbenundhalbmodalverben251}
+  \begin{xlist}
+    \ex[*]{\label{ex:modalverbenundhalbmodalverben252} dass der Hufschmied will, das Pferd behufen}
+    \ex[*]{\label{ex:modalverbenundhalbmodalverben253} dass der Hufschmied scheint, das Pferd zu behufen}
+    \ex[ ]{\label{ex:modalverbenundhalbmodalverben254} dass der Hufschmied beschließt, das Pferd zu behufen}
+  \end{xlist}
+\end{exe}
+\end{frame}
+
+\begin{frame}
+  {Halbmodale | \textit{scheinen} ohne Subjektrolle}
+  Subjekt von \textit{scheinen} nicht erfragbar\\
+  \Halbzeile
+\begin{exe}
+  \ex\label{ex:modalverbenundhalbmodalverben255}
+  \begin{xlist}
+    \ex[ ]{\label{ex:modalverbenundhalbmodalverben256} Frage: Wer will das Pferd behufen?\\
+      Antwort: Der Hufschmied will das.}
+    \ex[*]{\label{ex:modalverbenundhalbmodalverben257} Frage: Wer scheint das Pferd zu behufen?\\
+      Antwort: Der Hufschmied scheint das.}
+    \ex[ ]{\label{ex:modalverbenundhalbmodalverben258} Frage: Wer beschließt, das Pferd zu behufen?\\
+      Antwort: Der Hufschmied beschließt das.}
+  \end{xlist}
+\end{exe}
+\Zeile
+Und \textit{scheinen} kann kein subjektloses Verb einbetten\\
+\Halbzeile
+\begin{exe}
+  \ex\label{ex:modalverbenundhalbmodalverben259}
+  \begin{xlist}
+    \ex[*]{\label{ex:modalverbenundhalbmodalverben260} Dem Hufschmied will grauen.}
+    \ex[ ]{\label{ex:modalverbenundhalbmodalverben261} Dem Hufschmied scheint zu grauen}
+    \ex[*]{\label{ex:modalverbenundhalbmodalverben262} Dem Hufschmied beschließt zu grauen.}
+  \end{xlist}
+\end{exe}
+\end{frame}
+
+
+\begin{frame}
+  {(In)kohärente Infinitve}
+  \onslide<+->
+  \onslide<+->
+    \resizebox{1\textwidth}{!}{
+    \begin{tabular}{lcllll}
+      \lsptoprule
+      & \multirow{2}{*}{\textbf{Status}} & \multirow{2}{*}{\textbf{Kohärenz}} & \textbf{eigenes} & \textbf{Subjekts-} \\
+      & & & \textbf{Subjekt} & \textbf{Rolle} & \textbf{Beispiel}\\
+      \midrule
+      \textbf{Modalverben} & 1 & obl.\ kohärent & ja & Identität & \textit{wollen} \\
+      \textbf{Halbmodalverben} & 2 & obl.\ kohärent & nein & nein & \textit{scheinen} \\
+      \textbf{Kontrollverben} & 2 & \rot{opt.\ inkohärent} & ja & Kontrolle & \textit{beschließen} \\
+      \lspbottomrule
+    \end{tabular}
+  }\\
+  \Zeile
+  \begin{itemize}[<+->]
+    \item Nur \alert{inkohärente nachgestellte Infinitive} werden kommatiert!
+    \item Sie gelten als satzwertig, aber \rot{Inkohärenz leider nur optional}.
+    \item Es kommen also nur \alert{Abhängige von Halbmodalen} infrage.
+  \end{itemize}
+  \onslide<+->
+  \Viertelzeile
+  \begin{exe}
+    \ex[*]{Nadezhda \rot{scheint}, die Kontrolle über die Hantel zu verlieren.}
+    \ex[*]{Nedezhda \rot{will}, die Weltmeisterschaft gewinnen.}
+  \end{exe}
+\end{frame}
+
+\begin{frame}
+  {(In)kohärente Infinitve}
+  \onslide<+->
+  \onslide<+->
+  Was ist jetzt hiermit?\\
+  \Halbzeile
+  \onslide<+->
+  \begin{exe}
+    \ex[ ]{Nadezhda \alert{beschließt}, keine Steroide mehr einzunehmen.}
+    \ex[?]{Nadezhda \alert{beschließt}\orongsch{,} zu trainieren.}
+  \end{exe}
+  \onslide<+->
+  \Halbzeile
+  \alert{Eindeutig inkohärent} | hinter die RSK versetzte Infinitive\\
+  \Viertelzeile
+  \onslide<+->
+  \begin{exe}
+    \ex \rot{\textbf{Inkohärent}}
+    \begin{xlist}
+      \ex[ ]{\ldots dass Nadezhda beschließt, keine Steroide mehr zu nehmen.}
+      \ex[*]{\ldots dass Nadezhda keine Steroide mehr zu nehmen beschließt.}
+    \end{xlist}
+    \ex \alert{\textbf{Kohärent oder inkohärent}}
+    \begin{xlist}
+      \ex[ ]{\ldots dass Nadezhda zu trainieren beschließt.}
+      \ex[ ]{\ldots dass Nadezhda beschließt zu trainieren.}
+    \end{xlist}
+  \end{exe}
+\end{frame}
+
+
+\begin{frame}
+  {(In)kohärente Infinitve}
+  Es liegt also an der syntaktischen Struktur.\\
+  \Zeile
+  \onslide<+->
+  \begin{exe}
+    \ex
+    \begin{xlist}
+      \ex[ ]{[Nadezhda]\Sub{2} \alert{[beschließt]\Sub{1}} [t\Sub{2} \gruen{t\Sub{3}} \alert{[t\Sub{1}]\Sub{VK}}]\ \Sub{VP}\ \orongsch{,}\\
+        {\hspace{1em}}\gruen{[keine Steroide mehr einzunehmen]\Sub{3}}.}
+        \Viertelzeile
+      \ex[*]{[Nadezhda]\Sub{2} \rot{[beschließt]\Sub{1}}\\
+        {\hspace{1em}}[t\Sub{2} [keine Steroide] [mehr] \rot{[einzunehmen t\Sub{1}]\Sub{VK}}\ ]\Sub{VP}.}
+    \end{xlist}
+    \Halbzeile
+    \ex
+    \begin{xlist}
+      \ex[ ]{[Nadezhda]\Sub{2} \alert{[beschließt]\Sub{1}}\ \orongsch{,} [t\Sub{2} \gruen{t\Sub{3}} \alert{[t\Sub{1}]\Sub{VK}}\ ]\Sub{VP} \gruen{[zu trainieren]\Sub{3}}.}
+      \Viertelzeile
+      \ex[ ]{[Nadezhda]\Sub{2} \tuerkis{[beschließt]\Sub{1}} [t\Sub{2} \tuerkis{[zu trainieren t\Sub{1}]\Sub{VK}}\ ]\Sub{VP}}
+    \end{xlist}
+  \end{exe}
+  \Halbzeile
+  \onslide<+->
+  Füllen Sie den VK durch Hinzufügen von Hilfsverben auf,\\
+  um das Phänomen noch deutlicher zu sehen.
+\end{frame}
+
+
+\section{Kontrollinfinitive}
+
+\begin{frame}
+  {\textit{zu}-Infinitive als Subjekte und Objekte}
+  \begin{exe}
+  \ex\label{ex:infinitivkontrolle264}
+  \begin{xlist}
+    \ex{\label{ex:infinitivkontrolle265} [Das Geschirr zu spülen] nervt Matthias. (Objektkontrolle)}
+    \ex{\label{ex:infinitivkontrolle266} Doro wagt, [die Küche zu betreten]. (Subjektkontrolle)}
+  \end{xlist}
+\end{exe}
+\Zeile
+Auch mit Korrelat\\
+\Halbzeile
+\begin{exe}
+  \ex\label{ex:infinitivkontrolle267}
+  \begin{xlist}
+    \ex{\label{ex:infinitivkontrolle268} Es nervt Matthias, [das Geschirr zu spülen].}
+    \ex{\label{ex:infinitivkontrolle269} Doro wagt es, [die Küche zu betreten].}
+  \end{xlist}
+\end{exe}
+\end{frame}
+
+\begin{frame}
+  {Erhalt der Kontrolle bei Passivierung}
+\begin{exe}
+  \ex\label{ex:infinitivkontrolle270}
+  \begin{xlist}
+    \ex{\label{ex:infinitivkontrolle271} Der Installateur hat gestern versucht, die Küche zu betreten.}
+    \ex{\label{ex:infinitivkontrolle272} Gestern wurde versucht, die Küche zu betreten.}
+  \end{xlist}
+\end{exe}
+\end{frame}
+
+\begin{frame}
+  {Kontrolle}
+  \begin{block}
+    {Infinitivkontrolle}
+Die \textit{Kontrollrelation} besteht zwischen einer nominalen Valenzstelle eines Verbs und einem von diesem Verb abhängigen (subjektlosen) \textit{zu}"=Infinitiv.
+Die Bedeutung des nicht ausgedrückten Subjekts des abhängigen \textit{zu}"=Infinitivs wird dabei durch die mit der nominalen Valenzstelle verbundene Bedeutung beigesteuert.
+  \end{block}
+\end{frame}
+
+
+\begin{frame}
+  {Subjektinfinitive meist mit Objektkontrolle}
+  \begin{exe}
+  \ex\label{ex:infinitivkontrolle274}
+  \begin{xlist}
+    \ex{\label{ex:infinitivkontrolle275} Das Geschirr zu spülen, nervt ihn.}
+    \ex{\label{ex:infinitivkontrolle276} Das Geschirr zu spülen, fällt ihm leicht.}
+    \ex{\label{ex:infinitivkontrolle277} Das Geschirr zu spülen, beschert ihm einen zufriedenen Mitbewohner.}
+    \ex{\label{ex:infinitivkontrolle278} Sich für Hilfe zu bedanken, freut ihn immer besonders.}
+  \end{xlist}
+\end{exe}
+\end{frame}
+
+\begin{frame}
+  {Objektinfinitive | präferiert Objektkontrolle}
+  \begin{exe}
+  \ex\label{ex:infinitivkontrolle279}
+  \begin{xlist}
+    \ex{\label{ex:infinitivkontrolle280} Er wagt, die Küche zu betreten.}
+    \ex{\label{ex:infinitivkontrolle281} Er bittet seinen Mitbewohner, das Geschirr zu spülen.}
+    \ex{\label{ex:infinitivkontrolle282} Doro erlaubt Matthias, sich den Wagen zu leihen.}
+  \end{xlist}
+\end{exe}
+\end{frame}
+
+\begin{frame}
+  {Infinitivangaben | Subjektkontrolle}
+  \begin{exe}
+  \ex\label{ex:infinitivkontrolle283}
+  \begin{xlist}
+    \ex{\label{ex:infinitivkontrolle284} Matthias arbeitet, um Geld zu verdienen.}
+    \ex{\label{ex:infinitivkontrolle285} Matthias begrüßt Doro, ohne aus der Rolle zu fallen.}
+    \ex{\label{ex:infinitivkontrolle286} Matthias hilft Doro, anstatt untätig daneben zu stehen.}
+    \ex{\label{ex:infinitivkontrolle287} Matthias bringt Doro den Wagen zurück, ohne den Lackschaden \\zu erwähnen.}
+  \end{xlist}
+\end{exe}
+\end{frame}
