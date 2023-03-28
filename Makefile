@@ -8,6 +8,7 @@ BX = biber
 PROJECT = SchaeferDeutscheSyntax
 HANDOUTSUFF = _Handout_
 SLIDESUFF = _Folien_
+FULL = Komplett
 SUFFSUFF = .pdf
 BIBSUFF = .bbl
 OUTDIR = output
@@ -29,6 +30,14 @@ TEXFLAGS = -output-directory=$(OUTDIR)
 # Create output dir if needed.
 $(info $(shell [ ! -d $(OUTDIR) ] && mkdir -p ./$(OUTDIR)/includes))
 
+# Complete handout BBL.
+$(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(BIBSUFF): $(SOURCES) $(BIBFILE) 
+	$(LX) $(TEXFLAGS) -jobname=$(PROJECT)$(HANDOUTSUFF)$(FULL) $(PREFLAGS) "$(HANDOUTDEF)$(MAININCLUDE)"
+	cd ./$(OUTDIR); $(BX) $(PROJECT)$(HANDOUTSUFF)$(FULL)
+
+# Complete handout PDF.
+$(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(SUFFSUFF): $(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(BIBSUFF)
+	$(LX) $(TEXFLAGS) -jobname=$(PROJECT)$(HANDOUTSUFF)$(FULL) "$(HANDOUTDEF)$(MAININCLUDE)"
 
 # Individual handout BBL and PDF.
 $(OUTDIR)/%$(HANDOUTSUFF)$(PROJECT)$(BIBSUFF): main.tex $(SOURCEDIR)/%.tex $(BIBFILE)
@@ -80,7 +89,9 @@ slides12: $(OUTDIR)/12.+Syntax+infiniter+Verbformen$(SLIDESUFF)$(PROJECT)$(SUFFS
 
 allslides: slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12
 
-all: allhandouts allslides
+complete: $(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(SUFFSUFF)
+
+all: allhandouts allslides complete
 
 clean:
 	cd ./$(OUTDIR)/; \rm -f *.adx *.and *.aux *.bbl *.blg *.idx *.ilg *.ldx *.lnd *.log *.out *.rdx *.run.xml *.sdx *.snd *.toc *.wdx *.xdv *.nav *.snm *.bcf *.vrb
