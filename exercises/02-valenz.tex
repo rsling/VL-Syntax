@@ -1,0 +1,250 @@
+\documentclass[12pt,a4paper,twoside]{article}
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[ngerman]{babel}
+
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array,graphics}
+\usepackage{color}
+\usepackage{soul}
+\usepackage[linecolor=gray,backgroundcolor=yellow!50,textsize=tiny]{todonotes}
+\usepackage[linguistics]{forest}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{langsci-gb4e}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{marginnote}
+
+\usepackage[maxbibnames=99,
+  maxcitenames=2,
+  uniquelist=false,
+  backend=biber,
+  doi=false,
+  url=false,
+  isbn=false,
+  bibstyle=biblatex-sp-unified,
+  citestyle=sp-authoryear-comp]{biblatex}
+
+\definecolor{rot}{rgb}{0.7,0.2,0.0}
+\newcommand{\rot}[1]{\textcolor{rot}{#1}}
+\definecolor{blau}{rgb}{0.1,0.2,0.7}
+\newcommand{\blau}[1]{\textcolor{blau}{#1}}
+\definecolor{gruen}{rgb}{0.0,0.7,0.2}
+\newcommand{\gruen}[1]{\textcolor{gruen}{#1}}
+\definecolor{grau}{rgb}{0.6,0.6,0.6}
+\newcommand{\grau}[1]{\textcolor{grau}{#1}}
+\definecolor{orongsch}{RGB}{255,165,0}
+\newcommand{\orongsch}[1]{\textcolor{orongsch}{#1}}
+\definecolor{tuerkis}{RGB}{63,136,143}
+\definecolor{braun}{RGB}{108,71,65}
+\newcommand{\tuerkis}[1]{\textcolor{tuerkis}{#1}}
+\newcommand{\braun}[1]{\textcolor{braun}{#1}}
+
+\newcommand*\Rot{\rotatebox{75}}
+
+\newcommand{\zB}{z.\,B.\ }
+\newcommand{\ZB}{Z.\,B.\ }
+\newcommand{\Sub}[1]{\ensuremath{_{\text{#1}}}}
+\newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
+\newcommand{\UpSub}[2]{\ensuremath{^{\text{#1}}_{\text{#2}}}}
+\newcommand{\Doppelzeile}{\vspace{2\baselineskip}}
+\newcommand{\Zeile}{\vspace{\baselineskip}}
+\newcommand{\Halbzeile}{\vspace{0.5\baselineskip}}
+\newcommand{\Viertelzeile}{\vspace{0.25\baselineskip}}
+
+\newcommand{\whyte}[1]{\textcolor{white}{#1}}
+
+\newcommand{\Spur}[1]{t\Sub{#1}}
+\newcommand{\Ti}{\Spur{1}}
+\newcommand{\Tii}{\Spur{2}}
+\newcommand{\Tiii}{\Spur{3}}
+\newcommand{\Tiv}{\Spur{4}}
+\newcommand*{\mybox}[1]{\framebox{#1}}
+\newcommand\ol[1]{{\setul{-0.9em}{}\ul{#1}}}
+
+\newenvironment{nohyphens}{%
+  \par
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \sloppy
+}{\par}
+
+\newcommand{\Lf}{
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+\forestset{
+  Ephr/.style={draw, ellipse, thick, inner sep=2pt},
+  Eobl/.style={draw, rounded corners, inner sep=5pt},
+  Eopt/.style={draw, rounded corners, densely dashed, inner sep=5pt},
+  Erec/.style={draw, rounded corners, double, inner sep=5pt},
+  Eoptrec/.style={draw, rounded corners, densely dashed, double, inner sep=5pt},
+  Ehd/.style={rounded corners, fill=gray, inner sep=5pt,
+    delay={content=\whyte{##1}}
+  },
+  Emult/.style={for children={no edge}, for tree={l sep=0pt}},
+  phrasenschema/.style={for tree={l sep=2em, s sep=2em}},
+  sake/.style={tier=preterminal},
+  ake/.style={
+    tier=preterminal
+    },
+}
+
+\forestset{
+  decide/.style={draw, chamfered rectangle, inner sep=2pt},
+  finall/.style={rounded corners, fill=gray, text=white},
+  intrme/.style={draw, rounded corners},
+  yes/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Ja}}},
+  no/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Nein}}}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+
+
+\author{Prof.\ Dr.\ Roland Schäfer | Germanistische Linguistik FSU Jena}
+\title{Syntax | 02 | Kongruenz, Rektion, Valenz}
+\date{Version Sommer 2023 (\today)}
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX,Numbers=OldStyle, Scale=MatchLowercase}
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+\setlength{\parindent}{0pt}
+
+\usepackage[headings]{fancyhdr}
+\fancyhead[E,O]{}
+\fancyfoot[E,O]{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\setlength{\headsep}{50pt}
+\setlength{\textheight}{\textheight-25pt}
+
+
+
+\begin{document}
+
+\maketitle
+
+\section{Kongruenz}
+
+Finden Sie im Textausschnitt \textit{Gang durch das Ried} fünf Fälle von Subjekt-Verb-Kongruenz und fünf Nominalphrasen (Substantiv mit mindestens einem vorausgehenden Artikel oder einem vorausgehenden Adjektiv), in denen Kongruenz herrscht.
+
+
+
+
+\section{Verbvalenz}
+
+Entscheiden Sie für die numerierten und unterstrichenen Phrasen im Textausschnitt \textit{Gang durch das Ried}, ob sie Ergänzungen oder Angaben sind.
+Finden Sie dafür zunächst das Verb, von dem sie abhängen, und entscheiden Sie dann, ob es sich um Ergänzungen und Angaben handelt.
+Im Fall von Ergänzungen geben Sie an, welches Merkmal \slash\ welche Form das Verb regiert.
+Rechnen Sie damit, dass es in einigen Fällen schwer entscheidbar ist, ob es sich um eine Ergänzung oder eine Angabe handelt.
+Wir kommen im letzten drittel der Vorlesung aber nochmal darauf zurück, um etwas mehr Klarheit zu schaffen.
+
+
+Zur Wiederholung: Die wichtigsten Unterschiede zwischen valenzgebundenen Ergänzungen und Angaben sind die folgenden:
+
+\Zeile
+
+\begin{center}
+  \begin{tabular}[h]{lll}
+    \toprule
+                         & \textbf{Ergänzungen} & \textbf{Angaben} \\
+    \midrule
+    \textbf{Semantik} & verbgebunden & verbunabhängig \\
+    \textbf{Weglassbarkeit} & manchmal\slash oft obligatorisch & immer fakultativ \\
+    \textbf{Kasus\slash Präposition\slash\ldots} & regiert & frei \\
+    \textbf{Lizenzierung} & einmalig & iterierbar \\
+    \midrule
+    \textbf{Schultermini} & Subjekt, Objekte & adverbiale Bestimmung \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+\newpage
+
+\begin{center}
+  \begin{tabular}[h]{cp{0.2\textwidth}lp{0.3\textwidth}}
+    \toprule
+    &\textbf{Verb} & \textbf{Status} & \textbf{regiertes Merkmal} \\
+    \midrule
+    &&& \\
+     (1) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+     (2) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+     (3) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+     (4) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+     (5) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+     (6) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+     (7) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+     (8) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+     (9) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (10) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (11) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (12) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (13) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (14) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (15) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (16) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (17) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (18) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (19) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (20) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (21) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+    &&& \\
+    (22) & & \Square~Ergänzung\ \ \ \Square~Angabe & \\ \cline{2-2}\cline{4-4} 
+  \end{tabular}
+\end{center}
+
+
+
+\section{Text}
+
+\begin{nohyphens}
+  \begin{quote}
+    \textbf{Elisabeth Langgässer: Gang durch das Ried (Anfang)}\\
+    Verlag Jakob Hegner 19364, S. 1\\[0.5\baselineskip]
+
+    Im Spätherbst des Jahres 1930 ging ein Mann (1)\ul{über das verlassene französische Lager, das früher ein deutsches gewesen war und sich zwischen der hessischen Hauptstadt, umschließenden Tannen- und Birkenwäldern und dem großen Sande dahinzieht}.
+    (2)\ul{Es} nieselte langsam (3)\ul{vom Himmel herunter}, der Mann schlug (4)\ul{den Kragen der Jacke} hoch und rückte das Kappenschild noch tiefer in die Stirne.
+    (5)\ul{Auf den breiten Kasernenstraßen}, die (6)\ul{durch leere Barackenreihen}, (7)\ul{an Stallungen, Vorratshäusern und Kantinen} vorüberführten, wuchs dichtes, grünbraunes Gras, das jeden Schritt verschluckte und den Wandernden wesenlos wie eine Traumgestalt machte, die, wenn sie auch rufen würde, (8)\ul{von niemand} gehört werden könnte.
+    Noch vor kurzem hatten hier Feuerwerker aus Koblenz und Ludwigshafen den Übungsplatz abgesucht und die Blindgänger, Handgranaten und letzten Depots gesprengt – die Erde war damals zerstampft und (9)\ul{der Himmel} (10)\ul{von dem Echo jener dumpfen Schläge} erfüllt gewesen, die (11)\ul{bis in das Ried hinein} und noch weiterhin spürbar waren.
+
+      Jetzt aber herrschte (12)\ul{Stille}, eine blöde Taubheit gleichsam, die sich wohl noch (13)\ul{der Töne} erinnert, doch so sehr mit ihnen gesättigt ist, daß sie nichts mehr vernehmen kann.
+      Manche Fensterscheibe war da und dort durch die Erschütterung eingefallen und starrte gezackt wie ein schwarzer Stern aus der bröckelnden Mauerfüllung; (14)\ul{der rostigen Angel} enthoben, hing eine morsche Tür schief zu der eigenen Achse; eine andere schlug unaufhörlich, von dem Zugwind angetrieben, bis zur Hälfte der Schwelle vor, wo (15)\ul{ein üppiges Mooskissen} wucherte, (16)\ul{das} sie geräuschlos abfing.
+      Auch ein paar fetzige Wellblechbaracken standen (17)\ul{neben den Backsteinbauten}; sie waren (18)\ul{rötlichgelb} angelaufen und (19)\ul{von der großen Versteigerung} vor Wochen übriggeblieben.
+
+      Was diese Versteigerung anging, so konnte man damals glauben, in einer Stadt zu sein, die (20)\ul{von Erdkatastrophen} verschüttet gewesen und dann wieder ausgegraben und aufgebaut worden war: (21)\ul{unter freiem Himmel} stand, abgenutzt, das Inventar der Kasernen – alte Schränke, die jammervoll quietschten, verwanzte Betten und Öfen, welche glatt auseinanderfielen, ein paar Schemel mit starrenden Beinen, befleckte Bänke und Tische, (22)\ul{deren Holz}, wo es irgend anging, unzüchtig tätowiert war, nutzlose Eisenteile, die von Lumpensammlern hinausgefahren und auf halbem Weg wieder verloren wurden.
+Nur einige Feldbettstellen waren ungefragt hiergeblieben und jene Wellblechbaracken, die, zerrissen, als ob eine Schere sie geschlitzt und geschnitten hätte, ja, teilweise schon zusammengebrochen, in dem weiten Gelände ruhten und den Eindruck riesiger Raupen oder Fabeltiere machten, welche rasselnd niedergesunken, doch immer noch gefährlich und voll tückischer Drohung sind.
+Der Krieg hatte, wie ihm gemäß ist, wenn er irgendwo Abschied nimmt, seine leere Schale zurückgelassen, diese armselig rohen Kasernen, in denen er noch immer so gegenwärtig war, daß selbst die Allerärmsten sich nicht entschließen konnten, (23)\ul{in den verlassenen Höhlen einen Unterschlupf zu suchen}.
+  \end{quote}
+\end{nohyphens}
+
+\end{document}
