@@ -1,0 +1,197 @@
+\documentclass[12pt,a4paper,twoside]{article}
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[ngerman]{babel}
+
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array,graphics}
+\usepackage{color}
+\usepackage{soul}
+\usepackage[linecolor=gray,backgroundcolor=yellow!50,textsize=tiny]{todonotes}
+\usepackage[linguistics]{forest}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{langsci-gb4e}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{marginnote}
+
+\usepackage[maxbibnames=99,
+  maxcitenames=2,
+  uniquelist=false,
+  backend=biber,
+  doi=false,
+  url=false,
+  isbn=false,
+  bibstyle=biblatex-sp-unified,
+  citestyle=sp-authoryear-comp]{biblatex}
+
+\definecolor{rot}{rgb}{0.7,0.2,0.0}
+\newcommand{\rot}[1]{\textcolor{rot}{#1}}
+\definecolor{blau}{rgb}{0.1,0.2,0.7}
+\newcommand{\blau}[1]{\textcolor{blau}{#1}}
+\definecolor{gruen}{rgb}{0.0,0.7,0.2}
+\newcommand{\gruen}[1]{\textcolor{gruen}{#1}}
+\definecolor{grau}{rgb}{0.6,0.6,0.6}
+\newcommand{\grau}[1]{\textcolor{grau}{#1}}
+\definecolor{orongsch}{RGB}{255,165,0}
+\newcommand{\orongsch}[1]{\textcolor{orongsch}{#1}}
+\definecolor{tuerkis}{RGB}{63,136,143}
+\definecolor{braun}{RGB}{108,71,65}
+\newcommand{\tuerkis}[1]{\textcolor{tuerkis}{#1}}
+\newcommand{\braun}[1]{\textcolor{braun}{#1}}
+
+\newcommand*\Rot{\rotatebox{75}}
+
+\newcommand{\zB}{z.\,B.\ }
+\newcommand{\ZB}{Z.\,B.\ }
+\newcommand{\Sub}[1]{\ensuremath{_{\text{#1}}}}
+\newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
+\newcommand{\UpSub}[2]{\ensuremath{^{\text{#1}}_{\text{#2}}}}
+\newcommand{\Doppelzeile}{\vspace{2\baselineskip}}
+\newcommand{\Zeile}{\vspace{\baselineskip}}
+\newcommand{\Halbzeile}{\vspace{0.5\baselineskip}}
+\newcommand{\Viertelzeile}{\vspace{0.25\baselineskip}}
+
+\newcommand{\whyte}[1]{\textcolor{white}{#1}}
+
+\newcommand{\Spur}[1]{t\Sub{#1}}
+\newcommand{\Ti}{\Spur{1}}
+\newcommand{\Tii}{\Spur{2}}
+\newcommand{\Tiii}{\Spur{3}}
+\newcommand{\Tiv}{\Spur{4}}
+\newcommand*{\mybox}[1]{\framebox{#1}}
+\newcommand\ol[1]{{\setul{-0.9em}{}\ul{#1}}}
+
+\newenvironment{nohyphens}{%
+  \par
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \sloppy
+}{\par}
+
+\newcommand{\Lf}{
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+\forestset{
+  Ephr/.style={draw, ellipse, thick, inner sep=2pt},
+  Eobl/.style={draw, rounded corners, inner sep=5pt},
+  Eopt/.style={draw, rounded corners, densely dashed, inner sep=5pt},
+  Erec/.style={draw, rounded corners, double, inner sep=5pt},
+  Eoptrec/.style={draw, rounded corners, densely dashed, double, inner sep=5pt},
+  Ehd/.style={rounded corners, fill=gray, inner sep=5pt,
+    delay={content=\whyte{##1}}
+  },
+  Emult/.style={for children={no edge}, for tree={l sep=0pt}},
+  phrasenschema/.style={for tree={l sep=2em, s sep=2em}},
+  sake/.style={tier=preterminal},
+  ake/.style={
+    tier=preterminal
+    },
+}
+
+\forestset{
+  decide/.style={draw, chamfered rectangle, inner sep=2pt},
+  finall/.style={rounded corners, fill=gray, text=white},
+  intrme/.style={draw, rounded corners},
+  yes/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Ja}}},
+  no/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Nein}}}
+}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+
+
+\author{Prof.\ Dr.\ Roland Schäfer | Germanistische Linguistik FSU Jena}
+\title{Syntax | 04 | Phrasen und Satzglieder}
+\date{Version Sommer 2023 (\today)}
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX,Numbers=OldStyle, Scale=MatchLowercase}
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+\setlength{\parindent}{0pt}
+
+\usepackage[headings]{fancyhdr}
+\fancyhead[E,O]{}
+\fancyfoot[E,O]{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+\setlength{\headsep}{50pt}
+\setlength{\textheight}{\textheight-25pt}
+
+
+
+\begin{document}
+
+\maketitle
+
+\section*{Voraussetzungen}
+
+Sie sollten für diese Übungen folgende Themen aus dem Buch bzw.\ der Vorlesung wiederholen, falls sie Ihnen noch nicht klar sind:
+
+\begin{enumerate}\Lf
+  \item Was sind \textbf{Phrasen}?
+  \item Welche Phrasen sind die sogenannten \textbf{Satzglieder}?
+  \item Wie funkionieren die \textbf{Konstituententests}
+    \begin{enumerate}\Lf
+      \item \textbf{Pronominalisierungstest} bzw.\ \textbf{Ein-Wort-Ersetzungstext}
+      \item \textbf{Bewegungstest} und \textbf{Vorfeldtest}
+      \item \textbf{Koordinationstest}\\
+        Achtung! Dieser Test produziert sehr viele falschpositive Ergebnisse!
+    \end{enumerate}
+  \item \textbf{Strukturelle Ambiguität}
+\end{enumerate}
+
+\section{Konstituenten und Tests}
+
+(a)~Wenden Sie jeweils alle Tests auf die in eckigen Klammern gesetzten potentiellen Konstituenten an und entscheiden Sie, ob Sie sie als Phrase behandeln möchten.
+Erwarten Sie wie gesagt nicht, dass das perfekt und immer eindeutig funktioniert.
+Durch die Anwendung der Tests sollen Sie vor allem ihre Intuition für Satzstrukturen entwickeln.
+Erst durch die wohldefinierten Phrasenschemata können Sie dann in ein paar Wochen sicher entscheiden, was wir als Phrase auffassen wollen.
+(b)~Wenn eine Konstituente eine Phrase ist, ist sie dann auch ein Satzglied?
+(c)~Überlegen Sie, welches Wort der Kopf der Phrase sein könnte.
+Teilaufgabe (c) ist ausdrücklich eine Entlastungsaufgabe.
+Sie müssen das zum jetzigen Zeitpunkt noch nicht perfekt können.
+
+\begin{exe}
+  \ex{} [Unter dem Tisch] steht der [Papierkorb].
+  \ex{} Wir [waren alle] etwas neben [der Spur].
+  \ex{} Johan weiß [nur] zu genau, dass die Frage, [die gestellt wurde], nicht [beantwortbar] ist.
+  \ex{} Früher entschied [in der BRD] [die FDP] [meistens] [mit nur 5 \%] [die Kanzlerfrage]. 
+  \ex{} Ich sehe in [letzter Zeit] [ein blaues] Auto [immer] wieder die Straße entlangfahren.
+  \ex{} Ob Syntax wirklich [schwerer als] Morphologie ist, [wage ich] [zu bezweifeln].
+  \ex{} Die Universität, [deren Kassen] leer sind, [streicht vakante Professuren].
+  \ex{} Das ergibt dann [eben] in der gegebenen Situation keinen Sinn.
+\end{exe}
+
+
+\section{Strukturelle Ambiguität}
+
+\subsection{Ambige Phrasengrenzen}
+
+Strukturelle Ambiguität kommt in der Regel so zustande, dass sich in der einen Interpretation relativ zur anderen eine Phrasengrenze verschiebt.
+Stellen Sie fest, inwiefern die folgenden Sätze strukturell ambig sind und stellen Sie fest, welche Konstituenten sich in den beiden Lesarten unterschiedlich zusammensetzen.
+
+\begin{exe}
+  \ex Sandy hat einen Mann ohne Schuhe fotografiert.
+  \ex Auf der A9 waren wieder große LKWs und Autos unterwegs.
+  \ex Letztes Jahr hat Rahel sich eine Olive im Martini bestellt.
+  \ex Sie hat den Tathergang in Begleitung ihres Anwalts niedergeschrieben.
+  \ex Wir haben das Problem mit dem Taschenrechner gelöst.
+\end{exe}
+
+\subsection{Strukturelle Ambiguität und Satzglieder}
+
+Vier der Beispiele kann man durch eine Umstellung desambiguieren (= eindeutig machen)?
+Welche sind das, und was ist die Umstellung?
+
+\end{document}
