@@ -104,6 +104,24 @@
   no/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Nein}}}
 }
 
+
+\useforestlibrary{edges}
+
+\forestset{
+  narroof/.style={roof, inner xsep=-0.25em, rounded corners},
+  forky/.style={forked edge, fork sep-=7.5pt},
+  bluetree/.style={for tree={blau}, for children={edge=blau}},
+  orongschtree/.style={for tree={orongsch}, for children={edge=orongsch}},
+  rottree/.style={for tree={rot}, for children={edge=rot}},
+  gruentree/.style={for tree={gruen}, for children={edge=gruen}},
+  tuerkistree/.style={for tree={tuerkis}, for children={edge=tuerkis}},
+  brauntree/.style={for tree={braun}, for children={edge=braun}}, 
+  grautree/.style={for tree={grau}, for children={edge=grau}}, 
+  gruennode/.style={gruen, edge=gruen},
+  graunode/.style={grau, edge=grau},
+  whitearc/.style={for children={edge=white}},
+}
+
 \usepackage{tikz}
 \usetikzlibrary{arrows,positioning} 
 
@@ -120,15 +138,6 @@
 
 \setlength{\parindent}{0pt}
 
-\usepackage[headings]{fancyhdr}
-\fancyhead[E,O]{}
-\fancyfoot[E,O]{}
-\renewcommand{\headrulewidth}{0pt}
-\pagestyle{fancy}
-\setlength{\headsep}{50pt}
-\setlength{\textheight}{\textheight-25pt}
-
-
 
 \begin{document}
 
@@ -143,15 +152,160 @@ Sie sollten für diese Übungen folgende Themen aus dem Buch bzw.\ der Vorlesung
   \item Was für Wörter kommen als \textbf{Kopf der NP} infrage?
   \item Was kann\slash muss \textbf{links vom Kopf} stehen?
   \item Was kann\slash muss \textbf{rechts vom Kopf} stehen?
-  \item Was sind \textbf{regierte Attribute}? Im Besonderen
-    \begin{itemize}
-      \item Subjektsgenitive
-      \item Objektsgenitive
-      \item regierte satzförmige Attribute
-    \end{itemize}
+%  \item Was sind \textbf{regierte Attribute}? Im Besonderen
+%    \begin{itemize}
+%      \item Subjektsgenitive
+%      \item Objektsgenitive
+%      \item regierte satzförmige Attribute
+%    \end{itemize}
   \item Wo stehen \textbf{innere Rechtsattribute} im Gegensatz zu \textbf{satzförmigen Attributen} typischerweise?
+  \item Wann verwendet man in syntaktischen Analysen Dreiecke und wann einfache Kanten?
 \end{enumerate}
 
-\section{}
+\section{NPs identifizieren}\label{sec:erkennen}
+
+Klammern Sie im folgenden Textausschnitt \textit{Ausnahmebehandlung} alle NPs ein.
+Die erste ist beispielhaft eingeklammert.
+
+\begin{quote}\onehalfspacing
+   \textbf{Ausnahmebehandlung (Ausschnitt, bearbeitet)}\\
+   {\footnotesize\url{https://de.wikipedia.org/wiki/Ausnahmebehandlung}}\\
+
+  \newdimen\origiwspc%
+  \newdimen\origiwstr%
+  \origiwspc=\fontdimen2\font
+  \origiwstr=\fontdimen3\font
+  \fontdimen2\font=1em
+   {[Eine Ausnahme oder Ausnahmesituation]} bezeichnet in der Computertechnik ein Verfahren, mit dem Informationen über bestimmte Programmzustände an andere Programmebenen zur Weiterbehandlung weitergereicht werden .
+Kann in einem Programm beispielsweise einer Speicheranforderung nicht stattgegeben werden, wird eine Speicheranforderungsausnahme ausgelöst .
+Ein Computerprogramm kann zur Behandlung dieses Problems dafür definierte Algorithmen abarbeiten, die den Fehler beheben oder anzeigen .
+Exceptions haben in weiten Teilen die Behandlung von Fehlern mittels Fehlercodes oder Sprunganweisungen abgelöst und stellen im technischen Sinne einen zweiten, optionalen Rückgabewert einer Methode bzw.\ Funktion dar .
+  \fontdimen2\font=\origiwspc
+  \fontdimen3\font=\origiwstr
+\end{quote}
+
+\newpage
+
+\section{Abgekürzte und volle Analysen}
+
+Entscheiden Sie in den folgenden Analysen, ob ein Dreieck oder eine einfache Kante eingezeichnet werden muss, und zeichnen Sie entweder das eine oder das andere ein, sodass die Bäume hinterher vollständig sind.
+Zur Erinnerung: Sobald eine Struktur abgekürzt wurde, markieren wir das mit einem Dreieck.
+Eine Abkürzung liegt selbst dann vor, wenn wir eine Phrase, die nur aus einem einzelnen Wort besteht, direkt als Phrase analysieren.
+In der vollen Analyse müsste dann zunächst die Wortklasse bestimmt werden.
+
+Hinweis: Das Symbols KP steht für Komplementiererphrase, eine Art von Nebensatz.
+
+\Zeile
+
+(1)~\begin{forest}
+  [NP, whitearc
+    [\it Orangensaft]
+  ]
+\end{forest}
+
+\Doppelzeile
+
+(2)~\begin{forest}
+  [NP, calign=child, calign child=2
+    [Art, whitearc
+      [\it jeden]
+    ]
+    [N, whitearc
+      [\it Winter]
+    ]
+  ]
+\end{forest}
+
+\Doppelzeile
+
+(3)~\begin{forest}
+  [NP, calign=child, calign child=1
+    [N, whitearc
+      [\it Blütenstaub]
+    ]
+    [PP, whitearc
+      [\it auf dem Auto]
+    ]
+  ]
+\end{forest}
+
+\Doppelzeile
+
+(4)~\begin{forest}
+  [NP, calign=child, calign child=3
+    [Art, whitearc
+      [\it der]
+    ]
+    [AP, whitearc
+      [\it festen]
+    ]
+    [N, whitearc
+      [\it Überzeugung]
+    ]
+    [KP, whitearc
+      [\it dass man das lernen kann]
+    ]
+  ]
+\end{forest}
+
+\Doppelzeile
+
+(5)~\begin{forest}
+  [NP, whitearc
+    [\it dieses unsympathische Lachen]
+  ]
+\end{forest}
+
+\newpage
+
+\section{Phrasenstruktur von NPs}
+
+Zeichnen Sie für die unterstrichenen NPs aus Aufgabe~\ref{sec:erkennen} Phrasenstrukturdiagramme.
+Kürzen Sie dabei alle Konstituenten in der NP ungeachtet ihrer internen Komplexität durch Dreiecke an.
+Analysieren Sie also nur die primäre Struktur der NP.
+Wenn eine NP exakt und auf triviale Weise gleich strukturiert ist wie eine zuvor analysierte, verweisen Sie auf die vorherige Analyse, ohne eine neue Analyse anzufertigen.
+
+\begin{center}
+  \begin{forest}
+    [NP, calign=child, calign child=2
+      [Art
+        [\it eine]
+      ]
+      [N
+        [\it Ausnahme oder Ausnahmesituation, narroof]
+      ]
+    ]
+  \end{forest}
+\end{center}
+
+\Doppelzeile
+
+\section{Teile von NPs identifizieren}
+
+Unterstreichen Sie in den NPs in der zweiten Spalte der unten stehenden Tabelle die in der ersten Spalte genannten Teile.
+
+
+\begin{center}
+  \begin{tabular}[h]{clp{0.6\textwidth}}
+    \toprule
+    & \textbf{Zu unterstreichen} & \textbf{NP} \\
+    \midrule
+   (1) & eine AP & die sehr angenehme Kälte \\
+   && \\
+   (2) & alle inneren Rechtsattribute & \doublespacing Orangensaft ohne Zusätze in einer Flasche aus Glas, der in der Region hergestellt wurde\\
+   && \\
+   (3) & einen Nebensatz & mit der festen Überzeugung, dass man das lernen kann \\
+   && \\
+   (4) & alle inneren Rechtsattribute & \doublespacing Orangensaft ohne Zusätze in einer Flasche aus Glas, die in der Region hergestellt wurde\\
+   && \\
+   (5) & den Kopf & \doublespacing Karins überaus blasses und doch lebendiges Angesicht im Spiegel, an das sich Ingmar sein leben lang erinnern würde \\
+   && \\
+   (6) & alle inneren Rechtsattribute & \doublespacing Orangensaft ohne Zusätze in einer Flasche aus Glas, das in der Region hergestellt wurde\\
+   && \\
+   \bottomrule
+  \end{tabular}
+\end{center}
+
+
 
 \end{document}
