@@ -188,11 +188,10 @@ Exceptions haben in weiten Teilen die Behandlung von Fehlern mittels Fehlercodes
 
 \section{Abgekürzte und volle Analysen}
 
-Entscheiden Sie in den folgenden Analysen, ob ein Dreieck oder eine einfache Kante eingezeichnet werden muss, und zeichnen Sie entweder das eine oder das andere ein, sodass die Bäume hinterher vollständig sind.
+Entscheiden Sie in den folgenden Analysen, ob ein Dreieck oder eine einfache Kante eingezeichnet werden muss, und vervollständigen Sie die Bäume entsprechend.
 Zur Erinnerung: Sobald eine Struktur abgekürzt wurde, markieren wir das mit einem Dreieck.
 Eine Abkürzung liegt selbst dann vor, wenn wir eine Phrase, die nur aus einem einzelnen Wort besteht, direkt als Phrase analysieren.
 In der vollen Analyse gäbe es zunächst eine Analyseebene für die Wortklasse, und über dieser käme dann die Phrase.
-
 Hinweis: Das Symbols KP steht für Komplementiererphrase, eine Art von Nebensatz.
 
 \Zeile
@@ -261,11 +260,14 @@ Hinweis: Das Symbols KP steht für Komplementiererphrase, eine Art von Nebensatz
 \section{Phrasenstruktur von NPs}
 
 Zeichnen Sie für die unterstrichenen NPs aus Aufgabe~\ref{sec:erkennen} Phrasenstrukturdiagramme.
-Kürzen Sie dabei alle Konstituenten in der NP ungeachtet ihrer internen Komplexität durch Dreiecke an.
+Kürzen Sie dabei alle Konstituenten unterhalb der Ebene der NP ungeachtet ihrer internen Komplexität durch Dreiecke ab.
 Analysieren Sie also nur die primäre Struktur der NP.
 Wenn eine NP exakt und auf triviale Weise gleich strukturiert ist wie eine zuvor analysierte, verweisen Sie auf die vorherige Analyse, ohne eine neue Analyse anzufertigen.
+Die erste NP wird hier beispielhaft analysiert.
 
-\begin{center}
+\Zeile
+
+(0)~\begin{center}
   \begin{forest}
     [NP, calign=child, calign child=2
       [Art
