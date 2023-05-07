@@ -1,0 +1,316 @@
+\documentclass[12pt,a4paper,twoside]{article}
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage[ngerman]{babel}
+
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array,graphics}
+\usepackage{color}
+\usepackage{soul}
+\usepackage[linecolor=gray,backgroundcolor=yellow!50,textsize=tiny]{todonotes}
+\usepackage[linguistics]{forest}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{langsci-gb4e}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{marginnote}
+\usepackage{ulem}
+
+\usepackage[maxbibnames=99,
+  maxcitenames=2,
+  uniquelist=false,
+  backend=biber,
+  doi=false,
+  url=false,
+  isbn=false,
+  bibstyle=biblatex-sp-unified,
+  citestyle=sp-authoryear-comp]{biblatex}
+
+\definecolor{rot}{rgb}{0.7,0.2,0.0}
+\newcommand{\rot}[1]{\textcolor{rot}{#1}}
+\definecolor{blau}{rgb}{0.1,0.2,0.7}
+\newcommand{\blau}[1]{\textcolor{blau}{#1}}
+\definecolor{gruen}{rgb}{0.0,0.7,0.2}
+\newcommand{\gruen}[1]{\textcolor{gruen}{#1}}
+\definecolor{grau}{rgb}{0.6,0.6,0.6}
+\newcommand{\grau}[1]{\textcolor{grau}{#1}}
+\definecolor{orongsch}{RGB}{255,165,0}
+\newcommand{\orongsch}[1]{\textcolor{orongsch}{#1}}
+\definecolor{tuerkis}{RGB}{63,136,143}
+\definecolor{braun}{RGB}{108,71,65}
+\newcommand{\tuerkis}[1]{\textcolor{tuerkis}{#1}}
+\newcommand{\braun}[1]{\textcolor{braun}{#1}}
+
+\newcommand*\Rot{\rotatebox{75}}
+
+\newcommand{\zB}{z.\,B.\ }
+\newcommand{\ZB}{Z.\,B.\ }
+\newcommand{\Sub}[1]{\ensuremath{_{\text{#1}}}}
+\newcommand{\Up}[1]{\ensuremath{^{\text{#1}}}}
+\newcommand{\UpSub}[2]{\ensuremath{^{\text{#1}}_{\text{#2}}}}
+\newcommand{\Doppelzeile}{\vspace{2\baselineskip}}
+\newcommand{\Zeile}{\vspace{\baselineskip}}
+\newcommand{\Halbzeile}{\vspace{0.5\baselineskip}}
+\newcommand{\Viertelzeile}{\vspace{0.25\baselineskip}}
+
+\newcommand{\whyte}[1]{\textcolor{white}{#1}}
+
+\newcommand{\Spur}[1]{t\Sub{#1}}
+\newcommand{\Ti}{\Spur{1}}
+\newcommand{\Tii}{\Spur{2}}
+\newcommand{\Tiii}{\Spur{3}}
+\newcommand{\Tiv}{\Spur{4}}
+\newcommand*{\mybox}[1]{\framebox{#1}}
+\newcommand\ol[1]{{\setul{-0.9em}{}\ul{#1}}}
+
+\newenvironment{nohyphens}{%
+  \par
+  \hyphenpenalty=10000
+  \exhyphenpenalty=10000
+  \sloppy
+}{\par}
+
+\newcommand{\Lf}{
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}
+
+\forestset{
+  Ephr/.style={draw, ellipse, thick, inner sep=2pt},
+  Eobl/.style={draw, rounded corners, inner sep=5pt},
+  Eopt/.style={draw, rounded corners, densely dashed, inner sep=5pt},
+  Erec/.style={draw, rounded corners, double, inner sep=5pt},
+  Eoptrec/.style={draw, rounded corners, densely dashed, double, inner sep=5pt},
+  Ehd/.style={rounded corners, fill=gray, inner sep=5pt,
+    delay={content=\whyte{##1}}
+  },
+  Emult/.style={for children={no edge}, for tree={l sep=0pt}},
+  phrasenschema/.style={for tree={l sep=2em, s sep=2em}},
+  sake/.style={tier=preterminal},
+  ake/.style={
+    tier=preterminal
+    },
+}
+
+\forestset{
+  decide/.style={draw, chamfered rectangle, inner sep=2pt},
+  finall/.style={rounded corners, fill=gray, text=white},
+  intrme/.style={draw, rounded corners},
+  yes/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Ja}}},
+  no/.style={edge label={node[near end, above, sloped, font=\scriptsize]{Nein}}}
+}
+
+
+\useforestlibrary{edges}
+
+\forestset{
+  narroof/.style={roof, inner xsep=-0.25em, rounded corners},
+  forky/.style={forked edge, fork sep-=7.5pt},
+  bluetree/.style={for tree={blau}, for children={edge=blau}},
+  orongschtree/.style={for tree={orongsch}, for children={edge=orongsch}},
+  rottree/.style={for tree={rot}, for children={edge=rot}},
+  gruentree/.style={for tree={gruen}, for children={edge=gruen}},
+  tuerkistree/.style={for tree={tuerkis}, for children={edge=tuerkis}},
+  brauntree/.style={for tree={braun}, for children={edge=braun}}, 
+  grautree/.style={for tree={grau}, for children={edge=grau}}, 
+  gruennode/.style={gruen, edge=gruen},
+  graunode/.style={grau, edge=grau},
+  whitearc/.style={for children={edge=white}},
+}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning} 
+
+
+\author{Prof.\ Dr.\ Roland Schäfer | Germanistische Linguistik FSU Jena}
+\title{Syntax | 06 | Phrasen außer NP und VP}
+\date{Version Sommer 2023 (\today)}
+
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX,Numbers=OldStyle, Scale=MatchLowercase}
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+
+\setlength{\parindent}{0pt}
+
+
+\begin{document}
+
+\maketitle
+
+\section*{Voraussetzungen}
+
+Sie sollten für diese Übungen mit dem Buch unde der Vorlesung die möglichen Strukturen folgender Phrasentypen im Deutschen wiederholen:
+
+\begin{enumerate}\Lf
+  \item \textbf{Adjektivphrase (AP)} | valenzgebundene\slash regierte und nicht-regierte Elemente
+  \item \textbf{Präpositionalphrase (PPs)} | einstellige Valenz (obligatorische NP) und Kasusrektion
+  \item \textbf{Adverbphrase (AdvP)} | keine Valenz, keine Rektion
+  \item \textbf{Komplementiererphrase (KP)} | einstellige Valenz (obligatorische VP) und Verbletztstellung
+\end{enumerate}
+
+\section{Phrasen identifizieren}\label{sec:erkennen}
+
+(a)~Klammern Sie im folgenden Textausschnitt \textit{Gang durch das Ried} alle PPs und AdvPs ein und beschriften Sie die Klammer mit der Phrasenbezeichnung.
+Die erste ist beispielhaft eingeklammert.
+Statt einer Klammerung können Sie die beiden Phrasentypen auch mit zwei verschiedenfarbigen Textmarkern markieren.
+
+\begin{quote}\onehalfspacing
+   \textbf{Elisabeth Langgässer: Gang durch das Ried (Anfang)}\\
+   {\footnotesize Verlag Jakob Hegner 1934, S. 1 }
+
+  \newdimen\origiwspc%
+  \newdimen\origiwstr%
+  \origiwspc=\fontdimen2\font
+  \origiwstr=\fontdimen3\font
+  \fontdimen2\font=1em
+  {[Im Spätherbst des Jahres 1930]\Sub{PP}} ging ein Mann über das verlassene französische Lager, das früher ein deutsches gewesen war und sich zwischen der hessischen Hauptstadt, umschließenden Tannen- und Birkenwäldern und dem großen Sande dahinzieht. Es nieselte langsam vom Himmel herunter, der Mann schlug den Kragen der Jacke hoch und rückte das Kappenschild noch tiefer in die Stirne. Auf den breiten Kasernenstraßen, die durch leere Barackenreihen, an Stallungen, Vorratshäusern und Kantinen vorüberführten, wuchs dichtes, grünbraunes Gras, das jeden Schritt verschluckte und den Wandernden wesenlos wie eine Traumgestalt machte, die, wenn sie auch rufen würde, von niemand gehört werden könnte. Noch vor kurzem hatten hier Feuerwerker aus Koblenz und Ludwigshafen den Übungsplatz abgesucht und die Blindgänger, Handgranaten und letzten Depots gesprengt – die Erde war damals zerstampft und der Himmel von dem Echo jener dumpfen Schläge erfüllt gewesen, die bis in das Ried hinein und noch weiterhin spürbar waren.
+  \fontdimen2\font=\origiwspc
+  \fontdimen3\font=\origiwstr
+\end{quote}
+
+(b)~Teichnen Sie ohne Abkürzungen (= Dreiecke) Phrasenstrukturdiagramme der Phrasen [\textit{noch tiefer in die Stirne}] sowie [\textit{Koblenz und Ludwigshafen}] und [\textit{das verlassene französische Lager}].
+
+\section{Inkorrekte Phrasenstrukturanalysen erkennen}
+
+(a) Entscheiden Sie, ob die folgenden Analysen gemäß der in EGBD3 definierten Grammatik korrekt sind.
+Auch wenn Sie den Aufbau einiger der hier vorkommenden Phrasentypen (vor allem VP) noch nicht kennen, können Sie das bereits entscheiden, ohne die entsprechenden Abschnitte im Buch zu lesen bzw.\ die nächste Vorlesung zu sehen.
+
+\Zeile
+
+(1)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+  [PP, calign=child, calign child=1
+    [P
+      [\it unter]
+    ]
+    [N
+      [Freunden]
+    ]
+  ]
+\end{forest}
+
+(2)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+  [AdvP, calign=child, calign child=2
+    [Ptkl
+      [\it sehr]
+    ]
+    [Adv
+      [\it oft]
+    ]
+  ]
+\end{forest}
+
+\Zeile
+
+(3)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+  [VP, calign=last
+    [K
+      [\it obwohl]
+    ]
+    [NP
+      [\it ich]
+    ]
+    [NP
+      [\it ihr]
+    ]
+    [V
+      [\it glaube]
+    ]
+  ]
+\end{forest}
+
+\Zeile
+
+(4)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+  [PP, calign=child, calign child=2
+    [AP
+      [\it tief, narroof]
+    ]
+    [P
+      [\it in]
+    ]
+    [NP
+      [\it den Morast, narroof]
+    ]
+  ]
+\end{forest}
+
+\Zeile
+
+(5)\footnotemark[1]~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+  [NP, calign=first
+    [N
+      [\it mir]
+    ]
+    [Ptkl
+      [\it bei]
+    ]
+    [NP
+      [\it den Hausaufgaben]
+    ]
+    [AP
+      [\it behilfliche]
+    ]
+  ]
+\end{forest}
+
+\footnotetext[1]{Ein möglicher Satzkontext für diese Phrase wäre: \textit{Die} [\textit{mir bei den Hausaufgaben behilfliche}] \textit{Kommilitonin ist krank.}}
+
+\Zeile
+
+(6)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+  [KP, calign=first
+    [K
+      [\it dass]
+    ]
+    [VP
+      [\it Adrianna sich verrechnet hat, narroof]
+    ]
+  ]
+\end{forest}
+
+\Zeile
+
+(b) Zeichnen Sie korrigierte Versionen der inkorrekten Strukturen.
+Phrasentypen, die Sie noch nicht genau kennen (wie die VP) kürzen Sie mit einem Dreieck ab.
+
+\section{Komplementiererphrasen}
+
+Welche der im Folgenden unterstrichenen Konstituenten sind Komplementiererphrasen?
+
+\begin{center}
+  \begin{tabular}[h]{cll}
+    \toprule
+    & \textbf{Phrase im Satzkontext} & \textbf{KP?} \\
+    \midrule
+    (1) & \textit{Wir wissen nicht, \uline{wer heute zur Vorlesung kommt}.} & \Square \\
+    (2) & \textit{\uline{Dass lineare Algebra schwer ist}, glaubt hier keiner.} & \Square \\
+    (3) & \textit{Jen trifft die Entscheidung, \uline{die andere für sie treffen wollten}.} & \Square \\
+    (4) & \textit{\uline{Geht die Uhr nach}, kommt man eventuell zu spät.} & \Square \\
+    (5) & \textit{Wir haben mal wieder keine Ahnung, \uline{warum das so lange dauert}.} & \Square \\
+    (6) & \textit{\uline{Die Welt retten zu wollen}, rechtfertigt zunächst nichts.} & \Square \\
+    (7) & \textit{Wir müssen uns beeilen, \uline{weil 45 Minuten sehr kurz sind}.} & \Square \\
+    (8) & \textit{Die Theorie sagt es vorher, \uline{jedoch glaubt keiner daran}.} & \Square \\
+    (9) & \textit{Adrianna packt zusammen, \uline{denn es beginnt zu regnen}}. & \Square \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+
+\section{Transferfrage zur PP}
+
+Was ist an den PPs in den folgenden Sätzen für die bisher entwickelte Grammatik problematisch?
+
+\begin{exe}
+  \ex Der LKW ist bis vor die Tür gefahren.
+  \ex Das Hotel erreicht man nur von hinter dem Ortseingang.
+  \ex Die dumpfen Schläge waren bis in das Ried hinein spürbar.
+\end{exe}
+
+\end{document}
