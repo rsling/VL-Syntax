@@ -139,6 +139,18 @@
 
 \setlength{\parindent}{0pt}
 
+\newenvironment{spread}
+{%
+  \newdimen\origiwspc%
+  \newdimen\origiwstr%
+  \origiwspc=\fontdimen2\font%
+  \origiwstr=\fontdimen3\font%
+  \fontdimen2\font=1em%
+  \doublespacing%
+}{%
+  \fontdimen2\font=\origiwspc%
+  \fontdimen3\font=\origiwstr%
+}
 
 \begin{document}
 
@@ -150,21 +162,107 @@ Sie sollten für diese Übungen mit dem Buch und der Vorlesung folgende Themen w
 
 \begin{enumerate}\Lf
   \item \textbf{Struktur der Verbphrase (VP)}
-    \begin{itemize}
+    \begin{itemize}\Lf
       \item Verben ganz rechts
       \item Ergänzungen und Angaben davor
       \item Scrambling
     \end{itemize}
   \item \textbf{Struktur des Verbkomplexes}
-    \begin{itemize}
+    \begin{itemize}\Lf
       \item Bezeichnungen der drei Status des infiniten Verbs
       \item Statusrektion im VK, typischwerweise von rechts nach links
       \item Ausnahmen zur genannten Rektionsrichtung
     \end{itemize}
 \end{enumerate}
 
+\section{Verbphrasen identifizieren}
 
+Unterstreichen Sie im nachstehenden Textausschnitt \textit{Sinn und Bedeutung} alle VPs, die in eine KP eingebettet sind.
 
+\begin{quote}
+  \textbf{Gottlob Frege. \textit{Über Sinn und Bedeutung} (Anfang)}\\
+  \footnotesize{Zeitschrift für Philosophie und philosophische Kritik. Band 100, 1892, S. 25–50}\\
+  
+  \begin{nohyphens}
+  \begin{spread}
+    Die Gleichheit fordert das Nachdenken heraus durch Fragen, die sich daran knüpfen und nicht ganz leicht zu beantworten sind.
+    Ist sie eine Beziehung? Eine Beziehung zwischen Gegenständen? Oder zwischen Namen oder Zeichen für Gegenstände?
+    Das Letzte hatte ich in meiner Begriffsschrift angenommen.
+    Die Gründe, die dafür zu sprechen scheinen, sind folgende: a = a und a = b sind offenbar Sätze von verschiedenem Erkenntniswerte: a = a gilt a priori und ist nach Kant analytisch zu nennen, während Sätze von der Form a = b oft sehr wertvolle Erweiterungen unserer Erkenntnis enthalten und a priori nicht immer zu begründen sind.
+    Die Entdeckung, daß nicht jeden Morgen eine neue Sonne aufgeht, sondern immer dieselbe, ist wohl eine der folgenreichsten in der Astronomie gewesen.
+    Noch jetzt ist die Wiedererkennung eines kleinen Planeten oder eines Kometen nicht immer etwas Selbstverständliches.
+    Wenn wir nun in der Gleichheit eine Beziehung zwischen dem sehn wollten, was die Namen »a« und »b« bedeuten, so schiene a = b von a = a nicht verschieden sein zu können, falls nämlich a = b wahr ist.
+    Es wäre hiermit eine Beziehung eines Dinges zu sich selbst ausgedrückt, und zwar eine solche, in der jedes Ding mit sich selbst, aber kein Ding mit einem andern steht.
+  \end{spread}
+  \end{nohyphens}
+\end{quote}
+
+\section{Verbphrasen analysieren}\label{sec:analyse}
+
+Erstellen Sie Phrasenstrukturdiagramme für die eingeklammerten VPs in den folgenden Sätzen.
+Kürzen Sie alle Phrasen innerhalb der VP mit Dreiecken ab.
+Den Verbkomplex analysieren Sie vollständig, aber ohne Rektionspfeile.
+Für die erste VP wird die Aufgabe beispielhaft gelöst.
+
+\begin{exe}
+\setcounter{xnumi}{0}
+  \ex \grau{Wir sind gewappnet, falls} [heute Regen kommt]\Sub{VP}\grau{.}
+  \ex \grau{Camilla glaubt, dass} [das Buch den anderen gefallen hat]\Sub{VP}\grau{.}
+  \ex \grau{Der Boden ist nass, weil} [gestern die Waschmaschine ausgelaufen sein dürfte]\Sub{VP}\grau{.}
+  \ex \grau{Wir haben die Lasche angeklebt, damit} [sie nicht dauernd wieder abfällt]\Sub{VP}\grau{.}
+\end{exe}
+
+\Zeile
+
+\textbf{Beispiellösung}
+
+\Halbzeile
+
+(1)~\begin{forest}
+  [VP, calign=last
+    [AdvP
+      [\it heute, narroof]
+    ]
+    [NP
+      [\it Regen, narroof]
+    ]
+    [V
+      [\it kommt]
+    ]
+  ]
+\end{forest}
+
+\Doppelzeile
+
+\section{Verbkomplexe und Statusrektion verstehen}
+
+Zeichnen Sie Rektionspfeile ein, die anzeigen, welches Verb in den unten eingeklammerten Verbkomplexen welches andere Verb regiert.
+Beschriften Sie den Pfeil mit dem Status, der regiert wird.
+Sie sollen hier keine Bäume zeichnen, es geht vielmehr nur um die Rektionsverhältnisse.
+Für den ersten Verbkomplex wird die Aufgabe beispielhaft gelöst.
+
+\begin{exe}
+\setcounter{xnumi}{0}
+  \ex \grau{dass Kiki} [zugehört hat]
+  \ex \grau{ob Penny} [schweigen kann]
+  \ex \grau{obwohl Juliette} [baden können wollte]
+  \ex \grau{weil Michelle} [gestresst gewesen sein wird]
+\end{exe}
+
+\Zeile
+
+\textbf{Beispiellösung}
+
+\Halbzeile
+
+\begin{tikzpicture}[node distance=1cm, auto,]
+ \node[] (context) {(1)~(dass Kiki)};
+ \node[right=of context] (zugehört) {zugehört};
+ \node[right=of zugehört] (hat) {hat};
+ \path[->, draw, bend left=45] (hat) edge node[below] {3} (zugehört); 
+\end{tikzpicture}
+
+\newpage
 
 \section{Entlastungsaufgabe: Satzgliedstellung}
 
@@ -172,21 +270,30 @@ Beschreiben Sie den Unterschied der folgenden in KPs eingebetteten VPs zu den Ja
 Beachten Sie, dass sich die zu vergleichenden Konstituenten\slash Sätze nicht unterscheiden, außer dass die Satzgliedstellung an die Art der Konstituente\slash des Satzes angepasst wurde.
 
 \begin{exe}
+\setcounter{xnumi}{0}
   \ex
   \begin{xlist}
-    \ex \textbf{Nebensatz}: \grau{Wir wissen, dass} [die Sonne momentan öfter als sonst scheint]\Sub{VP}\grau{.}
-    \ex \textbf{Fragesatz}: Scheint die Sonne momentan öfter als sonst?
-    \ex \textbf{Aussagesatz}: Die Sonne scheint momentan öfter als sonst.
+    \ex \textbf{Nebensatz}: \grau{Wir wissen, dass} \blau{[die Sonne momentan öfter als sonst scheint]\Sub{VP}}\grau{.}
+    \ex \textbf{Fragesatz}: \blau{Scheint die Sonne momentan öfter als sonst?}
+    \ex \textbf{Aussagesatz}: \blau{Die Sonne scheint momentan öfter als sonst.}
   \end{xlist}
+  \Zeile
   \ex
   \begin{xlist}
-    \ex \textbf{Nebensatz}: \grau{Wir wissen, dass} [die Sonne momentan öfter als sonst scheint]\Sub{VP}\grau{.}
-    \ex \textbf{Fragesatz}: Scheint die Sonne momentan öfter als sonst?
-    \ex \textbf{Aussagesatz}: Die Sonne scheint momentan öfter als sonst.
+    \ex \textbf{Nebensatz}: \grau{Er gähnte, obwohl} \blau{[in der Vorlesung Aufmerksamkeit gefordert wird]\Sub{VP}}\grau{.}
+    \ex \textbf{Fragesatz}: \blau{Wird in der Vorlesung Aufmerksamkeit gefordert?}
+    \ex \textbf{Aussagesatz}: \blau{In der Vorlesung wird Aufmerksamkeit gefordert.}
+  \end{xlist}
+  \Zeile
+  \ex
+  \begin{xlist}
+    \ex \textbf{Nebensatz}: \grau{Wir haben die Lasche angeklebt, damit} \blau{[sie nicht dauernd wieder abfällt.]\Sub{VP}}\grau{.}
+    \ex \textbf{Fragesatz}: \blau{Fällt sie dauernd wieder ab?}
+    \ex \textbf{Aussagesatz}: \blau{Sie fällt dauernd wieder ab.}
   \end{xlist}
 \end{exe}
 
-(Zusatzaufgabe) Zeichnen Sie die Phrasenstrukturdiagramme der VPs, um sich noch genauer klar zu machen, was hier genau wie umgestellt wird.
+(Zusatzaufgabe) Zeichnen Sie die Phrasenstrukturdiagramme der VPs aus den (a)-Sätzen (außer dem, der schon in Aufgabe~\ref{sec:analyse} analysiert wurde), um sich noch genauer klar zu machen, was hier genau wie umgestellt wird.
 
 
 \end{document}
