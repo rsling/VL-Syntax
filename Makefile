@@ -74,7 +74,7 @@ handout12: $(OUTDIR)/12.+Syntax+infiniter+Verbformen$(HANDOUTSUFF)$(PROJECT)$(SU
 
 allhandouts: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12
 
-slides01: $(OUTDIR)/01.+Grammatik$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides01: echo $(OUTDIR)/01.+Grammatik$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 slides02: $(OUTDIR)/02.+Grundbegriffe$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 slides03: $(OUTDIR)/03.+Wortklassen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 slides04: $(OUTDIR)/04.+Konstituenten+und+Satzglieder$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
