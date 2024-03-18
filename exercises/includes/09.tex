@@ -36,13 +36,142 @@ Hier die Sätze, die die Relativsätze enthalten:
 
 \begin{exe}
 \setcounter{xnumi}{0}
-  \ex Ich kann so ziemlich jedes Buch, das ich in der Schule lesen musste, nicht ausstehen.
-  \ex Der Stock, mit dem mein Vater nach dem Unfall immer spazieren gegangen ist, stammt noch von meinem Opa.
-  \ex Das Auto der Kollegin mit den Kindern, die auf der Geburtstagsfeier offensichtlich stören wollten, fährt wieder.
-  \ex Denjenigen, mit dessen Auto wir zurückfahren, losen wir vorher immer aus.
+  \ex Ich kann so ziemlich jedes \Solulmark{Buch}, das ich in der Schule lesen musste, nicht ausstehen.
+  \ex Der \Solulmark{Stock}, mit dem mein Vater nach dem Unfall immer spazieren gegangen ist, stammt noch von meinem Opa.
+  \ex Das Auto der Kollegin mit den \Solulmark{Kindern}, die auf der Geburtstagsfeier offensichtlich stören wollten, fährt wieder.
+  \ex \Solulmark{Denjenigen}, mit dessen Auto wir zurückfahren, losen wir vorher immer aus.
 \end{exe}
 
-\newpage
+\Halbzeile
+
+\Sol{%
+\begin{enumerate}
+  \item Funktion: Akkusativergänzung (Objekt)\\
+    \begin{forest}
+      [RS, calign=first
+        [NP\Sub{1}, tier=prepre
+          [N, ake, narroof
+            [\it \blau{das}]
+          ]
+        ]
+        [VP, calign=last
+          [NP, ake
+            [\it ich, narroof]
+          ]
+          [\Ti, ake]
+          [PP, ake
+            [\it in der Schule, narroof]
+          ]
+          [V, calign=last, tier=prepre
+            [V, ake
+              [\it lesen]
+            ]
+            [V, ake
+              [\it musste]
+            ]
+          ]
+        ]
+      ]
+    \end{forest}
+  \item Funktion: Angabe (PP) \\
+    \begin{forest}
+      [RS, calign=first
+        [PP\Sub{1}, calign=first, tier=prepre
+          [P, ake
+            [\it mit]
+          ]
+          [NP
+            [N, ake
+              [\it \blau{dem}]
+            ]
+          ]
+        ]
+        [VP, calign=last
+          [NP, ake
+            [\it mein Vater, narroof]
+          ]
+          [PP, ake
+            [\it nach dem Unfall, narroof]
+          ]
+          [\Ti, ake]
+          [AdvP, ake
+            [\it immer, narroof]
+          ]
+          [V, calign=last, tier=prepre
+            [V, calign=last
+              [V, ake
+                [\it spazieren]
+              ]
+              [V, ake
+                [\it gegangen]
+              ]
+            ]
+            [V, ake
+              [\it ist]
+            ]
+          ]
+        ]
+      ]
+    \end{forest}
+  \item Funktion: Nominativergänzung (Subjekt)\\
+    \begin{forest}
+      [RS, calign=first
+        [NP\Sub{1}, tier=prepre
+          [N, ake
+            [\it \blau{die}]
+          ]
+        ]
+        [VP, calign=last
+          [\Ti, ake]
+          [PP, ake
+            [\it auf der Geburtstagsf., narroof]
+          ]
+          [AdvP, ake
+            [\it offensichtlich, narroof]
+          ]
+          [V, calign=last, tier=prepre
+            [V, ake
+              [\it stören]
+            ]
+            [V, ake
+              [\it wollten]
+            ]
+          ]
+        ]
+      ]
+    \end{forest}
+  \item Funktion: attributiver Genitiv\\
+    \begin{forest}
+      [RS, calign=first
+        [PP\Sub{1}, calign=first
+          [P, ake
+            [\it mit]
+          ]
+          [NP, calign=last
+            [NP
+              [N, ake
+                [\it \blau{dessen}]
+              ]
+            ]
+            [N, ake
+              [\it Auto]
+            ]
+          ]
+        ]
+        [VP, calign=last
+          [NP, ake
+            [\it wir, narroof]
+          ]
+          [\Ti, ake]
+          [V, ake
+            [\it zurückfahren]
+          ]
+        ]
+      ]
+    \end{forest}
+\end{enumerate}
+}
+
 
 \section{Rektionsmuster von Objektsätzen}\label{sec:nebensaetze}
 
@@ -64,6 +193,34 @@ Bilden Sie dazu für jedes der Verben einen Satz mit einem \textit{dass}-Objekts
   \ex \textit{ahnen} % beides
 \end{exe}
 
+\Halbzeile
+
+\Sol{%
+  \begin{enumerate}
+    \item Nur \textit{w}-Sätze, aber bei manchen Sprechern auch \textit{dass}-Sätze:
+      \begin{enumerate}
+        \item ? Ich überlege mir, dass ich zum Konzert fahre. 
+        \item Ich überlege mir, ob ich zum Konzert fahre.
+      \end{enumerate}
+    \item \textit{dass}- und \textit{w}-Sätze:
+      \begin{enumerate}
+        \item Ich vergaß, dass Sonntag war.
+        \item Ich vergaß, ob Sonntag war.
+      \end{enumerate}
+    \item Nur \textit{dass}-Sätze:
+      \begin{enumerate}
+        \item Ich werfe mir vor, dass ich das Buch vergessen habe.
+        \item * Ich werfe mir vor, ob ich das Buch vergessen habe.
+      \end{enumerate}
+    \item \textit{dass}- und \textit{w}-Sätze:
+      \begin{enumerate}
+        \item Ich ahne, dass  es bald regnet.
+        \item Ich ahne, wer gleich nassgeregnet wird.
+      \end{enumerate}
+  \end{enumerate}
+}
+
+
 \section{Korrelate}\label{sec:korrelate}
 
 (i) Bestimmen Sie für die folgenden \textit{dass}-Sätze, ob es Subjekt- oder Objektsätze sind.
@@ -78,6 +235,20 @@ Bilden Sie dazu für jedes der Verben einen Satz mit einem \textit{dass}-Objekts
   \ex Ich behaupte einfach mal, dass Chloe weiß, dass die Regenschirme im Keller sind.
 \end{exe}
 
+\Sol{%
+  \begin{exe}
+  \setcounter{xnumi}{0}
+    \ex Chloe teilte \orongsch{es} uns mit, dass der Regen stärker als sonst ausfiel.\\
+    \tuerkis{(Objektsatz)}
+    \ex \orongsch{Es} ist mir für heute genug Erfrischung, dass wir alle im Regen nass geworden sind.\\
+    \tuerkis{(Subjektsatz)}
+    \ex \orongsch{Es} gefällt mir nicht, dass der Wagen an jedem Morgen voll Blütenstaub ist.\\
+    \tuerkis{(Subjektsatz)}
+    \ex Ich behaupte \orongsch{es} einfach mal, dass Chloe \blau{es} weiß, dass die Regenschirme im Keller sind.\\
+    \tuerkis{(Objektsatz, Objektsatz)}
+  \end{exe}
+}
+
 \section{Analysen im Feldermodell}\label{sec:felder}
 
 Analysieren Sie die folgenden Sätze im Feldermodell wie im Beispiel dargestellt.
@@ -89,7 +260,7 @@ Wenn eins der Felder einen Nebensatz enthält, fertigen Sie für den Nebensatz e
   \ex Wer nicht hilfsbereit ist, kann meistens auch nicht auf die Hilfe anderer hoffen.
   \ex Willst du dem Typ etwa wirklich glauben, dass die Syntaxklausur schwer ist?
   \ex Der Vogel singt.
-  \ex Der Vogel hat gesungen, bevor der Regen losging.
+  \ex Der Vogel hat gesungen, bevor der Regen kam.
   \ex Dass ich den Vogel, der vor meinem Fenster saß, singen hören konnte, stimmt.
 \end{exe}
 
@@ -105,14 +276,106 @@ Beispielanalyse:
   \textbf{Nf}  && \textit{für den Frieden} \\
 \end{tabular}
 
+\Sol{%
+  \begin{enumerate}
+    \item
+      \begin{enumerate}
+      \item 
+        \begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{Wer nicht hilfsbereit ist} \\
+          \textbf{LSK} && \textit{kann} \\
+          \textbf{Mf}  && \textit{meistens \ldots\ anderer} \\
+          \textbf{RSK} && \textit{hoffen} \\
+          \textbf{Nf}  && \textit{---} \\
+        \end{tabular}
+      \item 
+        \blau{\begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{wer} \\
+          \textbf{LSK} && \textit{---} \\
+          \textbf{Mf}  && \textit{nicht hilfsbereit} \\
+          \textbf{RSK} && \textit{ist} \\
+          \textbf{Nf}  && \textit{---} \\
+        \end{tabular}}
+      \end{enumerate}
+    \item
+      \begin{enumerate}
+      \item 
+        \begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{---} \\
+          \textbf{LSK} && \textit{Willst} \\
+          \textbf{Mf}  && \textit{du dem Typ wirklich} \\
+          \textbf{RSK} && \textit{glauben} \\
+          \textbf{Nf}  && \textit{dass \ldots\ ist} \\
+        \end{tabular}
+      \item 
+        \blau{\begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{---} \\
+          \textbf{LSK} && \textit{dass} \\
+          \textbf{Mf}  && \textit{die Syntaxklausur schwer} \\
+          \textbf{RSK} && \textit{ist} \\
+          \textbf{Nf}  && \textit{---} \\
+        \end{tabular}}
+      \end{enumerate}
+    \item 
+      \begin{tabular}[h]{lp{1em}l}
+        \textbf{Vf}  && \textit{Der Vogel} \\
+        \textbf{LSK} && \textit{singt} \\
+        \textbf{Mf}  && \textit{---} \\
+        \textbf{RSK} && \textit{---} \\
+        \textbf{Nf}  && \textit{---} \\
+      \end{tabular}
+    \item
+      \begin{enumerate}
+      \item 
+        \begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{Der Vogel} \\
+          \textbf{LSK} && \textit{hat} \\
+          \textbf{Mf}  && \textit{---} \\
+          \textbf{RSK} && \textit{gesungen} \\
+          \textbf{Nf}  && \textit{bevor \ldots} \\
+        \end{tabular}
+      \item 
+        \blau{\begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{---} \\
+          \textbf{LSK} && \textit{bevor} \\
+          \textbf{Mf}  && \textit{der Regen} \\
+          \textbf{RSK} && \textit{kam} \\
+          \textbf{Nf}  && \textit{---} \\
+        \end{tabular}}
+      \end{enumerate}
+    \item
+      \begin{enumerate}
+      \item 
+        \begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{Dass \ldots\ konnte} \\
+          \textbf{LSK} && \textit{stimmt} \\
+          \textbf{Mf}  && \textit{---} \\
+          \textbf{RSK} && \textit{---} \\
+          \textbf{Nf}  && \textit{---} \\
+        \end{tabular}
+      \item 
+        \blau{\begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{---} \\
+          \textbf{LSK} && \textit{Dass} \\
+          \textbf{Mf}  && \textit{ich \ldots\ saß} \\
+          \textbf{RSK} && \textit{singen hören konnte} \\
+          \textbf{Nf}  && \textit{---} \\
+        \end{tabular}}
+      \item 
+        \orongsch{\begin{tabular}[h]{lp{1em}l}
+          \textbf{Vf}  && \textit{der} \\
+          \textbf{LSK} && \textit{---} \\
+          \textbf{Mf}  && \textit{vor meinem Fenster} \\
+          \textbf{RSK} && \textit{saß} \\
+          \textbf{Nf}  && \textit{---} \\
+        \end{tabular}}
+      \end{enumerate}
+  \end{enumerate}
+}
+
 \section{Bonusaufgabe}
 
 Erstellen Sie Phrasenstrukturdiagramme ohne Abkürzungen für die Sätze aus Aufgabe \ref{sec:felder}.
 
-\newpage
-\ \\
-\newpage
-\ \\
-\newpage
-\ \\
+\Sol{\newpage\ \\}
 
