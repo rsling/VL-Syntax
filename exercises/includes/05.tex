@@ -21,6 +21,7 @@ Sie sollten für diese Übungen folgende Themen aus dem Buch bzw.\ der Vorlesung
 
 Klammern Sie im folgenden Textausschnitt \textit{Ausnahmebehandlung} alle NPs ein.
 Die erste ist beispielhaft eingeklammert.
+Falls NPs in NPs eingebettet sind, klammern Sie nur die äußere NP ein.
 
 \begin{quote}\onehalfspacing
    \textbf{Ausnahmebehandlung (Ausschnitt, bearbeitet)}\\
@@ -31,15 +32,18 @@ Die erste ist beispielhaft eingeklammert.
   \origiwspc=\fontdimen2\font
   \origiwstr=\fontdimen3\font
   \fontdimen2\font=1em
-   {[Eine Ausnahme oder Ausnahmesituation]} bezeichnet in der Computertechnik ein Verfahren, mit dem Informationen über bestimmte Programmzustände an andere Programmebenen zur Weiterbehandlung weitergereicht werden .
-Kann in einem Programm beispielsweise einer Speicheranforderung nicht stattgegeben werden, wird eine Speicheranforderungsausnahme ausgelöst .
-Ein Computerprogramm kann zur Behandlung dieses Problems dafür definierte Algorithmen abarbeiten, die den Fehler beheben oder anzeigen .
-Exceptions haben in weiten Teilen die Behandlung von Fehlern mittels Fehlercodes oder Sprunganweisungen abgelöst und stellen im technischen Sinne einen zweiten, optionalen Rückgabewert einer Methode bzw.\ Funktion dar .
+  {[Eine Ausnahme oder Ausnahmesituation]} bezeichnet \Solbrack{in der Computertechnik} \Solbrack{ein Verfahren, mit dem Informationen über bestimmte Programmzustände an andere Programmebenen zur Weiterbehandlung weitergereicht werden} .
+  Kann in \Solbrack{einem Programm} beispielsweise \Solbrack{einer Speicheranforderung} nicht stattgegeben werden, wird \Solbrack{eine Speicheranforderungsausnahme} ausgelöst .
+  \Solbrack{Ein Computerprogramm} kann zur \Solbrack{Behandlung dieses Problems} \Solbrack{dafür definierte Algorithmen} abarbeiten, \Solbrack{die} \Solbrack{den Fehler} beheben oder anzeigen .
+  \Solbrack{Exceptions} haben in \Solbrack{weiten Teilen} \Solbrack{die Behandlung von Fehlern mittels Fehlercodes oder Sprunganweisungen} abgelöst und stellen im \Solbrack{technischen Sinne} \Solbrack{einen zweiten, optionalen Rückgabewert einer Methode bzw.\ Funktion} dar .
   \fontdimen2\font=\origiwspc
   \fontdimen3\font=\origiwstr
 \end{quote}
 
-\newpage
+\Halbzeile
+
+\Sol{\textbf{Hinweis:} nach \textit{zur} und \textit{im} folgen NPs ohne Artikelwort, weil der Artikel historisch mit der Präposition verschmolzen ist.}
+
 
 \section{Abgekürzte und volle Analysen}
 
@@ -51,15 +55,33 @@ Hinweis: Das Symbol KP steht für Komplementiererphrase, eine Art von Nebensatz.
 
 \Zeile
 
-(1)~\begin{forest}
+(1)~\Solalt{%
+\begin{forest}
+  [NP
+    [\it Orangensaft, narroof]
+  ]
+\end{forest}
+}{\begin{forest}
   [NP, whitearc
     [\it Orangensaft]
   ]
-\end{forest}
+\end{forest}}
 
 \Doppelzeile
 
-(2)~\begin{forest}
+(2)~\Solalt{%
+\begin{forest}
+  [NP, calign=child, calign child=2
+    [Art
+      [\it jeden]
+    ]
+    [N 
+      [\it Winter]
+    ]
+  ]
+\end{forest}%
+}{%
+\begin{forest}
   [NP, calign=child, calign child=2
     [Art, whitearc
       [\it jeden]
@@ -68,11 +90,23 @@ Hinweis: Das Symbol KP steht für Komplementiererphrase, eine Art von Nebensatz.
       [\it Winter]
     ]
   ]
-\end{forest}
+\end{forest}}
 
 \Doppelzeile
 
-(3)~\begin{forest}
+(3)~\Solalt{%
+\begin{forest}
+  [NP, calign=child, calign child=1
+    [N
+      [\it Blütenstaub]
+    ]
+    [PP 
+      [\it auf dem Auto, narroof]
+    ]
+  ]
+\end{forest}%
+}{%
+\begin{forest}
   [NP, calign=child, calign child=1
     [N, whitearc
       [\it Blütenstaub]
@@ -81,11 +115,30 @@ Hinweis: Das Symbol KP steht für Komplementiererphrase, eine Art von Nebensatz.
       [\it auf dem Auto]
     ]
   ]
-\end{forest}
+\end{forest}%
+}
 
 \Doppelzeile
 
-(4)~\begin{forest}
+(4)~\Solalt{%
+\begin{forest}
+  [NP, calign=child, calign child=3
+    [Art
+      [\it der]
+    ]
+    [AP
+      [\it festen, narroof]
+    ]
+    [N
+      [\it Überzeugung]
+    ]
+    [KP
+      [\it dass man das lernen kann, narroof]
+    ]
+  ]
+\end{forest}%
+}{%
+\begin{forest}
   [NP, calign=child, calign child=3
     [Art, whitearc
       [\it der]
@@ -100,15 +153,24 @@ Hinweis: Das Symbol KP steht für Komplementiererphrase, eine Art von Nebensatz.
       [\it dass man das lernen kann]
     ]
   ]
-\end{forest}
+\end{forest}%
+}
 
 \Doppelzeile
 
-(5)~\begin{forest}
+(5)~\Solalt{%
+\begin{forest}
+  [NP
+    [\it dieses unsympathische Lachen, narroof]
+  ]
+\end{forest}%
+}{%
+\begin{forest}
   [NP, whitearc
     [\it dieses unsympathische Lachen]
   ]
-\end{forest}
+\end{forest}%
+}
 
 \newpage
 
@@ -116,9 +178,6 @@ Hinweis: Das Symbol KP steht für Komplementiererphrase, eine Art von Nebensatz.
 
 Zeichnen Sie für die unterstrichenen NPs aus Aufgabe~\ref{sec:erkennen} Phrasenstrukturdiagramme.
 Kürzen Sie dabei alle Konstituenten unterhalb der Ebene der NP ungeachtet ihrer internen Komplexität durch Dreiecke ab.
-Analysieren Sie also nur die primäre Struktur der NP.
-Wenn eine NP exakt und auf triviale Weise gleich strukturiert ist wie eine zuvor analysierte, verweisen Sie auf die vorherige Analyse, ohne eine neue Analyse anzufertigen.
-Die erste NP wird hier beispielhaft analysiert.
 
 \Zeile
 
@@ -135,7 +194,102 @@ Die erste NP wird hier beispielhaft analysiert.
   \end{forest}
 \end{center}
 
-\Doppelzeile
+
+\Sol{\begin{enumerate}
+  \item \begin{forest}
+      [NP
+        [Art
+          [\it der]
+        ]
+        [N
+          [\it Computertechnik]
+        ]
+      ]
+    \end{forest}\\
+    Ebenso: \textit{einem Programm}, \textit{einer Speicheranforderung}, \textit{eine Speicheranforderungsausnahme}, \textit{ein Computerprogramm}, \textit{den Fehler}
+  \item \begin{forest}
+      [NP, calign=child, calign child=2
+        [Art
+          [\it ein]
+        ]
+        [N
+          [\it Verfahren]
+        ]
+        [RS
+          [\it mit \ldots\ werden, narroof]
+        ]
+      ]
+    \end{forest}
+  \item \begin{forest}
+      [NP, calign=first
+        [N
+          [\it Behandlung]
+        ]
+        [NP
+          [\it dieses Problems, narroof]
+        ]
+      ]
+    \end{forest}
+  \item \begin{forest}
+      [NP, calign=last
+        [AP
+          [\it definierte, narroof]
+        ]
+        [N
+          [\it Algorithmen]
+        ]
+      ]
+    \end{forest}\\
+    Ebenso: \textit{weiten Teilen}, \textit{technischen Sinne}
+  \item \begin{forest}
+      [NP
+        [N
+          [\it die]
+        ]
+      ]
+    \end{forest}
+  \item \begin{forest}
+      [NP
+        [N
+          [\it Exceptions]
+        ]
+      ]
+    \end{forest}
+  \item \begin{forest}
+      [NP, calign=child, calign child=2
+        [Art
+          [\it die]
+        ]
+        [N
+          [\it Behandlung]
+        ]
+        [PP
+          [\it von Fehlern, narroof]
+        ]
+        [PP
+          [\it mittels Fehlercodes oder Sprunganweisungen, narroof]
+        ]
+      ]
+    \end{forest}
+  \item \begin{forest}
+      [NP, calign=child, calign child=3
+        [Art
+          [\it einen]
+        ]
+        [AP
+          [\it {zweiten, optionalen}, narroof]
+        ]
+        [N
+          [\it Rückgabewert]
+        ]
+        [NP
+          [\it einer \ldots\ Funktion, narroof]
+        ]
+      ]
+    \end{forest}
+\end{enumerate}}
+
+
 
 \section{Teile von NPs identifizieren}
 
@@ -147,24 +301,21 @@ Unterstreichen Sie in den NPs in der zweiten Spalte der unten stehenden Tabelle 
     \toprule
     & \textbf{Zu unterstreichen} & \textbf{NP} \\
     \midrule
-   (1) & eine AP & die sehr angenehme Kälte \\
+    (1) & eine AP & die \Solulmark{sehr angenehme} Kälte \\
    && \\
-   (2) & alle inneren Rechtsattribute & \doublespacing Orangensaft ohne Zusätze in einer Flasche aus Glas, der in der Region hergestellt wurde\\
+   (2) & alle inneren Rechtsattribute & \doublespacing Orangensaft \Solulmark{ohne Zusätze in einer Flasche aus Glas}, der in der Region hergestellt wurde\\
    && \\
-   (3) & einen Nebensatz & mit der festen Überzeugung, dass man das lernen kann \\
+   (3) & einen Nebensatz & mit der festen Überzeugung, \Solulmark{dass man das lernen kann} \\
    && \\
-   (4) & alle inneren Rechtsattribute & \doublespacing Orangensaft ohne Zusätze in einer Flasche aus Glas, die in der Region hergestellt wurde\\
+   (4) & alle inneren Rechtsattribute & \doublespacing Orangensaft \Solulmark{ohne Zusätze in einer Flasche aus Glas, die in der Region hergestellt wurde}\\
    && \\
-   (5) & den Kopf & \doublespacing Karins überaus blasses und doch lebendiges Angesicht im Spiegel, an das sich Ingmar sein leben lang erinnern würde \\
+   (5) & den Kopf & \doublespacing Karins überaus blasses und doch lebendiges \Solulmark{Angesicht} im Spiegel, an das sich Ingmar sein leben lang erinnern würde \\
    && \\
-   (6) & alle inneren Rechtsattribute & \doublespacing Orangensaft ohne Zusätze in einer Flasche aus Glas, das in der Region hergestellt wurde\\
+   (6) & alle inneren Rechtsattribute & \doublespacing Orangensaft \Solulmark{ohne Zusätze in einer Flasche aus Glas, das in der Region hergestellt wurde}\\
    && \\
    \bottomrule
   \end{tabular}
 \end{center}
 
-\newpage
-\hspace{1em}
-\newpage
-\hspace{1em}
+\Sol{\newpage\hspace{1em}}
 
