@@ -19,17 +19,123 @@ Statt einer Klammerung können Sie die beiden Phrasentypen auch mit zwei verschi
    \textbf{Elisabeth Langgässer: Gang durch das Ried (Anfang)}\\
    {\footnotesize Verlag Jakob Hegner 1934, S. 1 }
 
+  \begin{linenumbers}
   \newdimen\origiwspc%
   \newdimen\origiwstr%
   \origiwspc=\fontdimen2\font
   \origiwstr=\fontdimen3\font
   \fontdimen2\font=1em
-  {[Im Spätherbst des Jahres 1930]\Sub{PP}} ging ein Mann über das verlassene französische Lager, das früher ein deutsches gewesen war und sich zwischen der hessischen Hauptstadt, umschließenden Tannen- und Birkenwäldern und dem großen Sande dahinzieht. Es nieselte langsam vom Himmel herunter, der Mann schlug den Kragen der Jacke hoch und rückte das Kappenschild noch tiefer in die Stirne. Auf den breiten Kasernenstraßen, die durch leere Barackenreihen, an Stallungen, Vorratshäusern und Kantinen vorüberführten, wuchs dichtes, grünbraunes Gras, das jeden Schritt verschluckte und den Wandernden wesenlos wie eine Traumgestalt machte, die, wenn sie auch rufen würde, von niemand gehört werden könnte. Noch vor kurzem hatten hier Feuerwerker aus Koblenz und Ludwigshafen den Übungsplatz abgesucht und die Blindgänger, Handgranaten und letzten Depots gesprengt – die Erde war damals zerstampft und der Himmel von dem Echo jener dumpfen Schläge erfüllt gewesen, die bis in das Ried hinein und noch weiterhin spürbar waren.
+  {[Im Spätherbst des Jahres 1930]\Sub{PP}} ging ein Mann \Solmark{[über das verlassene französische Lager, das früher ein deutsches gewesen war und sich zwischen der hessischen Hauptstadt, umschließenden Tannen- und Birkenwäldern und dem großen Sande dahinzieht]\Sub{PP}}. Es nieselte \Solmark[blau]{[langsam]\Sub{AdvP}} \Solmark[blau]{[vom Himmel herunter]\Sub{AdvP}}, der Mann schlug den Kragen der Jacke hoch und rückte das Kappenschild \Solmark{[noch tiefer in die Stirne]\Sub{PP}}. \Solmark{[Auf den breiten Kasernenstraßen, die durch leere Barackenreihen, an Stallungen, Vorratshäusern und Kantinen vorüberführten,]\Sub{PP}} wuchs dichtes, grünbraunes Gras, das jeden Schritt verschluckte und den Wandernden wesenlos wie eine Traumgestalt machte, die, wenn sie auch rufen würde, \Solmark{[von niemand]\Sub{PP}} gehört werden könnte. Noch \Solmark{[vor kurzem]\Sub{PP}} hatten \Solmark[blau]{[hier]\Sub{AdvP}} Feuerwerker aus Koblenz und Ludwigshafen den Übungsplatz abgesucht und die Blindgänger, Handgranaten und letzten Depots gesprengt – die Erde war \Solmark[blau]{[damals]\Sub{AdvP}} zerstampft und der Himmel \Solmark{[von dem Echo jener dumpfen Schläge]\Sub{PP}} erfüllt gewesen, die \Solmark[blau]{[bis in das Ried hinein]\Sub{AdvP}} und \Solmark[blau]{[noch weiterhin]\Sub{AdvP}} spürbar waren.
   \fontdimen2\font=\origiwspc
   \fontdimen3\font=\origiwstr
+  \end{linenumbers}
 \end{quote}
 
-(b)~Zeichnen Sie ohne Abkürzungen (= Dreiecke) Phrasenstrukturdiagramme der Phrasen [\textit{noch tiefer in die Stirne}] sowie [\textit{Koblenz und Ludwigshafen}] und [\textit{das verlassene französische Lager}].
+(b)~Zeichnen Sie ohne Abkürzungen (= Dreiecke) Phrasenstrukturdiagramme der Phrasen [\textit{vom Himmel herunter}], [\textit{noch tiefer in die Stirne}] sowie [\textit{Koblenz und Ludwigshafen}] und [\textit{das verlassene französische Lager}].
+
+\Sol{%
+  \begin{enumerate}
+    \item 
+      \begin{forest}
+        [AdvP, calign=last
+          [PP, calign=first
+            [P, tier=pre
+              [\it vom]
+            ]
+            [NP
+              [N, tier=pre
+                [\it Himmel]
+              ]
+            ]
+          ]
+          [Adv, tier=pre
+            [\it herunter]
+          ]
+        ]
+      \end{forest}
+    \item
+      \begin{forest}
+        [PP, calign=child, calign child=2
+          [AP, calign=last
+            [Ptkl, tier=pre
+              [\it noch]
+            ]
+            [A, tier=pre
+              [\it tiefer]
+            ]
+          ]
+          [P, tier=pre
+            [\it in]
+          ]
+          [NP, calign=last
+            [Art, tier=pre
+              [\it die]
+            ]
+            [N, tier=pre
+              [\it Stirne]
+            ]
+          ]
+        ]
+      \end{forest}
+    \item \textbf{Zwei Alternativen}:
+      \begin{enumerate}
+        \item \begin{forest}
+          [NP, , calign=child, calign child=2
+            [NP
+              [N, tier=pre
+                [\it Koblenz]
+              ]
+            ]
+            [Konj, tier=pre
+              [\it und]
+            ]
+            [NP
+              [N, tier=pre
+                [\it Ludwigshafen]
+              ]
+            ]
+          ]
+        \end{forest}
+        \item \begin{forest}
+          [NP
+            [N, calign=child, calign child=2
+              [N, tier=pre
+                [\it Koblenz]
+              ]
+              [Konj, tier=pre
+                [\it und]
+              ]
+              [N, tier=pre
+                [\it Ludwigshafen]
+              ]
+            ]
+          ]
+      \end{forest}
+      \end{enumerate}
+    \item
+      \begin{forest}
+        [NP, calign=last
+          [Art, tier=pre, forky
+            [\it das]
+          ]
+          [AP
+            [A, tier=pre
+              [\it verlassene]
+            ]
+          ]
+          [AP
+            [A, tier=pre
+              [\it französische]
+            ]
+          ]
+          [N, tier=pre
+            [\it Lager]
+          ]
+        ]
+      \end{forest}
+  \end{enumerate}
+}
+
 
 \section{Inkorrekte Phrasenstrukturanalysen erkennen}
 
@@ -38,7 +144,7 @@ Auch wenn Sie den Aufbau einiger der hier vorkommenden Phrasentypen (vor allem V
 
 \Zeile
 
-(1)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+(1)~\Solalt{\Square}{\Square}~korrekt\ \ \ \Solalt{\XBox}{\Square}~nicht~korrekt~\begin{forest}
   [AP, calign=last
     [Ptkl
       [\it sehr]
@@ -49,7 +155,7 @@ Auch wenn Sie den Aufbau einiger der hier vorkommenden Phrasentypen (vor allem V
   ]
 \end{forest}
 
-(2)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+(2)~\Solalt{\XBox}{\Square}~korrekt\ \ \ \Solalt{\Square}{\Square}~nicht~korrekt~\begin{forest}
   [AdvP, calign=child, calign child=2
     [Ptkl
       [\it sehr]
@@ -62,7 +168,7 @@ Auch wenn Sie den Aufbau einiger der hier vorkommenden Phrasentypen (vor allem V
 
 \Zeile
 
-(3)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+(3)~\Solalt{\Square}{\Square}~korrekt\ \ \ \Solalt{\XBox}{\Square}~nicht~korrekt~\begin{forest}
   [VP, calign=last
     [K
       [\it obwohl]
@@ -81,7 +187,7 @@ Auch wenn Sie den Aufbau einiger der hier vorkommenden Phrasentypen (vor allem V
 
 \Zeile
 
-(4)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+(4)~\Solalt{\XBox}{\Square}~korrekt\ \ \ \Solalt{\Square}{\Square}~nicht~korrekt~\begin{forest}
   [PP, calign=child, calign child=2
     [AP
       [\it tief, narroof]
@@ -97,7 +203,7 @@ Auch wenn Sie den Aufbau einiger der hier vorkommenden Phrasentypen (vor allem V
 
 \Zeile
 
-(5)\footnotemark[1]~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+(5)\footnotemark[1]~\Solalt{\Square}{\Square}~korrekt\ \ \ \Solalt{\XBox}{\Square}~nicht~korrekt~\begin{forest}
   [NP, calign=first
     [N
       [\it mir]
@@ -118,7 +224,7 @@ Auch wenn Sie den Aufbau einiger der hier vorkommenden Phrasentypen (vor allem V
 
 \Zeile
 
-(6)~\Square~korrekt\ \ \ \Square~nicht~korrekt~\begin{forest}
+(6)~\Solalt{\XBox}{\Square}~korrekt\ \ \ \Solalt{\Square}{\Square}~nicht~korrekt~\begin{forest}
   [KP, calign=first
     [K
       [\it dass]
@@ -134,24 +240,95 @@ Auch wenn Sie den Aufbau einiger der hier vorkommenden Phrasentypen (vor allem V
 (b) Zeichnen Sie korrigierte Versionen der inkorrekten Strukturen.
 Phrasentypen, die Sie noch nicht genau kennen (wie die VP) kürzen Sie mit einem Dreieck ab.
 
+
+\Sol{%
+  \begin{enumerate}
+    \item\begin{forest}
+        [AP, calign=last
+          [Ptkl
+            [\it sehr]
+          ]
+          [A
+            [\it schön]
+          ]
+        ]
+      \end{forest}
+    \item\begin{forest}
+        [KP, calign=first
+          [K, tier=pre
+            [\it obwohl]
+          ]
+          [VP, calign=last
+            [NP
+              [N, tier=pre
+                [\it ich]
+              ]
+            ]
+            [NP
+              [N, tier=pre
+                [\it ihr]
+              ]
+            ]
+            [V, tier=pre
+              [\it glaube]
+            ]
+          ]
+        ]
+      \end{forest}
+    \item\begin{forest}
+        [AP, calign=last
+          [NP, forky
+            [N, tier=pre, forky
+              [\it mir]
+            ]
+          ]
+          [PP, calign=first
+            [P, tier=pre
+              [\it bei]
+            ]
+            [NP, calign=last
+              [Art, tier=pre
+                [\it den]
+              ]
+              [N, tier=pre
+                [\it Hausaufgaben]
+              ]
+            ]
+          ]
+          [A, tier=pre
+            [\it behilfliche]
+          ]
+        ]
+      \end{forest}
+  \end{enumerate}
+}
+
+
 \section{Komplementiererphrasen}
 
 Welche der im Folgenden unterstrichenen Konstituenten sind Komplementiererphrasen?
+
+\Halbzeile
+
+\Sol{\textbf{Hinweise:} Zur Verständnishilfe wird zusätzlich angezeigt, warum es jeweils keine KPs sind.
+Dazu wurden Nebensatzeinleiter, die keine Komplementierer sind, grün markiert.
+\orongsch{Finite Verben, die nicht satzfinit stehen, sind orange markiert.}
+\blau{Nicht-finite Verben sind blau markiert.}}
 
 \begin{center}
   \begin{tabular}[h]{cll}
     \toprule
     & \textbf{Phrase im Satzkontext} & \textbf{KP?} \\
     \midrule
-    (1) & \textit{Wir wissen nicht, \uline{wer heute zur Vorlesung kommt}.} & \Square \\
-    (2) & \textit{\uline{Dass lineare Algebra schwer ist}, glaubt hier keiner.} & \Square \\
-    (3) & \textit{Jen trifft die Entscheidung, \uline{die andere für sie treffen wollten}.} & \Square \\
-    (4) & \textit{\uline{Geht die Uhr nach}, kommt man eventuell zu spät.} & \Square \\
-    (5) & \textit{Wir haben mal wieder keine Ahnung, \uline{warum das so lange dauert}.} & \Square \\
-    (6) & \textit{\uline{Die Welt retten zu wollen}, rechtfertigt zunächst nichts.} & \Square \\
-    (7) & \textit{Wir müssen uns beeilen, \uline{weil 45 Minuten sehr kurz sind}.} & \Square \\
-    (8) & \textit{Die Theorie sagt es vorher, \uline{jedoch glaubt keiner daran}.} & \Square \\
-    (9) & \textit{Adrianna packt zusammen, \uline{denn es beginnt zu regnen}}. & \Square \\
+    (1) & \textit{Wir wissen nicht, \uline{\Solmark{wer} heute zur Vorlesung kommt}.} & \Solalt{\Square}{\Square} \\
+    (2) & \textit{\uline{Dass lineare Algebra schwer ist}, glaubt hier keiner.} & \Solalt{\XBox}{\Square} \\
+    (3) & \textit{Jen trifft die Entscheidung, \uline{\Solmark{die} andere für sie treffen wollten}.} & \Solalt{\Square}{\Square} \\
+    (4) & \textit{\uline{\Solmark[orongsch]{Geht} die Uhr nach}, kommt man eventuell zu spät.} & \Solalt{\Square}{\Square} \\
+    (5) & \textit{Wir haben mal wieder keine Ahnung, \uline{\Solmark{warum} das so lange dauert}.} & \Solalt{\Square}{\Square} \\
+    (6) & \textit{\uline{Die Welt retten \Solmark[blau]{zu wollen}}, rechtfertigt zunächst nichts.} & \Solalt{\Square}{\Square} \\
+    (7) & \textit{Wir müssen uns beeilen, \uline{weil 45 Minuten sehr kurz sind}.} & \Solalt{\XBox}{\Square} \\
+    (8) & \textit{Die Theorie sagt es vorher, \uline{\Solmark{jedoch} \Solmark[orongsch]{glaubt} keiner daran}.} & \Solalt{\Square}{\Square} \\
+    (9) & \textit{Adrianna packt zusammen, \uline{\Solmark{denn} es \Solmark[orongsch]{beginnt} zu regnen}}. & \Solalt{\Square}{\Square} \\
     \bottomrule
   \end{tabular}
 \end{center}
@@ -161,14 +338,15 @@ Welche der im Folgenden unterstrichenen Konstituenten sind Komplementiererphrase
 
 Was ist an den PPs in den folgenden Sätzen für die bisher entwickelte Grammatik problematisch?
 
+\Halbzeile
+
+\Sol{\textbf{Hinweis:} Die problematischen Konstellationen sind markiert. Da es eine Transferaufgabe ist, gibt es keine weiteren Lösungshinweise und keine weitere Besprechung.}
+
 \begin{exe}
-  \ex Der LKW ist bis vor die Tür gefahren.
-  \ex Das Hotel erreicht man nur von hinter dem Ortseingang.
-  \ex Die dumpfen Schläge waren bis in das Ried hinein spürbar.
+  \ex Der LKW ist \Solmark{bis vor} die Tür gefahren.
+  \ex Das Hotel erreicht man nur \Solmark{von hinter} dem Ortseingang.
+  \ex Die dumpfen Schläge waren \Solmark{bis in} das Ried hinein spürbar.
 \end{exe}
 
-\newpage
-\hspace{1em}
-\newpage
-\hspace{1em}
+\Sol{\newpage\hspace{1em}}
 
