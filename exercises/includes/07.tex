@@ -19,24 +19,26 @@ Sie sollten für diese Übungen mit dem Buch und der Vorlesung folgende Themen w
 
 \section{Verbphrasen identifizieren}
 
-Unterstreichen Sie im nachstehenden Textausschnitt \textit{Sinn und Bedeutung} alle VPs, die in eine KP eingebettet sind.
+Klammern Sie im nachstehenden Textausschnitt \textit{Sinn und Bedeutung} alle VPs, die in eine KP eingebettet sind, ein.
 
 \begin{quote}
   \textbf{Gottlob Frege. \textit{Über Sinn und Bedeutung} (Anfang)}\\
   \footnotesize{Zeitschrift für Philosophie und philosophische Kritik. Band 100, 1892, S. 25–50}\\
   
+  \begin{linenumbers}
   \begin{nohyphens}
   \begin{spread}
     Die Gleichheit fordert das Nachdenken heraus durch Fragen, die sich daran knüpfen und nicht ganz leicht zu beantworten sind.
     Ist sie eine Beziehung? Eine Beziehung zwischen Gegenständen? Oder zwischen Namen oder Zeichen für Gegenstände?
     Das Letzte hatte ich in meiner Begriffsschrift angenommen.
-    Die Gründe, die dafür zu sprechen scheinen, sind folgende: a = a und a = b sind offenbar Sätze von verschiedenem Erkenntniswerte: a = a gilt a priori und ist nach Kant analytisch zu nennen, während Sätze von der Form a = b oft sehr wertvolle Erweiterungen unserer Erkenntnis enthalten und a priori nicht immer zu begründen sind.
-    Die Entdeckung, daß nicht jeden Morgen eine neue Sonne aufgeht, sondern immer dieselbe, ist wohl eine der folgenreichsten in der Astronomie gewesen.
+    Die Gründe, die dafür zu sprechen scheinen, sind folgende: a = a und a = b sind offenbar Sätze von verschiedenem Erkenntniswerte: a = a gilt a priori und ist nach Kant analytisch zu nennen, während \Solmark{[Sätze von der Form a = b oft sehr wertvolle Erweiterungen unserer Erkenntnis enthalten und a priori nicht immer zu begründen sind]}.
+    Die Entdeckung, daß \Solmark{[nicht jeden Morgen eine neue Sonne aufgeht, sondern immer dieselbe,]} ist wohl eine der folgenreichsten in der Astronomie gewesen.
     Noch jetzt ist die Wiedererkennung eines kleinen Planeten oder eines Kometen nicht immer etwas Selbstverständliches.
-    Wenn wir nun in der Gleichheit eine Beziehung zwischen dem sehn wollten, was die Namen »a« und »b« bedeuten, so schiene a = b von a = a nicht verschieden sein zu können, falls nämlich a = b wahr ist.
+    Wenn \Solmark{[wir nun in der Gleichheit eine Beziehung zwischen dem sehn wollten, was die Namen »a« und »b« bedeuten,]} so schiene a = b von a = a nicht verschieden sein zu können, falls \Solmark{[nämlich a = b wahr ist]}.
     Es wäre hiermit eine Beziehung eines Dinges zu sich selbst ausgedrückt, und zwar eine solche, in der jedes Ding mit sich selbst, aber kein Ding mit einem andern steht.
   \end{spread}
   \end{nohyphens}
+  \end{linenumbers}
 \end{quote}
 
 \section{Verbphrasen analysieren}\label{sec:analyse}
@@ -74,6 +76,74 @@ Für die erste VP wird die Aufgabe beispielhaft gelöst.
   ]
 \end{forest}
 
+\Halbzeile
+
+\Sol{%
+  \begin{itemize}
+    \item[(2)]\begin{forest}
+        [VP, calign=last
+          [NP, ake
+            [\it das Buch, narroof]
+          ]
+          [NP, ake
+            [\it den anderen, narroof]
+          ]
+          [V, calign=last
+            [V, ake
+              [\it gefallen]
+            ]
+            [V, ake
+              [\it hat]
+            ]
+          ]
+        ]
+      \end{forest}
+    \item[(3)]\begin{forest}
+        [VP, calign=last
+          [AdvP, ake
+            [\it gestern, narroof]
+          ]
+          [NP, ake
+            [\it die Waschmaschine, narroof]
+          ]
+          [V, calign=last
+            [V, calign=last
+              [V, ake
+                [\it ausgelaufen]
+              ]
+              [V, ake
+                [\it sein]
+              ]
+            ]
+            [V, ake
+              [\it dürfte]
+            ]
+          ]
+        ]
+      \end{forest}
+    \item[(4)]\begin{forest}
+        [VP, calign=last
+          [NP
+            [\it sie, narroof]
+          ]
+          [Ptkl
+            [\it nicht]
+          ]
+          [AP
+            [\it dauernd, narroof]
+          ]
+          [AdvP
+            [\it wieder, narroof]
+          ]
+          [V
+            [\it abfällt]
+          ]
+        ]
+      \end{forest}
+  \end{itemize}
+}
+
+
 \Doppelzeile
 
 \section{Verbkomplexe und Statusrektion verstehen}
@@ -104,7 +174,40 @@ Für den ersten Verbkomplex wird die Aufgabe beispielhaft gelöst.
  \path[->, draw, bend left=45] (hat) edge node[below] {3} (zugehört); 
 \end{tikzpicture}
 
-\newpage
+\Halbzeile
+
+\Sol{%
+  \begin{itemize}
+    \item[]% 
+      \begin{tikzpicture}[node distance=1cm, auto,]
+        \node[] (context) {(2)~(ob Penny)};
+        \node[right=of context] (schweigen) {schweigen};
+        \node[right=of schweigen] (kann) {kann};
+        \path[->, draw, bend left=45] (kann) edge node[below] {1} (schweigen);
+      \end{tikzpicture}
+    \item[]% 
+      \begin{tikzpicture}[node distance=1cm, auto,]
+        \node[] (context) {(3)~(obwohl Juliette)};
+        \node[right=of context] (baden) {baden};
+        \node[right=of baden] (können) {können};
+        \node[right=of können] (wollte) {wollte};
+        \path[->, draw, bend left=45] (wollte) edge node[below] {1} (können);
+        \path[->, draw, bend left=45] (können) edge node[below] {1} (baden);
+      \end{tikzpicture}
+    \item[]% 
+      \begin{tikzpicture}[node distance=1cm, auto,]
+        \node[] (context) {(4)~(weil Michelle)};
+        \node[right=of context] (gestresst) {gestresst};
+        \node[right=of gestresst] (gewesen) {gewesen};
+        \node[right=of gewesen] (sein) {sein};
+        \node[right=of sein] (wird) {wird};
+        \path[->, draw, bend left=45] (wird) edge node[below] {1} (sein);
+        \path[->, draw, bend left=45] (sein) edge node[below] {3} (gewesen);
+        \path[->, draw, bend left=45] (gewesen) edge node[below] {3} (gestresst);
+      \end{tikzpicture}
+  \end{itemize}
+}
+
 
 \section{Entlastungsaufgabe: Satzgliedstellung}
 
@@ -137,9 +240,10 @@ Beachten Sie, dass sich die zu vergleichenden Konstituenten\slash Sätze nicht u
 
 (Zusatzaufgabe) Zeichnen Sie die Phrasenstrukturdiagramme der VPs aus den (a)-Sätzen (außer dem, der schon in Aufgabe~\ref{sec:analyse} analysiert wurde), um sich noch genauer klar zu machen, was hier genau wie umgestellt wird.
 
-\newpage
-\hspace{1em}
-\newpage
-\hspace{1em}
+\Halbzeile
+
+\Sol{\textbf{Hinweis: Fragen Sie \uline{auf keinen Fall} nach einer Lösung für diese Aufgabe. Es handelt sich wie gesagt um eine \uline{Entlastungsaufgabe}. Wenn Sie nicht beizeiten darüber nachgedacht haben, ist die Aufgabe wertlos für Sie.}}
+
+\Sol{\newpage\hspace{1em}}
 
 
