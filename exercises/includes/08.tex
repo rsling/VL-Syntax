@@ -1,0 +1,135 @@
+\section*{Voraussetzungen}
+
+Sie sollten für diese Übungen mit dem Buch und der Vorlesung folgende Themen wiederholen, wenn sie Ihnen nicht mehr oder noch nicht präsent sind:
+
+\begin{enumerate}\Lf
+  \item Hauptsatz und Nebensatz
+  \item V1-Satz und V2-Satz
+  \item Verbbewegung
+  \item Vorfeldbesetzung als XP-Bewegung
+\end{enumerate}
+
+\Zeile
+
+\section{V1-Sätze und V2-Sätze aus VPs bilden}\label{sec:bilden}
+
+Im folgenden kurzen Text sind vier in KPs eingebettete VPs enthalten.
+Finden Sie diese und bilden Sie jeweils einen V1-Satz (Entscheidungsfrage) und einen V2-Satz (unabhängiger Aussagesatz) aus der VP.
+Lassen Sie nichts weg und fügen Sie nichts hinzu.
+In den V2-Sätzen dürfen Sie alles vor das finite Verb bewegen (= ins Vorfeld stellen) \textbf{außer dem Subjekt}.
+
+\begin{quote}
+  Das Lehramt im Fach Deutsch ist besonders schwierig, weil es neben fundiertem Wissen verschiedenste Kompetenzen erfordert.
+  Lehrpersonen sollten von vornherein wissen, dass sie sich ein überaus anspruchsvolles Fach ausgesucht haben.
+  Obwohl im Studium eigentlich keine Zeit dafür ist, sollten zum Beispiel weitreichende Fähigkeiten in grammatischer Analyse erworben werden.
+  Dies ist unerlässlich, denn die Bewertung sprachlicher Leistungen und die Förderung bildungssprachlicher Kompetenzen sind ohne solche Fähigkeiten nicht möglich.
+  Es wäre aus Sicht der Linguistik durchaus denkbar, andere Studieninhalte zu reduzieren, damit Studierende nach dem Studium mit der nötigen Souveränität in den Deutschunterricht gehen können.
+\end{quote}
+
+\Zeile
+
+\section{Konstituentenanalysen von VPs, V1-Sätzen und V2-Sätzen}\label{sec:analysieren}
+
+Zeichnen Sie Konstituentenstrukturdiagramme (Bäume) für die VPs aus Aufgabe~\ref{sec:bilden} sowie für die zugehörigen V1- und V2-Sätze.
+Kürzen Sie alle Phrasen außer der VP und dem Verbkomplex mit Dreiecken ab.
+Vergessen Sie nicht für jede bewegte Konstituente die Spur in der VP!
+Zeichnen Sie zur Verdeutlichung Bewegungspfeile von den Spuren zu den jeweiligen bewegten Konstituenten.
+
+\newpage
+
+\section{Fehlerhafte Phrasenstrukturdiagramme erkennen}\label{sec:fehlersuche}
+
+Sie sehen im Folgenden jeweils zwei Fragmente aus Phrasenstrukturanalysen nebeneinander.
+Eins der Fragment wird von unserer Grammatik beschrieben, das andere nicht.
+Es spielt jeweils keine Rolle, welche Wörter bzw.\ weiteren Strukturen man einsetzt:
+Die eine Struktur folgt den Regeln der Grammatik aus EGBD3, die andere folgt diesen Regeln nicht.
+Streichen Sie die von der Grammatik im Buch \slash\ in der Vorlesung ausgeschlossene (= nicht beschriebene) Struktur durch.
+
+\Zeile
+
+(1)~\hspace{4em}~\begin{forest}
+  [S, calign=child, calign child=2
+    [AdvP\Sub{2}]
+    [V\Sub{1}]
+    [VP]
+  ]
+\end{forest}~\hspace{4em}~\begin{forest}
+  [S, calign=child, calign child=2
+    [AdvP\Sub{2}]
+    [V\Sub{1}]
+    [PP]
+  ]
+\end{forest}
+
+\Zeile
+
+(2)~\hspace{4em}~\begin{forest}
+  [PP, calign=first
+    [P]
+    [NP]
+    [VP]
+  ]
+\end{forest}~\hspace{4em}~\begin{forest}
+  [PP, calign=child, calign child=2
+    [NP]
+    [P]
+    [NP]
+  ]
+\end{forest}
+
+\Zeile
+
+(3)~\hspace{4em}~\begin{forest}
+  [S, calign=child, calign child=2
+    []
+    []
+    []
+    []
+  ]
+\end{forest}~\hspace{4em}~\begin{forest}
+  [S, calign=child, calign child=2
+    []
+    []
+    []
+  ]
+\end{forest}
+
+\Zeile
+
+(4)~\hspace{4em}~\begin{forest}
+  [VP, calign=first
+    [V]
+    [PP]
+  ]
+\end{forest}~\hspace{4em}~\begin{forest}
+  [VP, calign=last
+    [PP]
+    [V]
+  ]
+\end{forest}
+
+\Zeile
+
+(5)~\hspace{4em}~\begin{forest}
+  [NP, calign=first
+    [N]
+    [NP]
+    [PP]
+    [RS]
+  ]
+\end{forest}~\hspace{4em}~\begin{forest}
+  [NP, calign=child, calign child=3
+    [Art]
+    [NP]
+    [N]
+    [RS]
+  ]
+\end{forest}
+
+\newpage
+\ \\
+\newpage
+\ \\
+\newpage
+\ \\
+
