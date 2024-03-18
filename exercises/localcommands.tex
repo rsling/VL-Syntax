@@ -117,19 +117,37 @@
 }
 
 
-\newcommand{\Sol}[1]{
-  \ifdefined\SOLUTIONS
-    \gruen{#1}
-  \fi
+\newcommand{\Sol}[1]{%
+  \ifdefined\SOLUTIONS%
+    \gruen{#1}%
+  \fi%
 }
 
-\newcommand{\Solalt}[2]{
-  \ifdefined\SOLUTIONS
-    \gruen{#1}
-  \else
-    #2
-  \fi
+\newcommand{\SolX}[1]{%
+  \ifdefined\SOLUTIONS%
+    #1%
+  \fi%
 }
+
+\newcommand{\Solalt}[2]{%
+  \ifdefined\SOLUTIONS%
+    \gruen{#1}%
+  \else%
+    #2%
+  \fi%
+}
+
+\newcommand{\SolaltX}[2]{%
+  \ifdefined\SOLUTIONS%
+    #1%
+  \else%
+    #2%
+  \fi%
+}
+
+\newcommand{\Solul}[1]{\SolaltX{\uline{#1}}{#1}}
+
+\newcommand{\Solmark}[2][gruen]{\Solalt{\textcolor{#1}{#2}}{#2}}
 
 \newcounter{aufgabe}
 \newcommand{\aufgabeginn}{\setcounter{aufgabe}{1}}
