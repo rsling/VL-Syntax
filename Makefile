@@ -57,8 +57,9 @@ $(OUTDIR)/%$(SLIDESUFF)$(PROJECT)$(SUFFSUFF): main.tex $(SOURCEDIR)%.tex $(OUTDI
 
 # Phony shit.
 
-.PHONY: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12 slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12 allhandouts allslides all clean realclean edit
+.PHONY: handout00 handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12 slides00 slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12 allhandouts allslides all clean realclean edit
 
+handout00: $(OUTDIR)/Grammatik+und+Lehramt$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 handout01: $(OUTDIR)/01.+Grammatik$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 handout02: $(OUTDIR)/02.+Grundbegriffe$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 handout03: $(OUTDIR)/03.+Wortklassen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
@@ -72,9 +73,10 @@ handout10: $(OUTDIR)/10.+Subjekte+und+Prädikate$(HANDOUTSUFF)$(PROJECT)$(SUFFSU
 handout11: $(OUTDIR)/11.+Passive+und+Objekte$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 handout12: $(OUTDIR)/12.+Syntax+infiniter+Verbformen$(HANDOUTSUFF)$(PROJECT)$(SUFFSUFF)
 
-allhandouts: handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12
+allhandouts: handout00 handout01 handout02 handout03 handout04 handout05 handout06 handout07 handout08 handout09 handout10 handout11 handout12
 
-slides01: echo $(OUTDIR)/01.+Grammatik$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides00: $(OUTDIR)/Grammatik+und+Lehramt$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
+slides01: $(OUTDIR)/01.+Grammatik$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 slides02: $(OUTDIR)/02.+Grundbegriffe$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 slides03: $(OUTDIR)/03.+Wortklassen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 slides04: $(OUTDIR)/04.+Konstituenten+und+Satzglieder$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
@@ -87,7 +89,7 @@ slides10: $(OUTDIR)/10.+Subjekte+und+Prädikate$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 slides11: $(OUTDIR)/11.+Passive+und+Objekte$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 slides12: $(OUTDIR)/12.+Syntax+infiniter+Verbformen$(SLIDESUFF)$(PROJECT)$(SUFFSUFF)
 
-allslides: slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12
+allslides: slides00 slides01 slides02 slides03 slides04 slides05 slides06 slides07 slides08 slides09 slides10 slides11 slides12
 
 complete: $(OUTDIR)/$(PROJECT)$(HANDOUTSUFF)$(FULL)$(SUFFSUFF)
 
