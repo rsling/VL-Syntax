@@ -129,11 +129,11 @@
   \fi%
 }
 
-\newcommand{\Solalt}[2]{%
+\newcommand{\Solalt}[3][gruen]{%
   \ifdefined\SOLUTIONS%
-    \gruen{#1}%
+  \textcolor{#1}{#2}%
   \else%
-    #2%
+    #3%
   \fi%
 }
 
